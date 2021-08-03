@@ -1,34 +1,33 @@
 const express = require("express");
 
-const path = require("path");
-
+/*const path = require("path");*/
 const routes = express.Router();
 
-routes.get('/home',(req,res) =>{
-    res.redirect('/')
-});
-routes.get('/',(req,res) =>{
-    res.sendFile(path.resolve("views", "home.html"));
-});
+const rotas = require('../controllers/mainController');
 
-routes.get('/carrinho',(req,res) => {
-    res.sendFile(path.resolve("views","carrinho.html"));
-});
-routes.get('/checkout',(req,res) => {
-    res.sendFile(path.resolve("views","checkout.html"));
-});
-routes.get('/contato',(req,res) => {
-    res.sendFile(path.resolve("views","contato.html"));
-});
-routes.get('/listagem',(req,res) => {
-    res.sendFile(path.resolve("views","listagem.html"));
-});
-routes.get('/painelUsuario',(req,res) => {
-    res.sendFile(path.resolve("views","user.html"));
-});
-routes.get('/painelUsuario',(req,res) => {
-    res.sendFile(path.resolve("views","produto.html"));
-});
-routes.get('/painelUsuario',(req,res) => {
-    res.sendFile(path.resolve("views","login.html"));
-});
+
+/*routes.get('/home',(req,res) =>{
+    res.redirect('/')
+});*/
+
+routes.get('/', mainController.index);
+
+routes.get('/contato', mainController.contato);
+
+routes.get('/lista', mainController.lista);
+
+routes.get('/carrinho', mainController.carrinho);
+
+routes.get('/checkout', mainController.checkout);
+
+routes.get('/login', mainController.login);
+
+routes.get('/produto', mainController.produto);
+
+routes.get('/user', mainController.user);
+
+module.exports = routes;
+
+
+
+
