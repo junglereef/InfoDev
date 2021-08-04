@@ -3,7 +3,7 @@ const express = require("express");
 /*const path = require("path");*/
 const routes = express.Router();
 
-const rotas = require('../controllers/mainController');
+const mainController = require('../controller/mainController');
 
 
 /*routes.get('/home',(req,res) =>{
