@@ -2,31 +2,31 @@ const path = require ('path')
 const controlador ={
 
     index: (req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','home.html'));
+        res.render('home');
     },
     lista: (req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','lista.html'));
+        res.render('lista');
     },
     carrinho:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','carrinho.html'));
+        res.render('carrinho');
     },
     checkout:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','checkout.html'));
+        res.render('checkout');
     },    
     contato:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','contato.html'));
+        res.render('contato');
     }, 
     login:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','login.html'));
+        res.render('login');
     }, 
     contato:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','contato.html'));
+        res.render('contato');
     }, 
     produto:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','produto.html'));
+        res.render('produto');
     },
     user:(req, res) =>  {
-        res.sendFile(path.resolve(__dirname,'..','views','user.html'));
+        res.render('user');
     }, 
  
 /*
