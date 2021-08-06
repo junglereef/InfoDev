@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Roboto;
+  }
+body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+section {height: 568px;
+        width: 320px;
+      border: 1px solid gray;}
+
+.main-header {
+  margin: 0.8vw;
+        height: 105px;
+        }
+
+.logo img{     
+  max-height: 41px;
+  max-width: 120px;
+
+}
+.home-image img{
+  width: 100%;
+}
+
+.searchbar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #E17055;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #864636;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.top-header{
+  margin: 0.8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+    display: none;
+}
+
+
+
+
+
+
+@media (min-width:600px) { .nav {display:block;} /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1281px) { .nav {display:block;} /* hi-res laptops and desktops */ }
