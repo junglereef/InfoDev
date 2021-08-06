@@ -4,9 +4,9 @@ const controlador ={
     index: (req, res) =>  {
         res.render('home');
     },
-    lista: (req, res) =>  {
+    /*lista: (req, res) =>  {
         res.render('lista');
-    },
+    },*/
     carrinho:(req, res) =>  {
         res.render('carrinho');
     },
