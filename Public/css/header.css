@@ -58,12 +58,15 @@
 	margin: 2vh 5vw;
   }
   
-  .top-icons {
+.top-icons {
 	margin: 3vh 2vw;
 	width: 30vw;
 	display: flex;
 	justify-content: space-between;
 	font-size: 20px;color:#939597 ;
+}
+.top-icons a{
+	color:#939597 ;
 }
 .top-menu {
     display: flex;
@@ -73,20 +76,28 @@
 #nav__checkbox{
 	display: none;
 }
+.close {
+	text-align: center;
+	display: none;
+}
 #nav__checkbox:checked ~ #navbar-list li{
 	display: block;
 }
-#nav__checkbox:checked + .logo img{
+#nav__checkbox:checked ~ label.nav__toggle .close{
+	display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .menu{
 	display: none;
 }
 
-.close {
+#nav__checkbox:checked ~ div.top-menu .logo{
 	display: none;
 }
+
 #navbar-list{
 	display: flex;
 	flex-direction: column;
-	gap:2rem;
+	gap:1.5rem;
 	align-items: center;
 	justify-content: center;
 	
@@ -99,4 +110,40 @@
 #navbar-list a {
 	text-decoration: none;
 	color: inherit;
+}
+
+@media (min-width:600px) { .nav {display:block;} /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1281px) { 
+.img{
+	font-size: 40px;
+	font-weight: 600;
+	color: blue;
+}
+.menu li img{
+	margin-bottom: -5px;
+}
+/*.pesquisa{
+	
+}*/
+.pesquisa input{
+	margin-top: 20px;
+	width: 500px;
+	height: 30px;
+	margin-left: 300px;
+}
+.pesquisa img{
+	
+	margin-left: -35px;
+	margin-bottom: -6px;
+}
+.pesquisa ol{
+	background-color: #ea834b;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	font-weight: 600;
+	padding: 10px;	
+} /* hi-res laptops and desktops */ 
 }
