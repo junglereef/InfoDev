@@ -5,9 +5,11 @@
     list-style: none;
     outline: none;
     box-sizing: border-box;
-    font-size: 16px;
-    font-family: Roboto;
-  }
+        font-family: Roboto;
+}
+html{ 
+    font-size: 62.5%;
+}
 body {
       min-height: 100vh;
       display: flex;
@@ -64,11 +66,4 @@ form.example::after {
 }
 
 
-
-
-
-
-
-@media (min-width:600px) { .nav {display:block;} /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 @media (min-width:1281px) { .nav {display:block;} /* hi-res laptops and desktops */ }
