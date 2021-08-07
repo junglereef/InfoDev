@@ -4,8 +4,8 @@
   font-family: 'roboto_condensedbold';
   padding: 16px 22px;
   text-transform: uppercase;
-  margin-top: 0px
-
+  margin-top: 0px;
+  text-align:center;
 }
 .produto {
     display: flex;
