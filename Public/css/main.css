@@ -15,9 +15,7 @@ body {
       align-items: center;
 }
 
-section {height: 568px;
-        width: 320px;
-      border: 1px solid gray;}
+section {}
 
 .main-header {
   margin: 0.8vw;
@@ -65,16 +63,7 @@ form.example::after {
   clear: both;
   display: table;
 }
-.top-header{
-  margin: 0.8vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav {
-    display: none;
-}
 
 
 
