@@ -7,6 +7,8 @@ const rotasDeProdutos = require('./src/routes/produtos')
 app.set('view engine', 'ejs');
 app.set('views', path.resolve ('./src/views'));
 
+app.use(express.static("public"));
+
 app.use(rotas);
 app.use('/produtos', rotasDeProdutos);
 app.use(express.static(path.resolve(__dirname, 'public')));
