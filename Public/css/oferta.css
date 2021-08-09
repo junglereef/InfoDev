@@ -1,6 +1,6 @@
 .oferta h2 {
   color: #365dae;
-  font-size: 0.820em;
+  font-size: 62.5%;
   font-family: 'roboto_condensedbold';
   padding: 16px 22px;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 }
 
 .pnome {
-    font-size: 0.6em;
+    font-size: 17px;
     display: block;
     display: -webkit-box;
     max-width: 100%;

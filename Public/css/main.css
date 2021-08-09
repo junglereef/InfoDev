@@ -8,7 +8,7 @@
         font-family: Roboto;
 }
 html{ 
-    font-size: 62.5%;
+    font-size: 17px;
 }
 body {
       min-height: 100vh;
@@ -34,10 +34,10 @@ body {
 
 .searchbar input[type=text] {
   padding: 10px;
-  font-size: 17px;
   border: 1px solid grey;
   float: left;
   width: 80%;
+  font-size: 17px;
   background: #f1f1f1;
 }
 
@@ -65,5 +65,5 @@ form.example::after {
   display: table;
 }
 
-
+@media (min-width:736px) { .nav {display:block;} /* hi-res laptops and desktops */ }
 @media (min-width:1281px) { .nav {display:block;} /* hi-res laptops and desktops */ }
