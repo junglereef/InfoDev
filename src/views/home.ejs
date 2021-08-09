@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link  rel = "stylesheet" type = "text/css" href = "/css/header.css" />
     <link  rel = "stylesheet" type = "text/css" href = "/css/footer.css" />
-    <title>InfoDev - Loja de Informaticat</title>
-</head>
-<body>
-    <%- include('./partials/header.ejs') %>
-    <main>
+    <link  rel = "stylesheet" type = "text/css" href = "/css/main.css" />
+    <link  rel = "stylesheet" type = "text/css" href = "/css/oferta.css" />
+    
 
+    <title>InfoDev - Loja de Informatica</title>
+</head>
+
+<<<<<<< HEAD
     </main>
     <%- include('./partials/footer.ejs') %>
+=======
+<body>
+    <container>
+            <!--header-->
+                 <%- include("./partials/header")  %>
+            <!--header-end-->
+            <div class="home-image">
+                <img src="images\app_banner.png" alt="">
+            </div>
+            <!--oferta-->
+                <%- include("./partials/oferta") %>
+    </container>
+>>>>>>> 5a70fcbd8c7272c8fad1bfe28803aeb1a5ac1769
 </body>
+
 </html>
