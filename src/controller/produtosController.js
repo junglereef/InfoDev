@@ -18,6 +18,10 @@ const controlador ={
         console.log(req.params.id);
         res.send("Veja as nossas ofertas");
     },
+
+    categoria: (req,res) => {
+        res.send("Categoria")
+    }
 };
 
 module.exports = controlador
