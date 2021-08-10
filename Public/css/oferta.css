@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
 .oferta h2 {
   color: #365dae;
-  font-size: 62.5%;
+  font-size: 17px;
   font-family: 'roboto_condensedbold';
   padding: 16px 22px;
   text-transform: uppercase;

@@ -10,6 +10,6 @@ routes.get("/criar", produtosController.criar);
 
 routes.get("/deletar", produtosController.deletar);
 
-routes.get("/:id", produtosController.id);
+/*routes.get("/:id", produtosController.id);*/
 
 module.exports = routes;
