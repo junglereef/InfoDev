@@ -8,7 +8,9 @@ routes.get("/lista", produtosController.lista);
 
 routes.get("/criar", produtosController.criar);
 
-routes.get("/deletar", produtosController.deletar);
+routes.get("/cancelar", produtosController.cancelar);
+
+routes.get("/categoria", produtosController.categoria);
 
 /*routes.get("/:id", produtosController.id);*/
 

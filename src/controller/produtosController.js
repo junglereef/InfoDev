@@ -1,3 +1,4 @@
+const path = require ('path')
 const controlador ={
 
     index: (req, res) =>  {
@@ -10,17 +11,17 @@ const controlador ={
     criar:(req, res) =>  {
         res.send("Criar produtos");
     },
-    deletar:(req, res) =>  {
+    cancelar:(req, res) =>  {
         res.send("Apagar produtos");
     },
 
-    id: (req, res) => {
+   /* id: (req, res) => {
         console.log(req.params.id);
         res.send("Veja as nossas ofertas");
-    },
+    },*/
 
     categoria: (req,res) => {
-        res.send("Categoria")
+        res.render("Categoria")
     }
 };
 
