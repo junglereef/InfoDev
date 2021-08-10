@@ -21,7 +21,7 @@ const controlador ={
     },*/
 
     categoria: (req,res) => {
-        res.render("Categoria")
+        res.render("categoria")
     }
 };
 

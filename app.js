@@ -7,11 +7,12 @@ const rotasDeProdutos = require('./src/routes/produtos')
 app.set('view engine', 'ejs');
 app.set('views', path.resolve ('./src/views'));
 
+
 app.use(express.static("public"));
 
 app.use(rotas);
 app.use('/produtos', rotasDeProdutos);
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());/*Adicionado do print de aula 27072021*/
 app.use(express.urlencoded({extended: false}));/*Adicionado do print de aula 27072021*/
 
