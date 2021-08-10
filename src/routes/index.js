@@ -1,3 +1,4 @@
+const { Router } = require("express");
 const express = require("express");
 const path = require("path");
 const routes = express.Router();
@@ -5,6 +6,7 @@ const mainController = require('../controller/mainController');
 
 
 routes.get('/home',mainController.index);
+
 
 routes.get('/', mainController.index);
 
