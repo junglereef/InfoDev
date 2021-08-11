@@ -17,14 +17,28 @@
     <title>InfoDev - Loja de Informatica</title>
 </head>
 
+<<<<<<< Updated upstream
+=======
+    </main>
+    
+>>>>>>> Stashed changes
 <body>
-    <container>
-            <!--header-->
-                 <%- include("./partials/header")  %>
-            <!--header-end-->
-            <div class="home-image">
-                <img src="images\app_banner.png" alt="">
+    
+    <!--header-->
+    <%- include("./partials/header")  %>
+    <!--header-end-->
+    <main>
+        <section>
+            <div>
+                <div class="home-image">
+                    <img src="images\app_banner.png" alt="">
+                </div>
+                <div>
+                <!--oferta-->
+                    <%- include("./partials/oferta") %>
+                </div>
             </div>
+<<<<<<< Updated upstream
             <!--oferta-->
                 <%- include("./partials/oferta") %>
             <!--FIM-oferta-->
@@ -33,6 +47,12 @@
             <%- include("./partials/footer") %>
             <!--footer-fim-->
     </container>
+=======
+        </section>
+    </main>
+        <!--RODAPÉ-->
+    <%- include('./partials/footer.ejs') %>
+>>>>>>> Stashed changes
 </body>
 
 </html>

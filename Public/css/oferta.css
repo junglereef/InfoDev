@@ -18,6 +18,7 @@
   text-transform: uppercase;
   margin-top: 0px;
   text-align:center;
+  display: none;
 }
 .produto {
     display: flex;
