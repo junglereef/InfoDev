@@ -1,8 +1,8 @@
 const path = require ('path')
 const controlador ={
 
-    index: (req, res) =>  {
-        res.send("Produtos");
+    index: (req, res) => {
+        res.render('produto');
     },
 
     lista: (req, res) =>  {
