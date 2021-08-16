@@ -220,6 +220,9 @@ form.example::after {
   margin-bottom: 0.8rem;
   font-weight: 500;
   color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rodape a:link {
