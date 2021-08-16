@@ -194,6 +194,7 @@ form.example::after {
   margin-top: 0.60rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .rsocial-icon {
   margin-top: 0.60rem;

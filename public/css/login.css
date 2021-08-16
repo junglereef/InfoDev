@@ -42,13 +42,13 @@
   transition: border-color 0.2s;
 }
 .login-submit-btn {
-  width: 380px;
-  padding: 1rem 3.2rem 1rem 1.2rem;
+  width: 20rem;
+  padding: 1rem 2rem 1rem 2rem;
   text-align: center;
   font-size: 1.rem;
   font-weight: 600;
   background: #ff4500;
-  color: #000;
+  color: #fff;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 0.5rem;
