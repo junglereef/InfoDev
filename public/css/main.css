@@ -186,9 +186,9 @@ form.example::after {
 /* FOOTER  */
 .rodape-principal {
   font-size: 1.7rem;
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;*/
   
 }
 .rodape {
@@ -248,7 +248,7 @@ form.example::after {
   
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .nav {
     display: block;
   } /* hi-res laptops and desktops */
