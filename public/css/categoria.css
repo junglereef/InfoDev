@@ -1,0 +1,23 @@
+
+.menu {
+    display: flex;
+    justify-content: left;
+    font-size: 15px;
+    margin-left: 24px;
+    margin-block-start: 24px ;
+    padding: 14px;
+    color: #ff4500; 
+}
+
+.categoria {
+    color: #ff4500;
+    font-size: 22px;
+    margin-left: 24px;
+    margin-block-start: 24px ;
+    text-decoration: blue underline 3px; 
+    ;
+}
+
+.categoria li {
+    padding: 10px;
+}
