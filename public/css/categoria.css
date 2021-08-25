@@ -9,12 +9,11 @@
     margin-left: 24px;
     margin-block-start: 24px ;
     text-decoration: blue underline 3px; 
-    ;
 }
 
 .menu {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     font-size: 14px;
     margin-left: 24px;
     margin-block-start: 24px ;
