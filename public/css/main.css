@@ -272,6 +272,30 @@ form.example::after {
   border: 2px solid #ff4500;
 }
 
+/*.client-avatar{
+  display: flex;
+  justify-content: center;
+ }*/ 
+
+ .corpo{
+   display: flex;
+   justify-content: left;
+ }
+
+ .lado-esquerdo{
+  display: flex;
+   align-items: center;
+ }
+ .user-details{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+ }
+ .client-avatar{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+ }
 
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
@@ -334,12 +358,5 @@ form.example::after {
     justify-content: space-around;
   
   }
-  .corpo{
-   display: flex;
-   justify-content: space-between;
-  }
-  .lado-esquerdo{
-    flex-direction: column;
-	  align-items: center;
-  }
+ 
 }
