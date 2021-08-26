@@ -20,6 +20,9 @@ const mainController = {
   user: (req, res) => {
     res.render("user", { page: "Minha Conta" });
   },
+  painel: (req, res) => {
+    res.render("painel-usuario", { page: "Painel do usuário"});
+  },
 };
 
 module.exports = mainController;

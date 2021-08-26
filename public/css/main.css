@@ -334,4 +334,12 @@ form.example::after {
     justify-content: space-around;
   
   }
+  .corpo{
+   display: flex;
+   justify-content: space-between;
+  }
+  .lado-esquerdo{
+    flex-direction: column;
+	  align-items: center;
+  }
 }
