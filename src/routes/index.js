@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const routes = express.Router();
 const path = require("path");
 const mainController = require("../controller/mainController");
@@ -10,4 +10,6 @@ routes.get("/checkout", mainController.checkout);
 routes.get("/login", mainController.login);
 routes.get("/user", mainController.user);
 routes.get("/painel-usuario", mainController.painel);
+routes.get("/pedido-finalizado", mainController.telaConfirmacao);
+
 module.exports = routes;

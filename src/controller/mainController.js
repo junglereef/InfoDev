@@ -23,6 +23,9 @@ const mainController = {
   painel: (req, res) => {
     res.render("painel-usuario", { page: "Painel do usuário"});
   },
+  telaConfirmacao: (req, res) => {
+    res.render("pedido-finalizado", { page: "Pedido finalizado"});
+  },
 };
 
 module.exports = mainController;

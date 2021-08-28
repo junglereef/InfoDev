@@ -1,7 +1,7 @@
 {
   "name": "infodev",
   "version": "1.0.0",
-  "description": "",
+  "description": "infodev",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js"
@@ -14,5 +14,13 @@
     "express": "^4.17.1",
     "g": "^2.0.1",
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junglereef/InfoDev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/junglereef/InfoDev/issues"
+  },
+  "homepage": "https://github.com/junglereef/InfoDev#readme"
 }
