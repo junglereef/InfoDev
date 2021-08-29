@@ -1,0 +1,68 @@
+.pfinalizado{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+main{
+    display: flex;
+
+}
+.panel-user{
+    max-width: 30%;
+    flex:2;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+.pfinalizado img{
+    width: 300px;
+    align-items: center;
+    flex: 2;
+    margin-left: 150px;
+}
+.pfinalizado h2{
+    font-size: 40px;
+}
+.resumo{
+    margin-right: 30px;
+    margin-top: 40px;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ff4500;
+    margin-bottom: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+.resumo h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.resumo-pedido{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ff4500;
+}
+.e-resumo{
+    border-bottom: none;
+}
+.resumo-pedido .preco{
+    font-weight: bold;
+}
+.d-entrega{
+    text-align: center;
+}
+.d-entrega p{
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold;
+}
+.d-entrega input{
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #ff4500;
+    color: white;
+    font-weight: bold;
+}
