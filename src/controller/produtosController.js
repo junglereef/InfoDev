@@ -1,6 +1,6 @@
 const produtosController = {
   index: (req, res) => {
-    res.send("Produtos");
+    res.render("Produto", { page: "Página Produto"});
   },
 
   lista: (req, res) => {

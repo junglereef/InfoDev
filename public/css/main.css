@@ -297,6 +297,10 @@ form.example::after {
    align-items: center;
  }
 
+.bloco-produto{
+padding: 5px 16px;
+}
+
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
   .nav {

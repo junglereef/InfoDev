@@ -13,7 +13,7 @@ app.set("views", path.resolve("./src/views"));
 const rotas = require("./src/routes");
 app.use(rotas);
 const rotasDeProdutos = require("./src/routes/produtos");
-app.use("/produtos", rotasDeProdutos);
+app.use(rotasDeProdutos);
 
 // Definindo uso de JSON
 app.use(express.json()); /*Adicionado do print de aula 27072021*/
