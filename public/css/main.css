@@ -411,11 +411,13 @@ form.example::after {
  .corpo{
    display: flex;
    justify-content: left;
+   margin: 10px;
  }
 
  .lado-esquerdo{
   display: flex;
    align-items: center;
+   margin: 10px;
  }
  .user-details{
   display: flex;
