@@ -297,8 +297,48 @@ form.example::after {
    align-items: center;
  }
 
+ /*Pagina Produto*/
+
 .bloco-produto{
 padding: 5px 16px;
+}
+
+.box-produto, .bloco-produto, .marca-produto, .responsive, .titulo-produto, .comprar, .caixa-imagem-produto{
+  width:100%;
+  height: auto;
+  font-size: 2.2vh;
+}
+
+.comprar{
+  display: flex;
+  justify-content: space-between;
+}
+
+span.preco {
+  font-size: 3.2em;
+  color: #FF4500;
+  font-weight: bold;
+}
+
+.button-laranja{
+  background: #FF4500;
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: bold;
+  border-radius: 4px;
+
+}
+
+.ctn-checkout input, .ctn-checkout button{ 
+  height: 42px;
+}
+.separador-compra{
+  margin-top: 2vh;
+  border: 1px solid #FF4500;
+}
+
+.descricao-produto{
+  margin-top: 2vh;
 }
 
 /*  MEDIA QUERIES */
