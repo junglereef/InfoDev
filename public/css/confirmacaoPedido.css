@@ -66,3 +66,29 @@ main{
     color: white;
     font-weight: bold;
 }
+
+@media(min-width: 320px) and (max-width: 568px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .panel-user{
+        margin-left: 50px;
+    }
+    .pfinalizado{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .pfinalizado h2{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 100px;
+     
+    }
+    .r-resumo{
+        align-items: center;
+        margin-left: 100px;
+    }
+}
