@@ -182,6 +182,137 @@ form.example::after {
 
 }
 
+/* PAINEL-USUARIO */
+
+.quadro {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  margin-top: 16px;
+  padding: 32px;
+  border-radius: 0.25rem;
+}
+
+.Quadrado-Magico {
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 58px;
+}
+
+.numero-pedido {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.titulo-pedido {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+
+.pedido {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(66, 70, 77);
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.status-pedido {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+
+.cancelado {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(231, 38, 38);
+}
+
+.prazo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.data {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+
+.data-numero {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(66, 70, 77);
+}
+
+.tipo-pagamento {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.pagamento {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+
+.tipo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(66, 70, 77);
+}
+
+
+
 
 /* FOOTER  */
 .rodape-principal {
