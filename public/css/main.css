@@ -184,16 +184,17 @@ form.example::after {
 
 /* PAINEL-USUARIO */
 
-.quadro {
+.quadro-pedidos {
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
   margin-top: 16px;
   padding: 32px;
   border-radius: 0.25rem;
+  margin-left: 125px;
 }
 
-.Quadrado-Magico {
+.quadro-pedidos-magico {
   display: flex;
   width: 100%;
   -webkit-box-align: center;
@@ -203,7 +204,7 @@ form.example::after {
   height: 58px;
 }
 
-.numero-pedido {
+.descricao-pedido-usuario {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -212,7 +213,7 @@ form.example::after {
   width: 180px;
 }
 
-.titulo-pedido {
+.titulo-pedido-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -221,7 +222,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.pedido {
+.numero-dos-pedidos-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -230,7 +231,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.status {
+.descricao-status-pedido-usuario {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -239,7 +240,7 @@ form.example::after {
   width: 140px;
 }
 
-.status-pedido {
+.status-pedido-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -248,7 +249,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.cancelado {
+.para-pedido-cancelado {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -257,7 +258,7 @@ form.example::after {
   color: rgb(231, 38, 38);
 }
 
-.prazo {
+.prazo-entrega-pedido-usuario {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -266,7 +267,7 @@ form.example::after {
   width: 140px;
 }
 
-.data {
+.data-entrega-pedido-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -275,7 +276,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.data-numero {
+.data-numero-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -284,7 +285,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.tipo-pagamento {
+.tipo-pagamento-usuario {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -293,7 +294,7 @@ form.example::after {
   width: 180px;
 }
 
-.pagamento {
+.titulo-pagamento-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -302,7 +303,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.tipo {
+.metodo-utilizado-pagamento-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -311,7 +312,55 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
+.quadro-pedidos-favoritos {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 32px;
+  border-radius: 0.25rem;
+  margin-right: 125px;
 
+}
+
+.quadro-pedidos-favoritos-descricao {
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 58px;
+  
+}
+
+.descricao-favoritos-usuario {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 180px;
+  margin-top: 450px;
+ 
+}
+
+.titulo-favoritos-usuario {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+
+.pedidos-favoritos-usuario-descritivo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(66, 70, 77);
+}
 
 
 /* FOOTER  */
