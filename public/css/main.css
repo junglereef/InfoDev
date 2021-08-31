@@ -276,7 +276,7 @@ form.example::after {
   color: rgb(66, 70, 77);
 }
 
-.data-numero-usuario {
+.data-numero-entrega-pedido-usuario {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
