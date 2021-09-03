@@ -5,47 +5,48 @@
     <!--header-->
     <%- include("./partials/header") %>
     <!--header-fim-->
+    <main>
         <div class="bloco-produto">
-            <div class="tag">
-                <img src="/public/images/oferta_small.png" alt="">
-            </div>
-            <div class="marca-produto">
-                <h2>Husky Gaming</h2>
-                <div class="stars"></div>
-            </div>
-            <div class="titulo-produto">
-                <h1 class="nome-produto">Cadeira Gamer Husky Gaming Snow, Black - HSN-BK</h1>
-            </div>
-            <div class="caixa-imagem-produto">
-                <div class="descricao-produto"><details><summary>Detalhes</summary><h2>A Cadeira Gamer Husky Gaming Snow proporciona alto conforto e qualidade para as melhores horas do seu dia!</h2>
-                    <p>&nbsp;</p>
-                    <h3>Tudo isso aliado a um ótimo custo benefício.</h3>
-                    <p>&nbsp;</p>
-                    <p>Os games do momento ficam ainda mais empolgantes ao serem jogados em uma Cadeira Gamer Husky Gaming Snow, pois além do design moderno e robusto, a cadeira proporciona ótima performance nas partidas devido a sensação de conforto que é convertida em foco e concentração, tudo que um gamer de verdade precisa para ser o melhor!</p>
-                    <p>&nbsp;</p>
-                    <p>A Gamer Husky Gaming Snow conta com uma estrutura consistente e de fácil montagem, com rodas 100% Nylon, função butterfly que regula a sua altura de forma prática, couro sintético PU, um balanço com até 13º de ajuste e ainda um assento de 510x500mm com encosto de 510 x 700 mm, é fácil perceber que ela foi projetada para entregar muito conforto para os gamers de forma acessível.</p>
-                    <p>&nbsp;</p>
-                    <p>A Husky Gaming Snow conta com espuma de alta qualidade e suas características mais elogiadas são regulagem de altura por pistão à gás e design singular e ao mesmo tempo muito moderno.</p>
-                    <p>&nbsp;</p>
-                    <p>Dê um upgrade no seu espaço gamer com uma Cadeira Husky Gaming Snow e sinta a diferença!</p>
-                    <p>&nbsp;</p>
-                    <p>Qualidade com custo benefício para você enfrentar qualquer desafio gamer! Aproveite essa oportunidade e adquira a Cadeira Gamer Husky Gaming Snow no KaBuM!</p></details></div>
-                <div class="favoritos"></div>
+            <div>
                 <div class="imagem-produto">
                     <img src="/images/cadeira-gamer.jpg" alt="cadeira-gamer" class="responsive">
                 </div>
             </div>
-            <div class="comprar">
-                <div class="ctn-preco">
-                    <span class="preco">695R$</span>
+            <div class = "descrição-produto">
+                <div class="titulo-produto descricao-detalhado">
+                    <h1 class="nome-produto">Cadeira Gamer Husky Gaming Snow, Black - HSN-BK</h1>
                 </div>
-                <div class="ctn-checkout">
-                    <button name="" type="submit" class="button-laranja" id="">
-                        COMPRAR</button>
-                </div>
+                <!--<div class="caixa-imagem-produto">
+                    <div class="descricao-produto"><details><summary>Detalhes</summary><h2>A Cadeira Gamer Husky Gaming Snow proporciona alto conforto e qualidade para as melhores horas do seu dia!</h2>
+                        <p>&nbsp;</p>
+                        <h3>Tudo isso aliado a um ótimo custo benefício.</h3>
+                        <p>&nbsp;</p>
+                        <p>Os games do momento ficam ainda mais empolgantes ao serem jogados em uma Cadeira Gamer Husky Gaming Snow, pois além do design moderno e robusto, a cadeira proporciona ótima performance nas partidas devido a sensação de conforto que é convertida em foco e concentração, tudo que um gamer de verdade precisa para ser o melhor!</p>
+                        <p>&nbsp;</p>
+                        <p>A Gamer Husky Gaming Snow conta com uma estrutura consistente e de fácil montagem, com rodas 100% Nylon, função butterfly que regula a sua altura de forma prática, couro sintético PU, um balanço com até 13º de ajuste e ainda um assento de 510x500mm com encosto de 510 x 700 mm, é fácil perceber que ela foi projetada para entregar muito conforto para os gamers de forma acessível.</p>
+                        <p>&nbsp;</p>
+                        <p>A Husky Gaming Snow conta com espuma de alta qualidade e suas características mais elogiadas são regulagem de altura por pistão à gás e design singular e ao mesmo tempo muito moderno.</p>
+                        <p>&nbsp;</p>
+                        <p>Dê um upgrade no seu espaço gamer com uma Cadeira Husky Gaming Snow e sinta a diferença!</p>
+                        <p>&nbsp;</p>
+                        <p>Qualidade com custo benefício para você enfrentar qualquer desafio gamer! Aproveite essa oportunidade e adquira a Cadeira Gamer Husky Gaming Snow no KaBuM!</p></details></div>
+                    <div class="favoritos"></div>
+                    
+                </div>-->
+                    <div class="ctn-preco descricao-detalhado">
+                        <span class="preco"> À vista por R$ 695</span>
+                    </div>
+                    <div class = "calculo-frete descricao-detalhado">
+                        <input id = "numero-cep" type = "number" placeholder="Digite seu CEP" />
+                        <input id = "procurar-cep" type="submit" value = "CALCULAR FRETE" />
+                    </div>
+                    <div class="ctn-checkout descricao-detalhado">
+                        <button name="" type="submit" class="button-laranja" id="">
+                            COMPRAR</button>
+                    </div>
             </div>
-            <hr class="separador-compra">
         </div>
+    </main>
     <!--footer-->
     <%- include("./partials/footer") %>
     <!--footer-fim-->

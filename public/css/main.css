@@ -515,7 +515,35 @@ form.example::after {
 /*Pagina Produto*/
 
 .bloco-produto {
-  padding: 5px 16px;
+  display: flex;
+  margin-top: 30px;
+}
+
+
+.bloco-produto img{
+  width: 500px;
+  margin-left: 20px;
+}
+.descrição-produto{
+  display: flex;
+  flex-direction: column;
+}
+.descricao-detalhado{
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+.calculo-frete #numero-cep, #procurar-cep{
+  border: 1px solid #FF4500;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+#procurar-cep{
+  background-color: #FF4500;
+  color:white;
+  font-weight: bold;
 }
 
 .box-produto,
@@ -544,9 +572,10 @@ span.preco {
 .button-laranja {
   background: #FF4500;
   color: #fff;
-  font-size: 2.2em;
+  font-size: 17px;
   font-weight: bold;
   border-radius: 4px;
+  padding: 10px;
 
 }
 
