@@ -189,154 +189,61 @@ form.example::after {
 
 .ctn-produto {
   padding: 10px 16px;
-
   border-top: 1px solid var(--gray-color);
-
 }
 
 .pnome {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.8rem;
-
 }
 
 /* PAINEL-USUARIO */
 
 .corpo-painel-usuario {
   display: flex;
-  flex-direction: column;
-  justify-content: left;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-
+.titulo-pedidos{
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+}
 .quadro-pedidos {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   background: rgb(255, 255, 255);
   margin-top: 16px;
-  padding: 32px;
-  border-radius: 0.25rem;
-  margin-left: 125px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 50px;
+  width: 300px;
 }
-
-.quadro-pedidos-magico {
+.todos-quadro-pedidos{
   display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  height: 58px;
+  padding: 5px;
 }
-
-.descricao-pedido-usuario {
+.seta-pedidos{
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  width: 180px;
+ justify-content: flex-end;
+ cursor: pointer;
 }
-
-.titulo-pedido-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
+.seta-pedidos img{
+  margin-top: 10px;
+  width: 40px;
+}
+.detalhes-pedido-titulo{
+  font-size: 13px;
   font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
 }
-
-.numero-dos-pedidos-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: rgb(66, 70, 77);
-}
-
-.descricao-status-pedido-usuario {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  width: 140px;
-}
-
-.status-pedido-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
+.detalhes-pedido{
+  font-size: 11px;
   font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
+  color: #363636;
 }
-
-.para-pedido-cancelado {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: rgb(231, 38, 38);
-}
-
-.prazo-entrega-pedido-usuario {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  width: 140px;
-}
-
-.data-entrega-pedido-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
-}
-
-.data-numero-entrega-pedido-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: rgb(66, 70, 77);
-}
-
-.tipo-pagamento-usuario {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  width: 180px;
-}
-
-.titulo-pagamento-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
-}
-
-.metodo-utilizado-pagamento-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: rgb(66, 70, 77);
-}
-
 .quadro-pedidos-favoritos-descricao {
   display: flex;
   flex-direction: column;
@@ -346,16 +253,16 @@ form.example::after {
   border-radius: 0.25rem;
   margin-left: 125px;  
 }
+.section-favoritos{
+  display: flex;
+  justify-content: left;
+}
 
 .quadro-pedidos-favoritos {
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
   justify-content: flex-start;
-  height: 5px;
-  padding: 32px;
+  padding: 10px;
   flex-direction: column;
 }
 
@@ -491,15 +398,21 @@ form.example::after {
   justify-content: left;
   margin: 10px;
   margin-bottom: 20px;
-  background-color: #939597;
+  background-color: #FFD39B;
 }
+
 
 .lado-esquerdo {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin-top: -200px;
+  margin-left: 20px;
 }
-
+.definicao-predidos{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 .user-details {
   display: flex;
   flex-direction: column;
@@ -527,6 +440,7 @@ form.example::after {
 .descrição-produto{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .descricao-detalhado{
   margin-bottom: 30px;
