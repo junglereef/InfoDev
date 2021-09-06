@@ -205,11 +205,16 @@ form.example::after {
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-.titulo-pedidos{
+.titulo-pedidos-favoritos{
   text-align: center;
   padding: 30px;
   font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: bold;
 }
+
 .quadro-pedidos {
   display: flex;
   flex-wrap: wrap;
@@ -244,18 +249,20 @@ form.example::after {
   font-weight: bold;
   color: #363636;
 }
+
 .quadro-pedidos-favoritos-descricao {
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
   margin-top: 10px;
   padding: 32px;
-  border-radius: 0.25rem;
+  border-radius: 12px;
   margin-left: 125px;  
 }
 .section-favoritos{
   display: flex;
   justify-content: left;
+  padding: 5px;
 }
 
 .quadro-pedidos-favoritos {
@@ -264,6 +271,7 @@ form.example::after {
   justify-content: flex-start;
   padding: 10px;
   flex-direction: column;
+  width: 550px;
 }
 
 
