@@ -257,12 +257,13 @@ form.example::after {
   margin-top: 10px;
   padding: 32px;
   border-radius: 12px;
-  margin-left: 125px;  
+  margin-left: 45px;  
 }
 .section-favoritos{
   display: flex;
   justify-content: left;
   padding: 5px;
+  flex-wrap: wrap;
 }
 
 .quadro-pedidos-favoritos {
