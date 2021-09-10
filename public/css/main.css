@@ -200,6 +200,10 @@ form.example::after {
 
 /* PAINEL-USUARIO */
 
+.painel-usuario{
+  display: flex;
+}
+
 .corpo-painel-usuario {
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +276,6 @@ form.example::after {
   justify-content: flex-start;
   padding: 10px;
   flex-direction: column;
-  width: 550px;
 }
 
 
@@ -410,13 +413,13 @@ form.example::after {
   background-color: #FFD39B;
 }
 
-
+/*
 .lado-esquerdo {
   display: flex;
   align-items: center;
   margin-top: -200px;
   margin-left: 20px;
-}
+}*/
 .definicao-predidos{
   display: flex;
   flex-direction: column;
@@ -516,6 +519,9 @@ span.preco {
   margin-top: 2vh;
 }
 
+
+
+
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
   .nav {
@@ -531,6 +537,15 @@ span.preco {
     justify-content: space-around;
 
   }
+  .quadro-pedidos-favoritos {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-direction: column;
+  }
+  
+
 }
 
 @media (min-width: 1200px) {
