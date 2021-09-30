@@ -94,8 +94,9 @@ form.example::after {
 }
 
 .menu li {
-  margin-left: 20px;
+  padding: 0;
   list-style-type: none;
+  display: inline;
   text-align: center;
 }
 
@@ -118,8 +119,13 @@ form.example::after {
 
 .top-menu {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  align-content: center;
+  align-items: flex-end;
+}
+
+.topnav {
+  display: none;
 }
 
 #nav__checkbox {
@@ -326,7 +332,8 @@ span.preco {
 
 .descrição-produto hr {
   margin-bottom: 2vh;
-  border: 1px solid #FF4500;
+  border-bottom: 2px solid var(--gray-color);
+  margin: 1rem;
 } 
 
 .separador-compra {
@@ -340,12 +347,41 @@ span.preco {
 
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
-  .nav {
+
+  .topnav {
     display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+  }
+  .topnav a {
+    color: var(--gray-color);
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
 
+  .topnav a :hover:not(.active) {
+    background-color: #ea834b;
+  } 
+
+ .menu {
+  display: none;
+  }
+  .home-image {
+    
+  }
+  
+ 
+
   /* hi-res laptops and desktops */
-  .rodape {
+  /* .rodape {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -360,7 +396,7 @@ span.preco {
     padding: 10px;
     flex-direction: column;
   }
-  
+   */
 
 }
 
