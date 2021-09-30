@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <%- include("./partials/head")%>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/confirmacaoPedido.css" />
+  
   <body>
     <!--header-->
     <%- include("./partials/header") %>
     <!--header-end-->
     <main>
-        <section class = "panel-user">
-            <!-- panel-user -->
-                <%- include("./partials/panel-user") %>
-            <!--panel-user-end-->
-        </section>
-        <section class = "pfinalizado">
-            <div>
-                <div>
+        <div class = "pfinalizado">
+            <div class ="ctn-detalhe-pedido">
+                <h2>Pedido realizado com sucesso!</h2>
+                <div class="img-pedido-ok">
                     <img src = "/images/ok.png" />
-                </div>
-                <div>
-                    <h2>Pedido realizado com sucesso!</h2>
                 </div>
             </div>
             <div class = r-resumo>
@@ -37,13 +33,14 @@
                         <p>Total da compra</p>
                         <p class = "preco">39,80</p>
                     </div>
-                </div>
                     <div class = "d-entrega">
                         <p> * Prazo para entrega 08 dias úteis</p>
                         <input type = "submit" name = "acompanhamento" value = "Acompanhe sua entrega"/>
                     </div>
+                </div>
+                    
             </div>
-        </section>
+        </div>
     </main>
     <!--Footer-->
     <%- include("./partials/footer") %>

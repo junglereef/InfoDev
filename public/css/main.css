@@ -198,105 +198,7 @@ form.example::after {
   margin-bottom: 0.8rem;
 }
 
-/* PAINEL-USUARIO */
 
-.painel-usuario{
-  display: flex;
-}
-
-.corpo-painel-usuario {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.titulo-pedidos-favoritos{
-  text-align: center;
-  padding: 30px;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-variant: small-caps;
-  font-weight: bold;
-}
-
-.quadro-pedidos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
-  margin-top: 16px;
-  padding: 20px;
-  border-radius: 20px;
-  margin-left: 50px;
-  width: 300px;
-}
-.todos-quadro-pedidos{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-.seta-pedidos{
-  display: flex;
- justify-content: flex-end;
- cursor: pointer;
-}
-.seta-pedidos img{
-  margin-top: 10px;
-  width: 40px;
-}
-.detalhes-pedido-titulo{
-  font-size: 13px;
-  font-weight: bold;
-}
-.detalhes-pedido{
-  font-size: 11px;
-  font-weight: bold;
-  color: #363636;
-}
-
-.quadro-pedidos-favoritos-descricao {
-  display: flex;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
-  margin-top: 10px;
-  padding: 32px;
-  border-radius: 12px;
-  margin-left: 45px;  
-}
-.section-favoritos{
-  display: flex;
-  justify-content: left;
-  padding: 5px;
-  flex-wrap: wrap;
-}
-
-.quadro-pedidos-favoritos {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  padding: 10px;
-  flex-direction: column;
-}
-
-
-.titulo-favoritos-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  justify-content: flex-start;
-  font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
-}
-
-.pedidos-favoritos-usuario-descritivo {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: rgb(66, 70, 77);
-  
-}
 
 
 /* FOOTER  */
@@ -329,11 +231,16 @@ form.example::after {
 .rsocial-icon a img {
   margin-right: 3px;
 }
-
 .usuario,
 .rsocial {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-color);
+}
+
+.usuario h2,
+.rsocial h2 {
+  margin-bottom: 1rem;
+ 
 }
 
 .rodape ol {
@@ -358,101 +265,13 @@ form.example::after {
   width: 150px;
 }
 
-/* User Panels*/
-.compras {
-  margin-top: 2rem;
-  color: #ff4500;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.compras-meio,
-.compras-meio h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.avatar {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.user-details p,
-.user-details h2 {
-  font-size: 2rem;
-}
-
-.profile-btn {
-  width: 20rem;
-  padding: 1rem 2rem 1rem 2rem;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #ff4500;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  border: 2px solid #ff4500;
-}
-
-/*.client-avatar{
-  display: flex;
-  justify-content: center;
- }*/
-
-.corpo {
-  display: flex;
-  justify-content: left;
-  margin: 10px;
-  margin-bottom: 20px;
-  background-color: #FFD39B;
-}
-
-/*
-.lado-esquerdo {
-  display: flex;
-  align-items: center;
-  margin-top: -200px;
-  margin-left: 20px;
-}*/
-.definicao-predidos{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-.user-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.client-avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /*Pagina Produto*/
 
-.bloco-produto {
-  display: flex;
-  margin-top: 30px;
-}
 
 
-.bloco-produto img{
-  width: 500px;
-  margin-left: 20px;
-}
-.descrição-produto{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+h1.nome-produto {
+  font-size: 4em;
 }
 .descricao-detalhado{
   margin-bottom: 30px;
@@ -461,7 +280,7 @@ form.example::after {
 }
 .calculo-frete #numero-cep, #procurar-cep{
   border: 1px solid #FF4500;
-  margin-left: 20px;
+  margin-bottom: 0.5em;
   padding: 10px;
   border-radius: 10px;
   
@@ -505,10 +324,10 @@ span.preco {
 
 }
 
-.ctn-checkout input,
-.ctn-checkout button {
-  height: 42px;
-}
+.descrição-produto hr {
+  margin-bottom: 2vh;
+  border: 1px solid #FF4500;
+} 
 
 .separador-compra {
   margin-top: 2vh;
@@ -518,9 +337,6 @@ span.preco {
 .descricao-produto {
   margin-top: 2vh;
 }
-
-
-
 
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
@@ -548,7 +364,13 @@ span.preco {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+  
+  .pnome {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
   .nav {
     display: block;
   }

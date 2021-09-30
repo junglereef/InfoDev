@@ -1,11 +1,177 @@
-.pfinalizado{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-main{
-    display: flex;
+/* PAINEL-USUARIO */
 
+.painel-usuario{
+    display: flex;
+  }
+  
+.corpo {
+display: flex;
+justify-content: left;
+margin: 10px;
+margin-bottom: 20px;
+}
+.corpo-painel-usuario {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.compras {
+  margin-top: 2rem;
+  color: #ff4500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.compras-meio,
+.compras-meio h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.user-info {
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.user-details p,
+.user-details h2 {
+  font-size: 2rem;
+}
+
+.profile-btn {
+  width: 20rem;
+  padding: 1rem 2rem 1rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #ff4500;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  border: 2px solid #ff4500;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5em;
+}
+
+.client-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.titulo-pedidos-favoritos{
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.quadro-pedidos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 50px;
+  width: 300px;
+}
+.todos-quadro-pedidos{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.seta-pedidos{
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.seta-pedidos img{
+  margin-top: 10px;
+  width: 40px;
+}
+.detalhes-pedido-titulo{
+  font-size: 13px;
+  font-weight: bold;
+}
+.detalhes-pedido{
+  font-size: 11px;
+  font-weight: bold;
+  color: #363636;
+}
+
+.quadro-pedidos-favoritos-descricao {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 32px;
+  border-radius: 12px;
+  margin-left: 45px;  
+}
+.section-favoritos{
+  display: flex;
+  justify-content: left;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.quadro-pedidos-favoritos {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px;
+  flex-direction: column;
+}
+
+
+.titulo-favoritos-usuario {
+  display: flex;
+  -webkit-box-align: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(66, 70, 77);
+}
+  
+.pedidos-favoritos-usuario-descritivo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(66, 70, 77);
+  
+}
+
+.ctn-detalhe-pedido {
+    margin-top: 2em;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 .panel-user{
     max-width: 30%;
@@ -14,24 +180,30 @@ main{
     margin-top: 20px;
     
 }
-.pfinalizado img{
+.img-pedido-ok img{
     width: 300px;
     align-items: center;
     flex: 2;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 .pfinalizado h2{
     font-size: 40px;
 }
 .resumo{
-    margin-right: 30px;
-    margin-top: 40px;
+    /* margin-right: 30px;
+    margin-top: 40px; */
     font-size: 15px;
     padding: 10px;
     border: 1px solid #ff4500;
     margin-bottom: 20px;
-    width: 250px;
+    /* width: 250px; */
     border-radius: 10px;
+}
+.r-resumo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
 }
 .resumo h3{
     font-size: 20px;
@@ -45,7 +217,7 @@ main{
     border-bottom: 1px solid #ff4500;
 }
 .e-resumo{
-    border-bottom: none;
+    margin-bottom: 0.5em;
 }
 .resumo-pedido .preco{
     font-weight: bold;
@@ -66,7 +238,7 @@ main{
     color: white;
     font-weight: bold;
 }
-
+/* 
 @media(min-width: 320px) and (max-width: 568px){
     main{
         display: flex;
@@ -91,4 +263,4 @@ main{
         align-items: center;
         margin-left: 100px;
     }
-}
+} */
