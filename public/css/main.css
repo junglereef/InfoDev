@@ -172,6 +172,10 @@ form.example::after {
   color: inherit;
 }
 
+.ctn-home-banner{
+  display: none;
+}
+
 /*DEPARTAMENTO*/
 
 .departamentos-home{
@@ -212,7 +216,10 @@ form.example::after {
   margin-bottom: 0.8rem;
 }
 
+.ctn-oferta-web{
+  display: none;
 
+}
 
 
 /* FOOTER  */
@@ -388,7 +395,16 @@ span.preco {
   }
   .ctn-home-banner {
     display: block;
+    width: 100%;
   }
+  .ctn-oferta-mobile {
+    display: none;
+  }
+
+  .ctn-oferta-web{
+    display: block;
+  }
+
   /* hi-res laptops and desktops */
   /* .rodape {
     display: flex;
