@@ -172,13 +172,13 @@ form.example::after {
   color: inherit;
 }
 
-.ctn-home-banner{
+.ctn-home-banner-web{
   display: none;
 }
 
 /*DEPARTAMENTO*/
 
-.departamentos-home{
+.deptHomeWeb{
   display: none;
 
 }
@@ -360,6 +360,7 @@ span.preco {
   margin-top: 2vh;
 }
 
+
 /*  MEDIA QUERIES */
 @media (min-width: 736px) {
 
@@ -393,9 +394,13 @@ span.preco {
   .home-image-mobile{
     display: none;
   }
-  .ctn-home-banner {
+  .ctn-home-banner-web  {
     display: block;
+
+  }
+  .ctn-home-banner-web img{
     width: 100%;
+    height: auto;
   }
   .ctn-oferta-mobile {
     display: none;
@@ -404,6 +409,43 @@ span.preco {
   .ctn-oferta-web{
     display: block;
   }
+/*SLider CSS*/
+.carousel{
+	padding: 0 30px;
+}
+.carousel__button--prev, .carousel__button--next{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.carousel__button--prev{
+	left: 0;
+}
+.carousel__button--next{
+	right: 0;
+}
+.carousel__container {
+	overflow: hidden;
+	height: 200px;
+}
+.carousel__list{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+.carousel__list.unwrap{
+	flex-wrap: nowrap;
+}
+.carousel__item{
+	flex: 1 0 250px;
+/* 	max-width: 300px; */
+	height: 200px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid #fff;
+}
+/*SLider CSS END*/
 
   /* hi-res laptops and desktops */
   /* .rodape {
@@ -447,7 +489,7 @@ span.preco {
   .menu li img {
     margin-bottom: -5px;
   }
-  .departamentos-home{
+  .deptHomeWeb{
     display: block;
   
   }

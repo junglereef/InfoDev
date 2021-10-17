@@ -1,30 +1,56 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!DOCTYPE html>
 <html lang="pt-BR">
   <%- include("./partials/head")%>
   <link rel="stylesheet" href="/css/main.css" />
+  <script type="text/javascript" src="/public/js/homeslider.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+   
   <body>
     <!--header-->
     <%- include("./partials/header") %>
     <!--header-end-->
+    <!--bannerMobile-->
     <div class="home-image-mobile">
       <img src="images\app_banner.png" alt="" />
     </div>
-
-    <div class="ctn-home-banner">
+    <!--bannerMobileEnd-->
+    <!--bannerWeb-->
+    <div class="ctn-home-banner-web">
       <img src="images\banner_img.jpg" alt="" />
     </div>
-    <div class="cnt-departamentos-home">
+    <!--bannerWebEnd-->
+    <!--departmentSection-->
+    <div class="deptHomeWeb">
+      <div class="topHomeDeptWeb">
+        <div class="infoLeft"></div>
+        <div class="infoRight"></div>
+      </div>
+      <div class="bodyHomeDeptWeb">
+        <div class="innerBodyHomeDeptWeb">
+          <div class="topProductSliderInnerBodyDeptWeb"></div>
+          <div class="bannerBlockInnerBodyDeptWeb">
+            <%- include("./partials/ofertaWeb") %>
+          </div>
+          <div class="deptCategoriesBodyDeptWeb"></div>
+        </div>
+      </div>
     </div>
+    <!--departmentSectionEnd-->
     <div class="ctn-oferta-mobile">
     <!--oferta-->
     <%- include("./partials/oferta") %>
-    <!--FIM-oferta-->
     </div>
-    <div class="ctn-oferta-web"></div>
-    
+     <!--ofertaEnd-->
+     <!--ofertaWeb-->
+    <div class="ctn-oferta-web">
+      <%- include("./partials/ofertaWeb") %> 
+    </div>
+    <!--ofertaWebEnd-->
     <!--Footer-->
     <%- include("./partials/footer") %>
-    <!--footer-fim-->
+    <!--footerEnd-->
     
   </body>
 </html>
