@@ -48,7 +48,7 @@ form.example::after {
 
 .pnome {
   font-size: clamp(2rem, 2.5vw, 2.8rem);
-  display: block;
+  text-align: center;
   margin-bottom: 0.8rem;
 }
 
