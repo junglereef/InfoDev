@@ -137,20 +137,47 @@
     color: inherit;
   }
   
+  .searchbar {
+    margin-top: -2rem;
+}
+  .searchbar input[type="text"] {
+    padding: 8.5px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    background: var(--white-color);
+  }
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: var(--acent-color);
+  color: var(--white-color);
+  font-size: clamp(1.8rem, 2.5vw, 3.2rem);
+  border: 1px solid grey;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+}
+
   .ctn-home-banner-web {
     display: none;
   }
 
 
+
   /*BODY*/
   h2{
     color: var(--blue-color);
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
   }
   /* FOOTER  */
 
   
   .rodape {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
     margin-top: 0.60rem;
     margin-bottom: 3rem;
     display: flex;
@@ -206,4 +233,30 @@
   .bottom-logo>img {
     
     width: 250px;
+      }
+
+      @media (min-width: 768px) {
+        .nav {
+          display: block;
+        }
+
+      
+        .menu li img {
+          margin-bottom: -5px;
+        }
+      
+        .rodape-principal {
+          margin-top: 0.60rem;
+          display: block;
+      
+        }
+      
+        .rodape {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      
+        }
       }
