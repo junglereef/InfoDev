@@ -145,7 +145,7 @@
     border: 1px solid grey;
     float: left;
     width: 80%;
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.9rem);
     background: var(--white-color);
   }
 /* Style the submit button */
