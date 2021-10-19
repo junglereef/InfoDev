@@ -21,7 +21,7 @@ const mainController = {
     res.render("user", { page: "Minha Conta" });
   },
   painel: (req, res) => {
-    res.render("painel-usuario", { page: "Painel do usuário"});
+    res.render("user-panel", { page: "Painel do usuário"});
   },
   telaConfirmacao: (req, res) => {
     res.render("pedido-finalizado", { page: "Pedido finalizado"});

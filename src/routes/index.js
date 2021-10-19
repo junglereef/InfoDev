@@ -9,7 +9,7 @@ routes.get("/carrinho", mainController.carrinho);
 routes.get("/checkout", mainController.checkout);
 routes.get("/login", mainController.login);
 routes.get("/user", mainController.user);
-routes.get("/painel-usuario", mainController.painel);
+routes.get("/user-panel", mainController.painel);
 routes.get("/pedido-finalizado", mainController.telaConfirmacao);
 
 module.exports = routes;

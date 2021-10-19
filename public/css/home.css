@@ -1,57 +1,11 @@
-:root {
-  --primary-color: #ff4500;
-  --acent-color: #864636;
-  --white-color: #f1f1f1;
-  --gray-color: #939597;
-  --secondary-color: #ff8c00;
-  --primary-light: #ea834b;
-}
 
-* {
-  margin: 0px;
-  padding: 0px;
-  border: none;
-  list-style: none;
-  outline: none;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-  /* 62.5 = 10px = 1rem  */
-}
-
-body {
-  min-height: 100vh;
-}
-
-.bd-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-header {
-  margin: 0.8vw;
-  height: 105px;
-}
-
-.logo img {
-  max-height: 41px;
-  max-width: 120px;
-}
-
-.home-image-mobile img {
-  width: 100%;
-}
 
 .searchbar input[type="text"] {
-  padding: 10px;
+  padding: 8.5px;
   border: 1px solid grey;
   float: left;
   width: 80%;
-  font-size: 17px;
+  font-size: 2.2rem;
   background: var(--white-color);
 }
 
@@ -62,7 +16,7 @@ form.example button {
   padding: 10px;
   background: var(--acent-color);
   color: var(--white-color);
-  font-size: 22px;
+  font-size: 2.4rem;
   border: 1px solid grey;
   border-left: none;
   /* Prevent double borders */
@@ -82,99 +36,7 @@ form.example::after {
 
 /* HEADER */
 
-.menu {
-  margin-top: 0.4rem;
-  text-align: center;
-  margin-bottom: 0.82em;
-}
 
-.menu ol {
-  display: flex;
-  align-content: center;
-}
-
-.menu li {
-  padding: 0;
-  list-style-type: none;
-  display: inline;
-  text-align: center;
-}
-
-.top-header {
-  margin: 2vh 5vw;
-  font-size: 1.7rem;
-}
-
-.top-icons {
-  margin: 3vh 2vw;
-  width: 30vw;
-  display: flex;
-  justify-content: space-between;
-  color: var(--gray-color);
-}
-
-.top-icons a {
-  color: var(--gray-color);
-}
-
-.top-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
-  margin-bottom: 0.5em;
-}
-
-.topnav {
-  display: none;
-}
-
-#nav__checkbox {
-  display: none;
-}
-
-.close {
-  text-align: center;
-  display: none;
-}
-
-#nav__checkbox:checked~#navbar-list li {
-  display: block;
-}
-
-#nav__checkbox:checked~label.nav__toggle .close {
-  display: block;
-}
-
-#nav__checkbox:checked~label.nav__toggle .menu {
-  display: none;
-}
-
-#nav__checkbox:checked~div.top-menu .logo {
-  display: none;
-}
-
-#navbar-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
-#navbar-list li {
-  list-style: none;
-  display: none;
-}
-
-#navbar-list a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.ctn-home-banner-web {
-  display: none;
-}
 
 /*DEPARTAMENTO*/
 
@@ -184,13 +46,11 @@ form.example::after {
 }
 
 /* OFERTA */
-.ctn-oferta-mobile {
-  font-size: 1.5rem;
+.ctn-offer {
+  font-size: 2.8rem;
 }
 
-.ctn-oferta-mobile h2 {
-  color: #365dae;
-  font-family: "roboto_condensedbold";
+.ctn-offer>h2 {
   padding: 16px 22px;
   text-transform: uppercase;
   margin-top: 0px;
@@ -215,78 +75,6 @@ form.example::after {
   display: block;
   margin-bottom: 0.8rem;
 }
-
-.ctn-oferta-web {
-  display: none;
-
-}
-
-
-/* FOOTER  */
-.rodape-principal {
-  font-size: 1.5rem;
-  /*display: flex;
-  flex-wrap: wrap;
-  justify-content: center;*/
-
-}
-
-.rodape {
-  margin-top: 0.60rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-}
-
-.rsocial-icon {
-  margin-top: 0.60rem;
-}
-
-.rsocial-icon a {
-  margin-bottom: 2rem;
-  align-items: center;
-  color: #ff4500;
-}
-
-.rsocial-icon a img {
-  margin-right: 3px;
-}
-
-.usuario,
-.rsocial {
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.usuario h2,
-.rsocial h2 {
-  margin-bottom: 1rem;
-
-}
-
-.rodape ol {
-  list-style-type: none;
-}
-
-.rodape li {
-  margin-bottom: 0.8rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rodape a:link {
-  text-decoration: none;
-
-}
-
-.logo img {
-  width: 150px;
-}
-
 
 /*Pagina Produto*/
 
@@ -387,7 +175,7 @@ span.preco {
     text-align: center;
     padding: 0 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 2.8rem;
   }
 
   .topnav a :hover:not(.active) {
@@ -411,14 +199,11 @@ span.preco {
     width: 100%;
     height: auto;
   }
-
-  .ctn-oferta-mobile {
+/*
+  .ctn-offer-mobile {
     display: none;
-  }
+  }*/
 
-  .ctn-oferta-web {
-    display: block;
-  }
 
   /*SLider CSS*/
   .carousel {
@@ -768,7 +553,7 @@ span.preco {
 
 
   .pnome {
-    font-size: 3rem;
+    font-size: 2.8rem;
     display: block;
     margin-bottom: 1rem;
   }
@@ -795,7 +580,7 @@ span.preco {
 
   /*.pesquisa{
 	
-}*/
+}*//*
   .pesquisa input {
     margin-top: 20px;
     width: 500px;
@@ -816,7 +601,7 @@ span.preco {
     list-style-type: none;
     font-weight: 600;
     padding: 10px;
-  }
+  }*/
 
   .rodape-principal {
     margin-top: 0.60rem;

@@ -1,60 +1,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <%- include("./partials/head")%>
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-  <script src="/public/js/homeslider.js"></script>
-    
-   
-  <body>
-    <!--header-->
-    <%- include("./partials/header") %>
-    <!--header-end-->
-    <!--bannerMobile-->
-    <div class="home-image-mobile">
-      <img src="images\app_banner.png" alt="" />
-    </div>
-    <!--bannerMobileEnd-->
-    <!--bannerWeb-->
-    <div class="ctn-home-banner-web">
-      <img src="images\banner_img_new.jpg" alt="" />
-    </div>
-    <!--bannerWebEnd-->
-    <!--departmentSection-->
-    <div class="deptHomeWeb">
-      <div class="topHomeDeptWeb">
-        <div class="infoLeft"></div>
-        <div class="infoRight"></div>
-      </div>
-      <div class="bodyHomeDeptWeb">
-        <div class="innerBodyHomeDeptWeb">
-          <div class="topProductSliderInnerBodyDeptWeb"></div>
-          <div class="bannerBlockInnerBodyDeptWeb">
-            <%- include("./partials/ofertaWeb") %>
-          </div>
-          <div class="deptCategoriesBodyDeptWeb"></div>
-        </div>
-      </div>
-    </div>
-    <!--departmentSectionEnd-->
-    <div class="ctn-oferta-mobile">
-    <!--oferta-->
-    <%- include("./partials/oferta") %>
-    </div>
-     <!--ofertaEnd-->
-     <!--ofertaWeb-->
-    <div class="ctn-oferta-web">
-      <%- include("./partials/ofertaWeb") %> 
-    </div>
-    <!--ofertaWebEnd-->
-    <!--Footer-->
+<%- include("./partials/head")%>
+<link rel="stylesheet" href="/css/global.css" />
+<link rel="stylesheet" href="/css/home.css" />
+
+<body>
+  <!--header-->
+  <%- include("./partials/header") %>
+  <!--header-end-->
+  <!--bannerMobile-->
+  <div class="home-image-mobile">
+    <img src="images\app_banner.png" alt="" />
+  </div>
+  <!--bannerMobileEnd-->
+  <!--bannerWeb-->
+  <div class="ctn-home-banner-web">
+    <img src="images\banner_img_new.jpg" alt="" />
+  </div>
+  <!--bannerWebEnd-->
+   <!--offer-->
+  <div class="ctn-offer">
+    <%- include("./partials/offers") %>
+  </div>
+  <!--offerEnd-->
+  <!--footer-->
+  <div class="footerHome">
     <%- include("./partials/footer") %>
-    <!--footerEnd-->
-    
-  </body>
+  </div>
+  <!--footerEnd-->
+
+</body>
+
 </html>
