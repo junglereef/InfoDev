@@ -76,6 +76,7 @@ form.example::after {
   margin-bottom: 0.8rem;
 }
 
+
 /*Pagina Produto*/
 
 
@@ -551,6 +552,12 @@ span.preco {
 
 @media (min-width: 768px) {
 
+  .ctn-offer{
+    position: relative; 
+    top: -325px;
+    background-color: #fff;
+  }
+  
 
   .pnome {
     font-size: 2.8rem;
