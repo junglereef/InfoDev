@@ -31,7 +31,7 @@
   border-top: 1px solid var(--gray-color);
 }
 
-.pnome {
+.pname {
   font-size: clamp(2rem, 2.5vw, 2.8rem);
   text-align: center;
   margin-bottom: 0.8rem;
@@ -49,9 +49,7 @@
     
   }
 
-  .ctn-home-banner-web {
-    height: 45vh;
-  }
+
 
   .prodcuts-grid {
     display: grid;

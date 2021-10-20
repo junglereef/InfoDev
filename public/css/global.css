@@ -138,26 +138,30 @@
   }
   
   .searchbar input[type="text"] {
-    padding: 8.5px;
+    padding: 1rem;
     border: 1px solid grey;
     float: left;
     width: 80%;
-    font-size: clamp(2.5rem, 2.2vw, 3rem);
+    font-size: clamp(2rem, 2.2vw, 4rem);
     background: var(--white-color);
   }
 
 /* Style the submit button */
-form.example button {
+form.searchbar-form button {
   float: left;
   width: 20%;
-  padding: 10px;
+  padding: 1.28rem;
   background: var(--acent-color);
   color: var(--white-color);
-  font-size: clamp(2.8rem, 2.2vw, 3rem);
+  font-size: clamp(2rem, 2.2vw, 4rem);
   border: 1px solid grey;
   border-left: none;
   /* Prevent double borders */
   cursor: pointer;
+}
+
+form.searchbar-form input::placeholder {
+text-align: center;
 }
 
   .ctn-home-banner-web {
@@ -305,8 +309,8 @@ form.example button {
 
   .ctn-home-banner-web {
     display: block;
-
-  }
+    height: 60vh;
+    }
 
   .ctn-home-banner-web img {
     width: 100%;
