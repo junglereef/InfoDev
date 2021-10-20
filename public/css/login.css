@@ -1,35 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  font-family: /*"Montserrat"*/"Roboto", sans-serif;
-}
-/*
-#login-page {
+
+.ctn-login-page-box {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-}*/
-.login-page-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20rem 0;
 }
 
-.login-input-label {
+/* .login-input-label {
   position: relative;
-}
+} */
 
 .login-input {
-  font-family: sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
   color: #000;
   background: transparent;
 
@@ -45,7 +27,7 @@
   width: 20rem;
   padding: 1rem 2rem 1rem 2rem;
   text-align: center;
-  font-size: 1.rem;
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
   font-weight: 600;
   background: #ff4500;
   color: #fff;
@@ -70,7 +52,11 @@
   cursor: pointer;
 }
 
-.label-content {
+.login-info {
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  text-align: center;
+}
+/* .label-content {
   color: #f9f9f9;
   font-size: 1.1rem;
   user-select: none;
@@ -86,7 +72,7 @@
   background: #fff;
 
   transition: top 0.2s, font-size 0.2s, color 0.2s;
-}
+} */
 
 .login-input:focus + .label-content,
 .login-input:not(:placeholder-shown) + .label-content {
@@ -99,16 +85,16 @@
   color: #1c1c1c;
 }
 
-@media (min-width: 370px) and (max-width: 660px) {
-  .login-page-box {
+@media (min-width: 800px)  {
+  /* .login-page-box {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .ogin-input-label {
+  } */
+  /* .ogin-input-label {
     width: 300px;
   }
   .login-submit-btn {
     width: 280px;
-  }
+  } */
   
 }

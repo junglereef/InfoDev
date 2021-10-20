@@ -3,7 +3,7 @@ h1.nome-produto {
     font-size: 4em;
   }
   
-  .descricao-detalhado {
+  .detailed-description {
     margin-bottom: 30px;
     margin-top: 10px;
     text-align: center;
@@ -57,7 +57,7 @@ h1.nome-produto {
   
   }
   
-  .descrição-produto hr {
+  .product-description hr {
     margin-bottom: 2vh;
     border-bottom: 2px solid var(--gray-color);
     margin: 1rem;

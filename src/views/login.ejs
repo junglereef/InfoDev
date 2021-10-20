@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-<!DOCTYPE html>
 <html lang="pt-BR">
-  <%- include('./partials/head')%>
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/login.css" />
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/global.css" />
+<link rel="stylesheet" href="/css/login.css" />
 
+
+<body>
+  <!--header-->
   <%- include('./partials/header')%>
-  <body id="login-page">
-    <section class="login-page-box">
-      <label class="login-input-label">
-        <input class="login-input" name="user" type="user" placeholder=" " />
-        <p class="label-content">Usuario</p>
-      </label>
+  <!--header-end-->
+ 
+    
+  <div class="ctn-login-page-box">
+    <form id="form_login">
+    <label class="login-input-label">
+      <input class="login-input" name="user" type="user" placeholder="Usuario" />
+    </label>
 
-      <label class="login-input-label">
-        <input
-          class="login-input"
-          name="password"
-          type="password"
-          placeholder=" "
-        />
-        <p class="label-content">Senha</p>
-      </label>
-      <label>
-        <button class="login-submit-btn" type="submit">Entrar</button>
-      </label>
-      <div class="forget-password">
-        <p>
-          Esqueceu a senha? <a><strong>clique aqui</strong></a>
-        </p>
-      </div>
-    </section>
-    <%- include('./partials/footer')%>
-  </body>
+    <label class="login-input-label">
+      <input class="login-input" name="password" type="password" placeholder="Senha " />
+    </label>
+    <label>
+      <button class="login-submit-btn" type="submit">Entrar</button>
+    </label>
+    <div class="forget-password">
+      <p class= "login-info">
+        Esqueceu a senha? <a><strong>clique aqui</strong></a>
+      </p>
+    </div>
+  </form>
+  </div>
+
+  <div class="footerBox">
+    <%- include("./partials/footer") %>
+  </div>
+</body>
+
 </html>
