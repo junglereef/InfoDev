@@ -50,7 +50,7 @@
   .menu {
     margin-top: 0.4rem;
     text-align: center;
-    margin-bottom: 0.82em;
+    margin-bottom: 0.4rem;
   }
   
   .menu ol {
@@ -142,9 +142,10 @@
     border: 1px solid grey;
     float: left;
     width: 80%;
-    font-size: clamp(1.8rem, 2.5vw, 2.9rem);
+    font-size: clamp(2.5rem, 2.2vw, 3rem);
     background: var(--white-color);
   }
+
 /* Style the submit button */
 form.example button {
   float: left;
@@ -152,7 +153,7 @@ form.example button {
   padding: 10px;
   background: var(--acent-color);
   color: var(--white-color);
-  font-size: clamp(1.8rem, 2.5vw, 3.2rem);
+  font-size: clamp(2.8rem, 2.2vw, 3rem);
   border: 1px solid grey;
   border-left: none;
   /* Prevent double borders */
@@ -232,28 +233,106 @@ form.example button {
     width: 250px;
       }
 
-      @media (min-width: 768px) {
-        .nav {
-          display: block;
-        }
-
-      
-        .menu li img {
-          margin-bottom: -5px;
-        }
-      
-        .rodape-principal {
-          margin-top: 0.60rem;
-          display: block;
-      
-        }
-      
-        .rodape {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: space-around;
-      
-        }
+      form.example button:hover {
+        background: var(--acent-color);
       }
+      
+      /* Clear floats */
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /*  MEDIA QUERIES */
+@media (min-width: 800px) {
+
+.nav {
+      display: block;
+    }
+
+  
+    .menu li img {
+      margin-bottom: -5px;
+    }
+  
+    .rodape-principal {
+      margin-top: 0.60rem;
+      display: block;
+  
+    }
+  
+    .rodape {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  
+    }
+  .topnav {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 1em; */
+  }
+
+  .topnav a {
+    color: var(--gray-color);
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 2.8rem;
+  }
+
+  .topnav a :hover:not(.active) {
+    background-color: #ea834b;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .home-image-mobile {
+    display: none;
+  }
+
+  .ctn-home-banner-web {
+    display: block;
+
+  }
+
+  .ctn-home-banner-web img {
+    width: 100%;
+    height: auto;
+  } 
+  
+
+
+  .menu li img {
+    margin-bottom: -5px;
+  }
+
+  .rodape-principal {
+    margin-top: 0.60rem;
+    display: block;
+
+  }
+
+  .rodape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+
+ 
+}
