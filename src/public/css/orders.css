@@ -1,6 +1,6 @@
 /* PAINEL-USUARIO */
 
-.painel-usuario{
+/* .painel-usuario{
     display: flex;
   }
   
@@ -29,8 +29,13 @@ margin-bottom: 20px;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-}
+} */
 
+.user-panel {
+  margin: 10rem;
+  display: flex;
+  justify-content: flex-end;
+}
 .avatar {
   vertical-align: middle;
   width: 50px;
@@ -186,8 +191,13 @@ main {
     flex: 2;
     /* margin-left: 150px; */
 }
+
+.orders {
+  margin: 10rem;
+}
 .pfinalizado h2{
-    font-size: 40px;
+ 
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
 }
 .resumo{
     /* margin-right: 30px;

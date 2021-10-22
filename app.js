@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const port = 3000;
 //Definindo Pasta Pública
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src/public")));
 
 //Definindo view Engine e Pasta Views
 app.set("view engine", "ejs");
