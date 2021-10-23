@@ -12,8 +12,8 @@ const produtosController = {
   cancelar: (req, res) => {
     res.send("Apagar produtos");
   },
-  categoria: (req, res) => {
-    res.render("categoria", { page: "Categoria" });
+  departamentos: (req, res) => {
+    res.render("departamentos", { page: "Departamentos" });
   },
 };
 

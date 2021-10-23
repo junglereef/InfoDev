@@ -1,20 +1,15 @@
 /*DEPARTAMENTO*/
 
-.deptHomeWeb {
-    display: none;
-  
-  }
-  
   /* OFERTA */
   .ctn-category {
     font-size: clamp(2rem, 2.5vw, 2.8rem);
-  
+    margin: 10rem;
   }
   
   .ctn-category>h2 {
-    padding: 16px 22px;
+    /* padding: 16px 22px; */
     text-transform: uppercase;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     text-align: center;
   }
   
@@ -25,18 +20,19 @@
     border-bottom: 2px solid var(--gray-color);
     margin: 1rem;
   }
-  
-  .ctn-category {
-    margin: 10rem;
-    /* border-top: 1px solid var(--gray-color); */
-  }
-  
+    
   .pname {
     font-size: clamp(2rem, 2.5vw, 2.8rem);
     text-align: center;
     margin-bottom: 0.8rem;
+    
+
   }
-  
+  .pname a {
+    color: #365dae;
+    text-decoration-line: none;
+
+  }
   
   /*  MEDIA QUERIES */
   @media (min-width: 800px) {

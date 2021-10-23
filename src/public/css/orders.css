@@ -1,276 +1,77 @@
-/* PAINEL-USUARIO */
-
-/* .painel-usuario{
-    display: flex;
-  }
-  
-.corpo {
-display: flex;
-justify-content: left;
-margin: 10px;
-margin-bottom: 20px;
-}
-.corpo-painel-usuario {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.compras {
-  margin-top: 2rem;
-  color: #ff4500;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.compras-meio,
-.compras-meio h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-} */
-
-.user-panel {
+.orders {
   margin: 10rem;
   display: flex;
-  justify-content: flex-end;
-}
-.avatar {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.user-info {
-  text-align: center;
-  margin-bottom: 5em;
-}
-
-.user-details p,
-.user-details h2 {
-  font-size: 2rem;
-}
-
-.profile-btn {
-  width: 20rem;
-  padding: 1rem 2rem 1rem 2rem;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #ff4500;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  border: 2px solid #ff4500;
-}
-
-.user-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5em;
-}
-
-.client-avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.titulo-pedidos-favoritos{
-  text-align: center;
-  padding: 30px;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-variant: small-caps;
-  font-weight: bold;
-}
-
-.quadro-pedidos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
-  margin-top: 16px;
-  padding: 20px;
-  border-radius: 20px;
-  margin-left: 50px;
-  width: 300px;
-}
-.todos-quadro-pedidos{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-.seta-pedidos{
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-}
-.seta-pedidos img{
-  margin-top: 10px;
-  width: 40px;
-}
-.detalhes-pedido-titulo{
-  font-size: 13px;
-  font-weight: bold;
-}
-.detalhes-pedido{
-  font-size: 11px;
-  font-weight: bold;
-  color: #363636;
-}
-
-.quadro-pedidos-favoritos-descricao {
-  display: flex;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
-  margin-top: 10px;
-  padding: 32px;
-  border-radius: 12px;
-  margin-left: 45px;  
-}
-.section-favoritos{
-  display: flex;
-  justify-content: left;
-  padding: 5px;
-  flex-wrap: wrap;
-}
-
-.quadro-pedidos-favoritos {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  padding: 10px;
   flex-direction: column;
 }
-
-
-.titulo-favoritos-usuario {
-  display: flex;
-  -webkit-box-align: center;
-  justify-content: flex-start;
-  font-weight: bold;
-  font-size: 14px;
-  color: rgb(66, 70, 77);
-}
-  
-.pedidos-favoritos-usuario-descritivo {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: normal;
-  color: rgb(66, 70, 77);
-  
+.order-confirmation h2{
+ 
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
 }
 
-.ctn-detalhe-pedido {
+
+.ctn-order-detail {
     margin-top: 2em;
     text-align: center;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-.panel-user{
-    max-width: 30%;
-    flex:2;
-    margin-left: 20px;
-    margin-top: 20px;
-    
-}
-.img-pedido-ok img{
-    width: 300px;
+.order-img-check img{
+    width: 30rem;
     align-items: center;
     flex: 2;
     /* margin-left: 150px; */
 }
 
-.orders {
-  margin: 10rem;
+.confirmation-msg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
 }
-.pfinalizado h2{
- 
-  font-size: clamp(2rem, 2.5vw, 2.8rem);
-}
-.resumo{
+.confirmation-msg-box{
     /* margin-right: 30px;
     margin-top: 40px; */
-    font-size: 15px;
-    padding: 10px;
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    padding: 1rem;
     border: 1px solid #ff4500;
     margin-bottom: 20px;
     /* width: 250px; */
     border-radius: 10px;
 }
-.r-resumo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2em;
+
+.confirmation-details{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ff4500;
 }
-.resumo h3{
+.confirmation-details h3{
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
 }
-.resumo-pedido{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ff4500;
-}
-.e-resumo{
+
+.confirmation-details-box{
     margin-bottom: 0.5em;
 }
-.resumo-pedido .preco{
+.confirmation-details .price{
     font-weight: bold;
 }
-.d-entrega{
+.ctn-delivery{
     text-align: center;
 }
-.d-entrega p{
-    font-size: 13px;
+.ctn-delivery p{
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
     text-align: left;
     font-weight: bold;
 }
-.d-entrega input{
-    margin-top: 20px;
-    padding: 15px 20px;
-    border-radius: 10px;
+.ctn-delivery input{
+    margin: 2rem;
+    padding: 1.8rem 2rem;
+    border-radius: 5rem;
     background-color: #ff4500;
     color: white;
     font-weight: bold;
 }
-/* 
-@media(min-width: 320px) and (max-width: 568px){
-    main{
-        display: flex;
-        flex-direction: column;
-    }
-    .panel-user{
-        margin-left: 50px;
-    }
-    .pfinalizado{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        align-items: center;
-    }
-    .pfinalizado h2{
-        font-size: 20px;
-        text-align: center;
-        margin-left: 100px;
-     
-    }
-    .r-resumo{
-        align-items: center;
-        margin-left: 100px;
-    }
-} */
+/*  MEDIA QUERIES */
+@media (min-width: 800px) {
+}

@@ -3,41 +3,85 @@
 <%- include("./partials/head")%>
 <link rel="stylesheet" href="/css/global.css" />
 <link rel="stylesheet" href="/css/product.css" />
-<body>
+ <!-- Scripts -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+ <script src="/scripts/main.js" charset="utf-8"></script>
+ <body>
     <!--header-->
     <%- include("./partials/header") %>
     <!--header-fim-->
-    <main>
-        <div class="bloco-produto">
-            
-                <div class="imagem-produto">
-                    <img src="/images/cadeira-gamer.jpg" alt="cadeira-gamer" class="responsive">
-                </div>
-            
-            <div class = "product-description">
-                <div class="titulo-produto detailed-description">
-                    <h1 class="nome-produto">Cadeira Gamer Husky Gaming Snow, Black - HSN-BK</h1>
-                </div>
-                
-                    <div class="ctn-preco detailed-description">
-                        <span class="preco"> À vista por R$ 695</span>
-                    </div>
-                    <div class = "calculo-frete detailed-description">
-                        <input id = "numero-cep" type = "number" placeholder="Digite seu CEP" />
-                        <input id = "procurar-cep" type="submit" value = "CALCULAR FRETE" />
-                    </div>
-                    <div class="ctn-checkout detailed-description">
-                        <button name="" type="submit" class="button-laranja" id="">
-                            COMPRAR</button>
-                    </div>
-                    <hr> 
-                    
-            </div>
+    <main class="container">
+ 
+        <!-- Left Column / Headphones Image -->
+        <div class="left-column">
+          <img data-image="black" src="images/black.png" alt="">
+          <img data-image="blue" src="images/blue.png" alt="">
+          <img data-image="red" class="active" src="images/red.png" alt="">
         </div>
-    </main>
+       
+       
+        <!-- Right Column -->
+        <div class="right-column">
+       
+          <!-- Product Description -->
+          <div class="product-description">
+            <span>Games</span>
+            <h1>Beats EP</h1>
+            <p>
+                A escolha preferida de uma vasta gama de DJs aclamados. Som forte, focado em graves e alto isolamento. Faixa de cabeça resistente e almofadas na orelha adequadas para apresentações ao vivo.</p>
+          </div>
+       
+          <!-- Product Configuration -->
+          <div class="product-configuration">
+       
+            <!-- Product Color -->
+            <div class="product-color">
+              <span>Cor</span>
+       
+              <div class="color-choose">
+                <div>
+                  <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                  <label for="red"><span></span></label>
+                </div>
+                <div>
+                  <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                  <label for="blue"><span></span></label>
+                </div>
+                <div>
+                  <input data-image="black" type="radio" id="black" name="color" value="black">
+                  <label for="black"><span></span></label>
+                </div>
+              </div>
+       
+            </div>
+       
+            <!-- Cable Configuration -->
+            <div class="cable-config">
+              <span>Configurações</span>
+       
+              <div class="cable-choose">
+                <button>Padrão</button>
+                <button>Coiled</button>
+                <button>Long-coiled</button>
+              </div>
+       
+              <a href="#">Como configurar seus fones de ouvido</a>
+            </div>
+          </div>
+       
+          <!-- Product Pricing -->
+          <div class="product-price">
+            <span>148R$</span>
+            <a href="#" class="cart-btn">Adicionar ao Carrinho</a>
+          </div>
+        </div>
+      </main>
     <!--footer-->
+  <div class="footerBox">
+    <hr>
     <%- include("./partials/footer") %>
-    <!--footer-fim-->
+  </div>
+  <!--footerEnd-->
 </body>
 
 </html>

@@ -9,31 +9,31 @@
     <%- include("./partials/header") %>
     <!--header-end-->
     <main class= "orders">
-        <div class = "pfinalizado">
-            <div class ="ctn-detalhe-pedido">
+        <div class = "order-confirmation">
+            <div class ="ctn-order-detail">
                 <h2>Pedido realizado com sucesso!</h2>
-                <div class="img-pedido-ok">
+                <div class="order-img-check">
                     <img src = "/images/ok.png" />
                 </div>
             </div>
-            <div class = r-resumo>
-                <div class = "resumo">
+            <div class = confirmation-msg>
+                <div class = "confirmation-msg-box">
                     <div>
                         <h3>Resumo do pedido</h3>
                     </div>
-                    <div class = "resumo-pedido">
+                    <div class = "confirmation-details">
                         <p>Pedido</p>
-                        <p class = "preco">29,90</p>
+                        <p class = "price">29,90</p>
                     </div>
-                    <div class = "resumo-pedido">
+                    <div class = "confirmation-details">
                         <p>Frete</p>
-                        <p class = "preco">9,90</p>
+                        <p class = "price">9,90</p>
                     </div>
-                    <div class = "resumo-pedido e-resumo">
+                    <div class = "confirmation-details confirmation-details-box">
                         <p>Total da compra</p>
-                        <p class = "preco">39,80</p>
+                        <p class = "price">39,80</p>
                     </div>
-                    <div class = "d-entrega">
+                    <div class = "ctn-delivery">
                         <p> * Prazo para entrega 08 dias úteis</p>
                         <input type = "submit" name = "acompanhamento" value = "Acompanhe sua entrega"/>
                     </div>
@@ -43,7 +43,9 @@
         </div>
     </main>
     <!--Footer-->
+    <div class="footerBox">
     <%- include("./partials/footer") %>
+    </div>
     <!--footer-fim-->
     
   </body>

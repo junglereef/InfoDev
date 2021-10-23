@@ -20,7 +20,9 @@ app.use(express.json()); /*Adicionado do print de aula 27072021*/
 // Desabilitando Encoded
 app.use(express.urlencoded({ extended: false })
 ); /*Adicionado do print de aula 27072021*/
-// Definindo port de escuta
+
+
 app.listen(port, () => {
   console.log(`O servidor esta rodando em http://localhost:${port}`);
 });
+// Definindo port de escuta
