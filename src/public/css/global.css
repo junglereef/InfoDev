@@ -169,9 +169,9 @@ form.searchbar-form button {
   cursor: pointer;
 }
 
-form.searchbar-form input::placeholder {
+/* form.searchbar-form input::placeholder {
 text-align: center;
-}
+} */
 
 .ctn-home-banner-web {
   display: none;
