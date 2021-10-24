@@ -65,8 +65,6 @@ $ npm run dev
 
 ## :memo: Licença
 
-Este projeto está sob licença MIT. Veja o arquiv `LICENSE.txt` para maiores informações.
-
 Project Link: [https://github.com/junglereef/InfoDev](https://github.com/junglereef/InfoDev)
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
