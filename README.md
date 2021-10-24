@@ -3,11 +3,8 @@ Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? 
 
 <p align="center">
   <a href="https://www.figma.com/file/IkWuJViU7BSWwdWgzydQsG/InfoDev">Layout</a> &#xa0; | &#xa0;
-  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-começando">Começando</a> &#xa0;  | &#xa0; 
-  <a href="#sparkles-etapas">Etapas</a> &#xa0;| &#xa0;
-  <a href="#heavy_check_mark-equipe">Equipe</a> &#xa0;| &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0;  | &#xa0;
   <a href="#memo-licença">Licença</a> &#xa0 
 </p>
 
