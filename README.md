@@ -49,28 +49,10 @@ Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.co
 
 ```bash
 # Clone este repositório
-$ git clone ## :checkered_flag: Começando
-
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
-
-```bash
-# Clone este repositório
-$ git clone ## :checkered_flag: Começando
-
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
-
-```bash
-# Clone este repositório
-$ git clone ## :checkered_flag: Começando
-
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
-
-```bash
-# Clone este repositório
 $ git clone https://github.com/junglereef/InfoDev
 
 # Entre na pasta
-$ cd infoDev
+$ cd infodev
 
 # Instale as dependências
 $ npm install
