@@ -15,10 +15,6 @@ Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? 
 
 ## :dart: Sobre o Projeto
 <br>
-<div align="center">
-<img  src="./.github/preview.gif" alt="Logo">
-</div>
-<br>
 <br>
 Como projeto integrador (projeto desenvolvido durante todo o decorrer do curso e a ser entregue ao final como comprovação para certificação) foi nos dado o desafio de desenvolver uma plataforma de ecommerce, em que o tema seria a nossa escolha e onde iríamos criando e refatorando o código a cada nova tecnologia/módulo que fossemos aprendendo.
 
