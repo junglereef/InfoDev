@@ -37,6 +37,9 @@
   margin-bottom: 0.8rem;
 }
 
+.footerBoxMain hr {
+  display:none;
+}
 
 /*  MEDIA QUERIES */
 @media (min-width: 800px) {
@@ -46,8 +49,6 @@
     background-color: #fff;
     
   }
-
-
 
   .prodcuts-grid {
     display: grid;
@@ -64,5 +65,8 @@
 
   }
  
+  .footerBoxMain hr {
+    display:block;
+  }
 
 }

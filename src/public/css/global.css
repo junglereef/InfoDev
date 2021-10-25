@@ -330,16 +330,18 @@ form.example::after {
     margin-bottom: -5px;
   }
 
-  .footerBox hr {
-    margin-bottom: 2vh;
-    border-bottom: 2px solid var(--gray-color);
-    margin: 1rem;
-  }
+
 
   .footerBoxMain {
     margin-top: 0.60rem;
     display: block;
 
+  }
+
+  .footerBoxMain hr {
+    margin-bottom: 2vh;
+    border-bottom: 2px solid var(--gray-color);
+    margin: 1rem;
   }
 
   .footerBoxMainGrid {
