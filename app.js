@@ -2,6 +2,10 @@ const express = require('express');
 const path = require("path");
 const app = express();
 const port = 3000;
+
+const logger = require("morgan");
+app.use(logger("dev"));
+/*https://expressjs.com/en/resources/middleware/morgan.html*/
 //Definindo Pasta Pública
 app.use(express.static(path.join(__dirname, "src/public")));
 

@@ -21,6 +21,16 @@ module.exports = (connection, DataTypes) => {
     }
 );
 
+User.associate = (models) => {
+    
+    User.hasMany(models.Order, {
+      foreignKey: "user_id",
+    });
+    User.hasMany(models.Address, {
+        foreignKey: "user_id",
+      });
+  };
+
 return User;
 
 }
