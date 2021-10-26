@@ -18,17 +18,30 @@ module.exports = (connection, DataTypes) => {
         manufacturer_id: DataTypes.INTEGER,
         width: DataTypes.INTEGER,
         height: DataTypes.INTEGER,
-        lenght: DataTypes.INTEGER,
+        length: DataTypes.INTEGER,
         weight: DataTypes.INTEGER,
         createdAt: DataTypes.DATE,
 
     },
     {
-        tableName: "product", 
+        tableName: "products", 
         timestamps: "true"
 
     }
 );
+
+Product.associate = (models) => {
+    Product.belongsTo(models.Manufacturer, {
+      foreignKey: "manufacturer_id",
+    });
+
+    Product.hasMany(models.OrderItem, {
+      foreignKey: "product_id",
+    });
+    Product.hasMany(models.ProductHasCategory, {
+        foreignKey: "product_id",
+      });
+  };
 
 return Product;
 

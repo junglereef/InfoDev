@@ -1,6 +1,6 @@
 module.exports = (connection, DataTypes) => {
-    const User = connection.define(
-        "User",
+    const Manufacturer = connection.define(
+        "Manufacturer",
     {
         id:{
             type: DataTypes.INTEGER,
@@ -8,19 +8,24 @@ module.exports = (connection, DataTypes) => {
             autoIncrement: true,
         },
         name: DataTypes.STRING(200),
-        email: DataTypes.STRING(200),
-        password: DataTypes.STRING(256),
-        user_type: DataTypes.BOOLEAN,
         createdAt: DataTypes.DATE,
 
     },
     {
-        tableName: "users", 
+        tableName: "manufacturers", 
         timestamps: "true"
 
     }
 );
 
-return User;
+Manufacturer.associate = (models) => {
+  
+    
+    Manufacturer.hasMany(models.Product, {
+        foreignKey: "manufacturer_id",
+      });
+  };
+
+return Manufacturer;
 
 }

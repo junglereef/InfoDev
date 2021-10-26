@@ -12,7 +12,7 @@ module.exports = (connection, DataTypes) => {
         zipcode: DataTypes.INTEGER,
         recipient: DataTypes.STRING(200),
         street: DataTypes.STRING(200),
-        number: DataTypes.INTEGER(15),
+        number: DataTypes.INTEGER,
         city: DataTypes.STRING(200),
         state: DataTypes.STRING(2),
         neighborhood: DataTypes.STRING(200),
@@ -21,11 +21,28 @@ module.exports = (connection, DataTypes) => {
         
     },
     {
-        tableName: "adress", 
+        tableName: "adresses", 
         timestamps: "true"
 
     }
 );
+
+Adress.associate = (models) => {
+    Adress.belongsTo(models.AddressType, {
+      foreignKey: "adress_type_id",
+    });
+
+    Adress.belongsTo(models.User, {
+        foreignKey: "user_id",
+      });
+
+    Adress.hasMany(models.Order, {
+      foreignKey: "address_id",
+    });
+    
+  };
+
+  
 
 return Adress;
 

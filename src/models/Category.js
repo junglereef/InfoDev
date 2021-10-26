@@ -1,6 +1,6 @@
 module.exports = (connection, DataTypes) => {
-    const User = connection.define(
-        "User",
+    const Category = connection.define(
+        "Category",
     {
         id:{
             type: DataTypes.INTEGER,
@@ -8,19 +8,24 @@ module.exports = (connection, DataTypes) => {
             autoIncrement: true,
         },
         name: DataTypes.STRING(200),
-        email: DataTypes.STRING(200),
-        password: DataTypes.STRING(256),
-        user_type: DataTypes.BOOLEAN,
         createdAt: DataTypes.DATE,
 
     },
     {
-        tableName: "users", 
+        tableName: "categories", 
         timestamps: "true"
 
     }
 );
 
-return User;
+Category.associate = (models) => {
+  
+    
+    Category.hasMany(models.ProductHasCategory, {
+        foreignKey: "category_id",
+      });
+  };
+
+return Category;
 
 }

@@ -2,7 +2,7 @@ create database infodev;
 
 use infodev;
 
-create table product(
+create table products(
 	id int(10) auto_increment primary key,
 	name varchar(200),
 	inventory int(10),
@@ -21,7 +21,7 @@ create table product(
 	updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
-create table manufacturer ( 
+create table manufacturers ( 
 	id int(10) auto_increment primary key,
 	name varchar(100),
 	createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
@@ -29,7 +29,7 @@ create table manufacturer (
 
 );
 
-create table category(
+create table categories(
 	id int(10) auto_increment primary key,
 	name varchar(200),
 	createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
@@ -44,7 +44,7 @@ create table product_has_category(
 	updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
-create table user ( 
+create table users ( 
 	id int(10) auto_increment primary key,
 	name varchar(200),
 	email varchar(200),
@@ -55,7 +55,7 @@ create table user (
 
 );
 
-create table address(
+create table addresses(
   id int(10) auto_increment primary key,
   address_type_id int(15),
   user_id int(10),
@@ -70,52 +70,63 @@ create table address(
   updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
-create table address_type(
+create table addresses_types(
   id int(10) auto_increment primary key,
   address_type varchar(15),
   createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
   updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
-create table request( 
+create table orders( 
 	id int(10) auto_increment primary key,
 	user_id int(10),
-	request_items_id int(10),
+	order_items_id int(10),
 	address_id int(10),
 	shipping_id int(10),
 	freight_price float(5),
-	total_request_price float(5),
+	total_order_price float(5),
 	createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
 	updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
-create table request_items (
+create table order_items_has_product(
+	id int(10) auto_increment primary key,
+	product_id int(10),
+	order_items_id int(10),
+	createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
+	updatedAt timestamp null default current_timestamp() on  update current_timestamp()
+);
+
+
+create table order_items (
 id int(10) auto_increment primary key,
 product_id int(10),
-items_price float(5),
+item_price float(5),
 quantity int(10),
 createdAt TIMESTAMP not null default CURRENT_TIMESTAMP,
 updatedAt timestamp null default current_timestamp() on  update current_timestamp()
 );
 
 
-ALTER TABLE address
-add foreign key (address_type_id) references address_type(id),
-add foreign key (user_id) references user(id);
+ALTER TABLE addresses
+add foreign key (address_type_id) references addresses_types(id),
+add foreign key (user_id) references users(id);
 
-ALTER TABLE product
-add foreign key (manufacturer_id) references manufacturer(id);
+ALTER TABLE products
+add foreign key (manufacturer_id) references manufacturers(id);
 
 
 ALTER TABLE product_has_category
-add foreign key (product_id) references product(id),
-add foreign key (category_id) references category(id);
+add foreign key (product_id) references products(id),
+add foreign key (category_id) references categories(id);
 
-ALTER TABLE request
-add foreign key (user_id) references user(id),
-add foreign key (address_id) references address(id),
-add foreign key (request_items_id) references request_items(id);
+ALTER TABLE orders
+add foreign key (user_id) references users(id),
+add foreign key (address_id) references addresses(id),
+add foreign key (order_items_id) references order_items(id);
 
-ALTER TABLE  request_items
-add foreign key (product_id) references product(id);
+ALTER TABLE order_items_has_product
+add foreign key (product_id) references products(id),
+add foreign key (order_items_id) references order_items(id);
+
 
