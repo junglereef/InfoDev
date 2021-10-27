@@ -12,9 +12,9 @@ const mainController = {
   contato: (req, res) => {
     res.render("contato", { page: "Contato" });
   },
-  login: (req, res) => {
-    res.render("login", { page: "Entre ou Cadastre-se" });
-  },
+  // login: (req, res) => {
+  //   res.render("login", { page: "Entre ou Cadastre-se" });
+  // },
   produto: (req, res) => {
     res.render("produto", { page: "Produto" });
   },
@@ -31,13 +31,17 @@ const mainController = {
 
 module.exports = mainController;
 
-async function criar(name, email) {
+// async function criar(name, email) {
 
-  const post = await User.create({
+//   const post = await User.create({
+//     name: "Atila",
+//     email: "atila@atila.com",
+//     password: "welcome",
+//     user_type: 0,
+    
+//   });
+//   return console.log(post)
+// }
 
-  });
-  return console.log(post)
-}
-
-criar ("atila", 'asa@asa.com' )
+// criar ()
 

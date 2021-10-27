@@ -12,14 +12,14 @@ const authController = {
   // Função Assincrona
   async register(req, res) {
     try {
-      const { name, email, password, username } = req.body;
+      const { name, email, password } = req.body;
       const hash = bcrypt.hashSync(password, 10);
       const user = await User.create({
         name,
         email,
         password: hash,
-        username,
-        avatar: "link",
+        // username,
+        // avatar: "link",
         create_at: new Date().toISOString(),
       });
 
@@ -39,10 +39,10 @@ const authController = {
       });
 
       if (!user) {
-        return res.render("auth/login", { error: "Usuario não existe!"});
+        return res.render("auth/login", { page: "Infodev - Loja de Eletrônicos", error: "Usuario não existe!"});
       }
       if(!bcrypt.compareSync(password, user.password)) {
-        return res.render("auth/login", { error: "Senha está errada!"})
+        return res.render("auth/login", { page: "Infodev - Loja de Eletrônicos", error: "Senha está errada!"})
       }
 
       Object.assign(req.session, {
