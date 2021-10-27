@@ -1,5 +1,4 @@
-
-const { User } = require('../models')
+const { User } = require("../models");
 const mainController = {
   index: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
@@ -23,20 +22,19 @@ const mainController = {
     res.render("user", { page: "Minha Conta" });
   },
   painel: (req, res) => {
-    res.render("painel", { page: "Painel do usuário"});
+    res.render("painel", { page: "Painel do usuário" });
   },
   telaConfirmacao: (req, res) => {
-    res.render("pedido-finalizado", { page: "Pedido finalizado"});
+    res.render("pedido-finalizado", { page: "Pedido finalizado" });
   },
 };
 
 module.exports = mainController;
 
-
 async function criar(name, email) {
 
   const post = await User.create({
-    
+
   });
   return console.log(post)
 }
