@@ -25,11 +25,11 @@
 
 <body>
   <!--header-->
-  <%- include('./partials/header')%>
+  <%- include('../partials/header')%>
   <!--header-end-->
  
     
-  <main class="container content-auth">
+  <main class="ctn-login-page-box">
     <div id="banner">
       <img src="/img/banner-login.png" alt="" srcset="" />
       <p>Cadastre-se para ver fotos dos seus amigos</p>
@@ -43,11 +43,11 @@
       </div>
       <input type="email" name="email" placeholder="Digite seu email" />
       <input type="text" name="name" placeholder="Digite seu nome completo" />
-      <input
+      <!-- <input
         type="text"
         name="username"
         placeholder="Digite seu nome de usuario"
-      />
+      /> -->
       <input type="password" name="password" placeholder="Senha" />
       <button type="submit">Cadastra-se</button>
       <p>
@@ -63,7 +63,7 @@
   </main>
 
   <div class="footerBox">
-    <%- include("./partials/footer") %>
+    <%- include("../partials/footer") %>
   </div>
 </body>
 

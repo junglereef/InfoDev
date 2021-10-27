@@ -1,10 +1,10 @@
-const { User } = require("../models");
+const { User } = require("../models/User");
 const bcrypt = require("bcryptjs");
 
 const authController = {
   
   showLogin(req, res) {
-    return res.render("auth/login");
+    return res.render("auth/login" );
   },
   showRegister(req, res) {
     return res.render("auth/register");
@@ -39,7 +39,7 @@ const authController = {
       });
 
       if (!user) {
-        return res.render("auth/login", { page: "Infodev - Loja de Eletrônicos", error: "Usuario não existe!"});
+        return res.render("auth/login", { error: "Usuario não existe!"});
       }
       if(!bcrypt.compareSync(password, user.password)) {
         return res.render("auth/login", { page: "Infodev - Loja de Eletrônicos", error: "Senha está errada!"})
