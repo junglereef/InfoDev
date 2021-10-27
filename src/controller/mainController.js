@@ -1,3 +1,5 @@
+
+const { User } = require('../models')
 const mainController = {
   index: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
@@ -29,3 +31,15 @@ const mainController = {
 };
 
 module.exports = mainController;
+
+
+async function criar(name, email) {
+
+  const post = await User.create({
+    
+  });
+  return console.log(post)
+}
+
+criar ("atila", 'asa@asa.com' )
+

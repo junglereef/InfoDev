@@ -19,10 +19,9 @@ module.exports = (connection, DataTypes) => {
 );
 
 AddressType.associate = (models) => {
-  
-    
     AddressType.hasMany(models.Address, {
         foreignKey: "address_type_id",
+        as: "adress"
       });
   };
 
