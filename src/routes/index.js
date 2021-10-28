@@ -5,11 +5,11 @@ const isLogin = require("../middlewares/isLogin");
 const mainController = require("../controller/mainController");
 const authController = require("../controller/Auth");
 
-routes.get("/", authController.showLogin);
+// routes.get("/", authController.showLogin);
 routes.get("/login", authController.showLogin);
 routes.post("/login", authController.login);
-routes.get("/registro", authController.showRegister);
-routes.post("/registro", authController.register);
+routes.get("/cadastro", authController.showRegister);
+routes.post("/cadastro", authController.register);
 
 
 routes.get("/home", mainController.index);

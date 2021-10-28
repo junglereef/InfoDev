@@ -12,9 +12,7 @@ const mainController = {
   contato: (req, res) => {
     res.render("contato", { page: "Contato" });
   },
-  // login: (req, res) => {
-  //   res.render("login", { page: "Entre ou Cadastre-se" });
-  // },
+
   produto: (req, res) => {
     res.render("produto", { page: "Produto" });
   },

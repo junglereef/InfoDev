@@ -1,13 +1,13 @@
-const { User } = require("../models/User");
+const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 
 const authController = {
   
   showLogin(req, res) {
-    return res.render("auth/login" );
+    return res.render("auth/login", { page: "Faça o Login - Infodev" } );
   },
   showRegister(req, res) {
-    return res.render("auth/register");
+    return res.render("auth/register",  { page: "Cadastre-se - Infodev" }  );
   },
   // Função Assincrona
   async register(req, res) {
@@ -26,7 +26,7 @@ const authController = {
       return res.redirect("/login");
     } catch (err) {
       console.log(err);
-      return res.redirect("/registro");
+      return res.redirect("/cadastro");
     }
   },
   async login(req, res) {
@@ -38,12 +38,10 @@ const authController = {
         },
       });
 
-      if (!user) {
-        return res.render("auth/login", { error: "Usuario não existe!"});
+      if (!user || !bcrypt.compareSync(password, user.password )) {
+        return res.render("auth/login", { error: "Usuario ou Senha inválidos"});
       }
-      if(!bcrypt.compareSync(password, user.password)) {
-        return res.render("auth/login", { page: "Infodev - Loja de Eletrônicos", error: "Senha está errada!"})
-      }
+     
 
       Object.assign(req.session, {
         user: {
@@ -52,6 +50,12 @@ const authController = {
         },
       });
 
+     if (user.user_type) {
+       req.session.user.admin=true
+       
+     }
+     
+     
       return res.redirect("/home");
 
     } catch (error) {
