@@ -43,12 +43,12 @@ const authController = {
       }
      
 
-      Object.assign(req.session, {
-        user: {
+      req.session.user = {
+        
           id: user.id,
           name: user.name,
-        },
-      });
+
+      };
 
      if (user.user_type) {
        req.session.user.admin=true

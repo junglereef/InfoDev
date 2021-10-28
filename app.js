@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require("express-session")
 const path = require("path");
 const app = express();
 //Definindo utilização de rotas
@@ -9,6 +10,16 @@ const port = 3000;
 const logger = require("morgan");
 app.use(logger("dev"));
 /*https://expressjs.com/en/resources/middleware/morgan.html*/
+
+app.use(
+  session({
+    secret: "6U5KAYDRTYPXLASUDOF",
+    resave: true,
+    saveUninitialized: true,
+    cookies: { secure: "auto", maxAge: 21600000 },
+  })
+);
+
 //Definindo Pasta Pública
 app.use(express.static(path.join(__dirname, "src/public")));
 

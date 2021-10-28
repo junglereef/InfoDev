@@ -25,16 +25,19 @@ module.exports = (connection, DataTypes) => {
 
 Order.associate = (models) => {
     
-    Order.hasMany(models.User, {
+    Order.belongsTo(models.User, {
         foreignKey: "user_id",
+        as: "user",
       });
 
     Order.hasMany(models.OrderItem, {
         foreignKey: "order_items_id",
+        as: "itens",
       });
     
-    Order.hasMany(models.Adress, {
+    Order.belongsTo(models.Adress, {
         foreignKey: "address_id",
+        as: "address"
       });
   };
 

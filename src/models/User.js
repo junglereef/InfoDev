@@ -21,8 +21,8 @@ module.exports = (connection, DataTypes) => {
 
   User.associate = (models) => {
     User.hasMany(models.Order, {
-      foreignKey: "order_items_id",
-      as: "pedido",
+      foreignKey: "user_id",
+      as: "pedidos",
     });
   };
 

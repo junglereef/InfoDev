@@ -12,6 +12,7 @@
  
     
   <main class="ctn-login-page-box">
+     <span><%= typeof error !== "undefined" ? error:'' %> </span>
         <form action="/login" method="POST"  id="form_login">
         <label class="login-input-label">
           <input class="login-input" type="email" name="email" placeholder="Digite seu email"  />
