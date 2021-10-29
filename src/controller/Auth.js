@@ -7,7 +7,7 @@ const authController = {
     return res.render("auth/login", { page: "Faça o Login - Infodev" } );
   },
   showRegister(req, res) {
-    return res.render("auth/register",  { page: "Cadastre-se - Infodev" }  );
+    return res.render("auth/cadastro",  { page: "Cadastre-se - Infodev" }  );
   },
   // Função Assincrona
   async register(req, res) {

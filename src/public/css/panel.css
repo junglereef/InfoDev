@@ -43,6 +43,10 @@ margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
   }
+
+  .user-menu-box {
+    text-align: center;
+}
   .avatar {
     vertical-align: middle;
     width: 50px;

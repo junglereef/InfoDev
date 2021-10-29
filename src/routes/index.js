@@ -18,7 +18,7 @@ routes.get("/contato", mainController.contato);
 routes.get("/carrinho", mainController.carrinho);
 routes.get("/checkout", mainController.checkout);
 routes.get("/user", mainController.user);
-routes.get("/painel", mainController.painel);
+routes.get("/painel", isLogin,mainController.painel);
 routes.get("/pedido-finalizado", mainController.telaConfirmacao);
 
 module.exports = routes;
