@@ -19,9 +19,7 @@ const mainController = {
   user: (req, res) => {
     res.render("user", { page: "Minha Conta" });
   },
-  painel: (req, res) => {
-    res.render("painel", { page: "Painel do usuário" });
-  },
+
   telaConfirmacao: (req, res) => {
     res.render("pedido-finalizado", { page: "Pedido finalizado" });
   },

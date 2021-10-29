@@ -56,7 +56,7 @@ const authController = {
      }
      
      
-      return res.redirect("/home");
+      return res.redirect("admin/");
 
     } catch (error) {
       console.log(error);

@@ -5,6 +5,7 @@ const app = express();
 //Definindo utilização de rotas
 const rotas = require("./src/routes");
 const rotasDeProdutos = require("./src/routes/produtos");
+const rotasAdmin = require('./src/routes/admin');
 const port = 3000;
 
 const logger = require("morgan");
@@ -35,7 +36,9 @@ app.use(express.json()); /*Adicionado do print de aula 27072021*/
 app.use(express.urlencoded({ extended: false })
 ); /*Adicionado do print de aula 27072021*/
 app.use(rotas);
-app.use(rotasDeProdutos);
+app.use("/produtos", rotasDeProdutos);
+app.use("/admin", rotasAdmin);
+
 
 app.listen(port, () => {
   console.log(`O servidor esta rodando em http://localhost:${port}`);
