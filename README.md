@@ -65,6 +65,6 @@ $ npm run dev
 
 ## :memo: Licença
 
-Project Link: [https://github.com/junglereef/InfoDev](https://github.com/junglereef/InfoDev)
+MIT License - Project Link: [https://github.com/junglereef/InfoDev](https://github.com/junglereef/InfoDev)
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
