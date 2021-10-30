@@ -35,7 +35,7 @@
   
   .main-header {
     margin: 0.8vw;
-    height: 105px;
+    /* height: 10px; */
   }
   
   .logo img {
@@ -81,6 +81,10 @@
   .top-icons a {
     color: var(--gray-color);
   }
+
+  .top-icons a:hover {
+    color: var(--primary-color)
+  }
   
   .top-menu {
     display: flex;
@@ -90,7 +94,7 @@
     margin-bottom: 0.8em;
   }
   
-  .topnav {
+  .desktop-navbar{
     display: none;
   }
   
@@ -125,6 +129,7 @@
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
+    color: var(--gray-color);
   }
   
   #navbar-list li {
@@ -142,8 +147,6 @@
     display: none;
   }
 
-  
-
   /*SearchBox*/
  
   .searchbar input[type="text"] {
@@ -153,6 +156,7 @@
     width: 80%;
     font-size: clamp(2rem, 2.2vw, 4rem);
     background: var(--white-color);
+    text-align: center;
   }
 
 /* Style the submit button */
@@ -204,7 +208,7 @@ h2{
 .rsocial-icon a {
   margin-bottom: 2rem;
   align-items: center;
-  color: #ff4500;
+  color: var(--primary-color)
 }
 
 .rsocial-icon a img {
@@ -265,49 +269,89 @@ form.example::after {
 /*  MEDIA QUERIES */
 @media (min-width: 800px) {
 
-  .nav {
-  display: block;
-  }
   .menu li img {
     margin-bottom: -5px;
   }
 
-    
-  .topnav {
-    display: block;
-    text-align: center;
-    padding: 1.4rem 1.6rem;
-    text-decoration: none;
-    margin-bottom: 1vw;
+  .desktop-navbar {
     display: flex;
     justify-content: center;
-    /* margin-left: 1em; */
+    
   }
-
-  #myTopnav ul li {
-
-    display: none;
-
-  }
-
-  #myTopnav ul li:hover {
-    display: block;
-  }
-
-  .topnav a {
-    color: var(--gray-color);
-    float: left;
-    display: block;
+  #myTopnav {
+    list-style:none inside;
+    margin:0;
+    padding:0;
     text-align: center;
-    padding: 0 16px;
+   
+  }
+
+  #myTopnav li {
+    display: block;
+    position:relative;
+    float:left;
+    color: var(--primary-color)
+  }
+
+  #myTopnav li a {
+    display:block;
+    padding:0;
+    text-decoration:none;
+    width:200px; /* this is the width of the menu items */
+    line-height:35px; /* this is the hieght of the menu items */
+    color: var(--gray-color); /* list item font color */
+    font-size:85%;/* smaller font size for sub menu items */
+  }
+  
+  #myTopnav li:hover {
+  color: var(--white-color);
+  background: var(--primary-color);
+  border-radius: 10px;
+  }
+  #myTopnav li a:hover {
+    color: var(--white-color);
+  }
+
+  #myTopnav li:hover>a {
+    color: var(--white-color)
+  }
+
+  #myTopnav li a:focus {
     text-decoration: none;
-    font-size: 2.8rem;
+    color: var(--blue-color)
   }
 
-  .topnav a :hover:not(.active) {
-    background-color: #ea834b;
+  #myTopnav ul {
+  position:absolute;
+  padding:0;
+  left:0;
+  display:none; /*hides sublists */
+  }
+  #myTopnav li:hover ul {
+    display:block;
+    background: var(--primary-color);
+    border-radius: 10px;
+  } /* shows sublist on hover */
+  
+  #myTopnav li:hover ul a {
+    color: var(--white-color);
+  }
+  #myTopnav li:hover ul {
+    color: var(--white-color);
   }
 
+
+  #myTopnav li ul li a:hover {
+    color: var(--blue-color);
+  }
+
+
+  #myTopnav li li:hover ul {
+    display:block; /* shows sub-sublist on hover */
+    margin-left:200px; /* this should be the same width as the parent list item */
+    margin-top:-35px; /* aligns top of sub menu with top of list item */
+    }
+   
   .menu {
     display: none;
   }
@@ -329,8 +373,6 @@ form.example::after {
   .menu li img {
     margin-bottom: -5px;
   }
-
-
 
   .footerBoxMain {
     margin-top: 0.60rem;

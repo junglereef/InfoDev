@@ -55,7 +55,14 @@
 .login-info {
   font-size: clamp(2rem, 2.5vw, 2.8rem);
   text-align: center;
+  
 }
+
+.login-info a {
+  text-decoration: none;
+
+}
+
 /* .label-content {
   color: #f9f9f9;
   font-size: 1.1rem;

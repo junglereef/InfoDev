@@ -44,10 +44,18 @@
 /*  MEDIA QUERIES */
 @media (min-width: 800px) {
 
+  form.searchbar-form button {
+    padding: 1.25rem;
+  }
+
   .ctn-offer{
     position: relative; 
     background-color: #fff;
     
+  }
+
+  .ctn-product .pname>a {
+    text-overflow: ellipsis;
   }
 
   .prodcuts-grid {
@@ -56,7 +64,7 @@
     grid-auto-rows: auto;
     grid-gap: 1rem;
   }
-
+  
   .product-item {
 
     border: 2px solid #e7e7e7;
