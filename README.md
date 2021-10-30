@@ -1,6 +1,4 @@
 # InfoDev
-Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? Nós somos. É gamer? Nós também! Você é Hardware? Esse é nosso DNA! Nascemos assim, 100% conectados. Esta plataforma foi criada para trazer os melhores produtos para você, apaixonado por tecnologia e games
-
 <p align="center">
   <a href="https://www.figma.com/file/IkWuJViU7BSWwdWgzydQsG/InfoDev">Layout</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
