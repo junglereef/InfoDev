@@ -2,11 +2,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(255, 255, 255);
-    padding-bottom: 100px;
   }
 
   .contact-panel {
-    margin-top: 25px;
+    margin-top: 50px;
   }
   
   #contact {

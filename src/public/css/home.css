@@ -45,7 +45,7 @@
 @media (min-width: 800px) {
 
   form.searchbar-form button {
-    padding: 1.25rem;
+    padding: 1.6rem;
   }
 
   .ctn-offer{
@@ -55,6 +55,7 @@
   }
 
   .ctn-product .pname>a {
+  
     text-overflow: ellipsis;
   }
 
