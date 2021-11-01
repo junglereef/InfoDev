@@ -1,6 +1,4 @@
 # InfoDev
-Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? Nós somos. É gamer? Nós também! Você é Hardware? Esse é nosso DNA! Nascemos assim, 100% conectados. Esta plataforma foi criada para trazer os melhores produtos para você, apaixonado por tecnologia e games
-
 <p align="center">
   <a href="https://www.figma.com/file/IkWuJViU7BSWwdWgzydQsG/InfoDev">Layout</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
@@ -15,10 +13,7 @@ Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? 
 
 ## :dart: Sobre o Projeto
 <br>
-<br>
-Como projeto integrador (projeto desenvolvido durante todo o decorrer do curso e a ser entregue ao final como comprovação para certificação) foi nos dado o desafio de desenvolver uma plataforma de ecommerce, em que o tema seria a nossa escolha e onde iríamos criando e refatorando o código a cada nova tecnologia/módulo que fossemos aprendendo.
-
-Optamos então pela criação de um ecommerce de informatica, onde iriamos trabalhar desde o desenvolvimento da identidade visual até a finalização e deploy.
+Se você é apaixonado por tecnologia, está no lugar certo! Você é HighTech? Nós somos. É gamer? Nós também! Você é Hardware? Esse é nosso DNA! Nascemos assim, 100% conectados. Esta plataforma foi criada para trazer os melhores produtos para você, apaixonado por tecnologia e games este é o seu lugar!
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
@@ -65,6 +60,6 @@ $ npm run dev
 
 ## :memo: Licença
 
-Project Link: [https://github.com/junglereef/InfoDev](https://github.com/junglereef/InfoDev)
+MIT License - Project Link: [https://github.com/junglereef/InfoDev](https://github.com/junglereef/InfoDev)
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
