@@ -3,8 +3,8 @@ const mainController = {
   index: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
   },
-  carrinho: (req, res) => {
-    res.render("carrinho", { page: "Carrinho" });
+  cart: (req, res) => {
+    res.render("cart", { page: "Carrinho" });
   },
   checkout: (req, res) => {
     res.render("checkout", { page: "Finalizar Compra" });

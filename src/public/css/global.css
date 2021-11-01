@@ -97,6 +97,10 @@
   .desktop-navbar{
     display: none;
   }
+
+  .nav {
+    justify-content: center;
+  }
   
   #nav__checkbox {
     display: none;
@@ -148,6 +152,11 @@
   }
 
   /*SearchBox*/
+
+  .searchbar-form{
+    display:flex;
+    justify-content: center;
+  }
  
   .searchbar input[type="text"] {
     padding: 1rem;
@@ -201,6 +210,7 @@ h2{
 
 }
 
+
 .rsocial-icon {
   margin-top: 0.60rem;
 }
@@ -235,6 +245,8 @@ h2{
 
 .footerBoxMainGrid ol {
   list-style-type: none;
+  padding-left: 0;
+  list-style:none;
 }
 
 .footerBoxMainGrid li {

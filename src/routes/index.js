@@ -15,7 +15,7 @@ routes.post("/cadastro", authController.register);
 routes.get("/home", mainController.index);
 routes.get("/", mainController.index);
 routes.get("/contato", mainController.contato);
-routes.get("/carrinho", mainController.carrinho);
+routes.get("/cart", mainController.cart);
 routes.get("/checkout", mainController.checkout);
 routes.get("/pedido-finalizado", mainController.telaConfirmacao);
 
