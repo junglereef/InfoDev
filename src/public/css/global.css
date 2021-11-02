@@ -314,6 +314,10 @@ form.example::after {
     color: var(--gray-color); /* list item font color */
     font-size:85%;/* smaller font size for sub menu items */
   }
+
+  #myTopnav li li a {
+    text-decoration:none;
+  }
   
   #myTopnav li:hover {
   color: var(--white-color);

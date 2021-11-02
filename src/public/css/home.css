@@ -37,6 +37,11 @@
   margin-bottom: 0.8rem;
 }
 
+.pname  a {
+  text-decoration: none;
+  color:var(--blue-color)
+}
+
 .footerBoxMain hr {
   display:none;
 }

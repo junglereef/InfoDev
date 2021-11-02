@@ -9,13 +9,13 @@
   .cart-page-title-box {
     display: flex;
     flex-direction: column;
-    color: var(--primary);
+    color: var(--primary-color);
   }
 
   .cart-page-header-title-line {
-    border: 1px solid var(--primary);
-    background-color: var(--primary);
-    color: var(--primary);
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--primary-color);
   }
   #cart-items {
     width: 100%;
@@ -63,7 +63,7 @@
   }
   .cart-item-details-name {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--primary-color);
     font-weight: 700;
   }
   .cart-item-details-sku {
@@ -79,7 +79,7 @@
   }
   a.cart-remove-item {
     font-size: 1.2rem;
-    color: var(--primary);
+    color: var(--primary-color);
     text-transform: uppercase;
     transition: all 0.3s ease-in;
   }
@@ -109,7 +109,7 @@
   
   .cart-shipping-coupon-container {
     flex-grow: 1;
-    background-color: var(--primaryLight);
+    background-color: var(--primary-colorLight);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@
   }
   .cart-shipping-title {
     font-size: 1.6rem;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   .cart-shipping-container {
     display: flex;
@@ -140,13 +140,13 @@
   }
   .cart-shipping-zipcode-label {
     font-size: 1rem;
-    color: var(--primary);
+    color: var(--primary-color);
     text-transform: uppercase;
     padding-left: 1rem;
   }
   .cart-zipcode-input {
     font-size: 3rem;
-    color: var(--primary);
+    color: var(--primary-color);
     text-align: center;
     border-radius: 0;
     padding: 0.8rem;
@@ -184,17 +184,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   .coupon-text-box h2 {
     font-size: 3rem;
     font-weight: 400;
     text-transform: uppercase;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   .coupon-text-box p {
     font-size: 1.4rem;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   .coupon-input-box {
     width: 60%;
@@ -214,7 +214,7 @@
   .coupon-input::placeholder {
     font-size: 2rem;
     padding-left: 1.5rem;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   .coupon-input-btn {
     min-height: 6rem;
@@ -230,7 +230,7 @@
     gap: 1rem;
   }
   .cart-resume-details-container {
-    background-color: var(--primaryLight);
+    background-color: var(--primary-colorLight);
     padding: 2rem;
     font-size: 1.7rem;
   }
@@ -248,14 +248,14 @@
   .resume-item-total-line {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border: 0.1rem solid var(--primary);
-    background-color: var(--primary);
+    border: 0.1rem solid var(--primary-color);
+    background-color: var(--primary-color);
   }
   .cart-resume-total-container {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--primary-color);
     text-transform: uppercase;
   }
   .cart-buttons-container {
@@ -269,7 +269,7 @@
     border-radius: 0;
   }
   .cart-continue-shopping-checkout {
-    background-color: var(--primary);
+    background-color: var(--primary-color);
   }
   .cart-continue-shopping-checkout:hover {
     background-color: var(--acent);
@@ -310,7 +310,7 @@
     min-height: 70vh;
   }
   .checkout-page-container {
-    background-color: var(--primaryLight);
+    background-color: var(--primary-colorLight);
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
@@ -358,7 +358,7 @@
   .zip-input-box > p {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--primary-color);
   }
   
   .checkout-address-line-2-box {
@@ -384,7 +384,7 @@
   }
   
   .checkout-label {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: var(--input-label-size);
     text-transform: uppercase;
     padding: 0.5rem 0 0.2rem 1rem;
@@ -392,7 +392,7 @@
   }
   
   .checkout-radio-label {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 1.3rem;
     text-transform: uppercase;
     padding: 0.5rem 0 0.2rem 1rem;
@@ -414,7 +414,7 @@
   }
   
   .checkout-checkbox-label {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 1.3rem;
     text-transform: uppercase;
     padding: 0.5rem 0 0.2rem 1rem;
@@ -430,7 +430,7 @@
   }
   
   .checkout-checkbox-label-delivery {
-    color: var(--primary);
+    color: var(--primary-color);
     font-size: 1.7rem;
     text-transform: uppercase;
     padding: 0.5rem 0 0.2rem 1rem;
@@ -440,4 +440,8 @@
 
 .cart-box-body h2 {
     text-align: center;
+}
+
+.forget-zip-code>a {
+  text-decoration: none;
 }
