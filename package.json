@@ -1,10 +1,11 @@
 {
   "name": "infodev",
   "version": "1.0.0",
-  "description": "infodev",
-  "main": "app.js",
+  "description": "Projeto desenvolvido pelo grupo 10 durante o curso Desenvolvimento Web Fullstack (Digital House)",
+  "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start": "node src/app",
+    "dev": "nodemon src/app"
   },
   "keywords": [],
   "author": "",
