@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const produtosController = require("../controller/ProductController");
-// Definindo rotas
-router.get("/", produtosController.index);
-router.get("/lista", produtosController.lista);
-router.get("/criar", produtosController.criar);
-router.get("/cancelar", produtosController.cancelar);
-router.get("/categorias", produtosController.categorias);
+const ProductController = require("../controller/ProductController");
+
+// DEFININDO ROTAS PRINCIPAIS DE PRODUTO [VIEWS]
+router.get("/", ProductController.productsListPage);
+router.get("/categorias", ProductController.categoryProductPage);
+router.get("/:id", ProductController.productPage);
 
 //Exportando Rotas
 module.exports = router;

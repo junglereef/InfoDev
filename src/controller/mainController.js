@@ -1,43 +1,28 @@
-const { User } = require("../models");
-const mainController = {
-  index: (req, res) => {
+const MainController = {
+  indexPage: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
   },
-  cart: (req, res) => {
+  cartPage: (req, res) => {
     res.render("cart", { page: "Carrinho" });
   },
-  checkout: (req, res) => {
+  checkoutPage: (req, res) => {
     res.render("checkout", { page: "Finalizar Compra" });
   },
-  contato: (req, res) => {
-    res.render("contato", { page: "Contato" });
+  orderConfirmation: (req, res) => {
+    res.render("pedido-finalizado", { page: "Pedido finalizado" });
   },
-
-  produto: (req, res) => {
-    res.render("produto", { page: "Produto" });
-  },
-  user: (req, res) => {
+  accountPage: (req, res) => {
     res.render("user", { page: "Minha Conta" });
   },
-
-  telaConfirmacao: (req, res) => {
-    res.render("pedido-finalizado", { page: "Pedido finalizado" });
+  contactPage: (req, res) => {
+    res.render("contato", { page: "Contato" });
+  },
+  loginRedirect(req, res) {
+    res.redirect("/auth/login"); // redirecionara para a pagina de login através da rota auth
+  },
+  registerRedirect(req, res) {
+    res.redirect("/auth/cadastre-se"); // redirecionara para a pagina de cadastro através da rota auth
   },
 };
 
-module.exports = mainController;
-
-// async function criar(name, email) {
-
-//   const post = await User.create({
-//     name: "Atila",
-//     email: "atila@atila.com",
-//     password: "welcome",
-//     user_type: 0,
-    
-//   });
-//   return console.log(post)
-// }
-
-// criar ()
-
+module.exports = MainController;

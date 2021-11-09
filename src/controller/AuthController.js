@@ -1,13 +1,12 @@
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 
-const authController = {
-  
+const AuthController = {
   showLogin(req, res) {
-    return res.render("auth/login", { page: "Faça o Login - Infodev" } );
+    return res.render("auth/login", { page: "Faça o Login - Infodev" });
   },
   showRegister(req, res) {
-    return res.render("auth/cadastro",  { page: "Cadastre-se - Infodev" }  );
+    return res.render("auth/cadastro", { page: "Cadastre-se - Infodev" });
   },
   // Função Assincrona
   async register(req, res) {
@@ -31,40 +30,36 @@ const authController = {
   },
   async login(req, res) {
     try {
-        const { email, password } = req.body;
+      const { email, password } = req.body;
       const user = await User.findOne({
         where: {
           email,
         },
       });
 
-      if (!user || !bcrypt.compareSync(password, user.password )) {
-        return res.render("auth/login", { error: "Usuario ou Senha inválidos"});
+      if (!user || !bcrypt.compareSync(password, user.password)) {
+        return res.render("auth/login", {
+          error: "Usuario ou Senha inválidos",
+        });
       }
-     
 
       req.session.user = {
-        
-          id: user.id,
-          name: user.name,
-
+        id: user.id,
+        name: user.name,
       };
 
-     if (user.user_type) {
-       req.session.user.admin=true
-       
-     }
-     
-     
-      return res.redirect("admin/");
+      if (user.user_type) {
+        req.session.user.admin = true;
+      }
 
+      return res.redirect("admin/");
     } catch (error) {
       console.log(error);
-      return res.render('auth/login', {
+      return res.render("auth/login", {
         error: "sistema indisponivel tente novamente!",
       });
     }
   },
 };
 
-module.exports = authController;
+module.exports = AuthController;
