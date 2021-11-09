@@ -9,6 +9,8 @@ const methodOverride = require("method-override");
 const mainRoutes = require("./src/routes");
 const productsRoutes = require("./src/routes/products");
 const adminRoutes = require("./src/routes/admin");
+const authRoutes = require("./src/routes/auth");
+
 const port = 3000;
 
 app.use(logger("dev"));
@@ -40,6 +42,7 @@ app.use(
 
 app.use(mainRoutes);
 app.use("/produtos", productsRoutes);
+app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 
 app.listen(port, () => {
