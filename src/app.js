@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 
 //Definindo utilização de rotas
 const mainRoutes = require("./src/routes");
-const productsRoutes = require("./src/routes/produtos");
+const productsRoutes = require("./src/routes/products");
 const adminRoutes = require("./src/routes/admin");
 const port = 3000;
 
