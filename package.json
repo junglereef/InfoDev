@@ -18,7 +18,7 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5",
-    "sequelize-cli": "^6.2.0"
+    "uuid": "^8.3.2"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/junglereef/InfoDev#readme",
   "devDependencies": {
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "sequelize-cli": "^6.2.0"
   }
 }
