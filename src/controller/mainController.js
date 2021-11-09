@@ -21,7 +21,7 @@ const MainController = {
     res.redirect("/auth/login"); // redirecionara para a pagina de login através da rota auth
   },
   registerRedirect(req, res) {
-    res.redirect("/auth/cadastre-se"); // redirecionara para a pagina de cadastro através da rota auth
+    res.redirect("/auth/cadastro"); // redirecionara para a pagina de cadastro através da rota auth
   },
 };
 

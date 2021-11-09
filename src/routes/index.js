@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const MainController = require("../controller/MainController");
 
-//DEFININDO ROTAS PRINCIPAIS [VIEWS] DO SUSUARIO
+//DEFININDO ROTAS PRINCIPAIS [VIEWS] DO USUARIO
 router.get("/", MainController.indexPage);
 router.get("/contato", MainController.contactPage);
 router.get("/cart", MainController.cartPage);
@@ -14,3 +14,4 @@ router.get("/login", MainController.loginRedirect);
 router.get("/cadastre-se", MainController.registerRedirect);
 
 module.exports = router;
+

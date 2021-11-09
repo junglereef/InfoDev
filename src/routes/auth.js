@@ -3,9 +3,9 @@ const router = express.Router();
 const AuthController = require("../controller/AuthController");
 
 // ROTAS [VIEWS]
-router.get("/login", AuthController.showLogin);
-router.get("/cadastre-se", AuthController.showRegister);
+router.get("/login", AuthController.showLogin); // exibe a página de login
+router.get("/cadastro", AuthController.showRegister); // exibe a página de cadastro
 
 //ROTAS [AÇÕES]
-router.post("/login", AuthController.login);
-router.post("/cadastre-se", AuthController.register);
+router.post("/login", AuthController.login); // Executa a ação de login do usuário
+router.post("/cadastro", AuthController.register); // Executa a ação de registro do usuário
