@@ -11,6 +11,7 @@ const productsRoutes = require("./src/routes/products");
 const adminRoutes = require("./src/routes/admin");
 const authRoutes = require("./src/routes/auth");
 
+//estabelecendo uma porta para inicialização do servidor
 const port = 3000;
 
 app.use(logger("dev"));
@@ -27,8 +28,11 @@ app.use(
 
 //Definindo Pasta Pública
 app.use(express.static(path.resolve(__dirname, "src", "public")));
-//Definindo methodOverride para trabalhar com métodos HTTP
+
+//Definindo methodOverride para trabalhar com métodos HTTP (PUT/DELETE)
+// ?method=[MédotoHTTP]
 app.use(methodOverride("_method"));
+
 //Definindo view Engine e Pasta Views
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "src", "views"));
