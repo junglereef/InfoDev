@@ -1,11 +1,9 @@
-const express = require('express');
-const routes = express.Router();
-const path = require("path");
-const AdminController = require('../controller/AdminController');
+const express = require("express");
+const router = express.Router();
+const AdminController = require("../controller/AdminController");
 const isLogin = require("../middlewares/isLogin");
 
+router.use(isLogin);
+routerget("/", AdminController.dashboard);
 
-routes.get("/", isLogin,AdminController.painel);
-
-
-module.exports = routes;
+module.exports = router;
