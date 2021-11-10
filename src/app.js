@@ -6,10 +6,10 @@ const app = express();
 const methodOverride = require("method-override");
 
 //Definindo utilização de rotas
-const mainRoutes = require("./src/routes");
-const productsRoutes = require("./src/routes/products");
-const adminRoutes = require("./src/routes/admin");
-const authRoutes = require("./src/routes/auth");
+const mainRoutes = require("./routes");
+const productsRoutes = require("./routes/products");
+const adminRoutes = require("./routes/admin");
+const authRoutes = require("./routes/auth");
 
 //estabelecendo uma porta para inicialização do servidor
 const port = 3000;
@@ -27,7 +27,7 @@ app.use(
 );
 
 //Definindo Pasta Pública
-app.use(express.static(path.resolve(__dirname, "src", "public")));
+app.use(express.static(path.resolve(__dirname, "public")));
 
 //Definindo methodOverride para trabalhar com métodos HTTP (PUT/DELETE)
 // ?method=[MédotoHTTP]
@@ -35,7 +35,7 @@ app.use(methodOverride("_method"));
 
 //Definindo view Engine e Pasta Views
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "src", "views"));
+app.set("views", path.resolve(__dirname,"views"));
 
 // Definindo uso de JSON
 app.use(express.json()); /*Adicionado do print de aula 27072021*/

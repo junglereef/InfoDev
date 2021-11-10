@@ -4,7 +4,7 @@ const ProductController = require("../controller/ProductController");
 
 // DEFININDO ROTAS PRINCIPAIS DE PRODUTO [VIEWS]
 router.get("/", ProductController.productsListPage);
-router.get("/categorias", ProductController.categoryProductPage);
+router.get("/categorias", ProductController.categoriesProductPage);
 router.get("/:id", ProductController.productPage);
 
 //Exportando Rotas

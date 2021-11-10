@@ -9,3 +9,5 @@ router.get("/cadastro", AuthController.showRegister); // exibe a página de cada
 //ROTAS [AÇÕES]
 router.post("/login", AuthController.login); // Executa a ação de login do usuário
 router.post("/cadastro", AuthController.register); // Executa a ação de registro do usuário
+
+module.exports = router;
