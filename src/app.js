@@ -35,7 +35,7 @@ app.use(methodOverride("_method"));
 
 //Definindo view Engine e Pasta Views
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname,"views"));
+app.set("views", path.resolve(__dirname, "views"));
 
 // Definindo uso de JSON
 app.use(express.json()); /*Adicionado do print de aula 27072021*/
