@@ -20,8 +20,6 @@
 
 &#xa0;
 
-<hr>
-
 <p align="center">
   <a href="https://www.figma.com/file/IkWuJViU7BSWwdWgzydQsG/InfoDev">Layout</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
