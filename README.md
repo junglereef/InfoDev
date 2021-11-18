@@ -1,4 +1,27 @@
-# InfoDev
+
+
+
+<h1 align="center"> InfoDEV</h1>
+
+<p align="center">
+
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=FF5C00&labelColor=000000?color=FF5C00&style=for-the-badge" alt="PRs welcome!" />
+    <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
+  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
+  <img alt="Licença" src="https://img.shields.io/github/license/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
+</p>
+
+&#xa0;
+
+<h4 align="center"> 
+	🚧  Em construção...  🚧
+</h4> 
+
+&#xa0;
+
+<hr>
+
 <p align="center">
   <a href="https://www.figma.com/file/IkWuJViU7BSWwdWgzydQsG/InfoDev">Layout</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
