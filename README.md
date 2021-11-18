@@ -32,7 +32,6 @@ As seguintes ferramentas foram usadas durante a construção do projeto:
 - [MySQL](https://www.mysql.com)
 - [Sequelize ORM](https://sequelize.org)
 
-[![wakatime](https://wakatime.com/badge/user/3f8ae3d7-6b55-4499-8986-a5053ed896ef/project/41a46bcc-a060-4c28-8c44-5e1bc25e82a6.svg)](https://wakatime.com/badge/user/3f8ae3d7-6b55-4499-8986-a5053ed896ef/project/41a46bcc-a060-4c28-8c44-5e1bc25e82a6)
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
