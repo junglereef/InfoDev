@@ -1,10 +1,12 @@
 
 
 
-<h1 align="center"> InfoDEV</h1>
+
 
 <p align="center">
+<img width="500" src="./.github/logo.png" alt="infoDev"/>
 
+&#xa0;
   <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=FF5C00&labelColor=000000?color=FF5C00&style=for-the-badge" alt="PRs welcome!" />
     <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
   <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/junglereef/InfoDev?color=FF5C00&style=for-the-badge">
