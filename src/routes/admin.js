@@ -9,10 +9,10 @@ const acessLevel = require("../middlewares/acessLevel");
 // router.use(acessLevel);
 
 // ROTA PAINEL [PRINCIPAL]
-router.get("/", AdminController.dashboardPage);
+router.get("/", isLogin,AdminController.dashboardPage);
 
 //// DEFININDO ROTAS [VIEWS] PRODUTOS
-router.get("/criar", ProdutosController.createProductPage);
-router.get("/categorias", ProdutosController.categoriesProductPage);
+router.get("/criar", isLogin,ProdutosController.createProductPage);
+router.get("/categorias", isLogin,ProdutosController.categoriesProductPage);
 
 module.exports = router;

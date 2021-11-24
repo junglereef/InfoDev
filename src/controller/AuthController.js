@@ -17,6 +17,7 @@ const AuthController = {
         name,
         email,
         password: hash,
+        user_type: 0,
         // username,
         // avatar: "link",
         create_at: new Date().toISOString(),
@@ -52,7 +53,7 @@ const AuthController = {
         req.session.user.admin = true;
       }
 
-      return res.redirect("admin/");
+      return res.redirect("/admin");
     } catch (error) {
       console.log(error);
       return res.render("auth/login", {
