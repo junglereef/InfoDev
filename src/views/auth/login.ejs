@@ -13,7 +13,7 @@
     
   <main class="ctn-login-page-box">
      <span><%= typeof error !== "undefined" ? error:'' %> </span>
-        <form class="row gy-4 gx-6 align-items-center" action="/login" method="POST"  id="form_login">
+        <form class="row gy-4 gx-6 align-items-center" action="/auth/login" method="POST"  id="form_login">
         <label class="login-input-label">
           <input class="form-control" type="email" name="email" placeholder="Digite seu email"  />
         </label>
