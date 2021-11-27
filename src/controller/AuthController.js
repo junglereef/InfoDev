@@ -38,7 +38,7 @@ const AuthController = {
         },
       });
 
-      if (!user || crypto.validate(password, user.password)) {
+      if (!user || !crypto.validate(password, user.password)) {
         return res.render("auth/login", {
           error: "Usuario ou Senha inválidos",
         });
