@@ -49,6 +49,9 @@ app.use("/produtos", productsRoutes);
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 
+/*Import Bootstrap*/
+
+
 app.listen(port, () => {
   console.log(`O servidor esta rodando em http://localhost:${port}`);
 });

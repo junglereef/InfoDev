@@ -64,23 +64,6 @@
 
 }
 
-/* .label-content {
-  color: #f9f9f9;
-  font-size: 1.1rem;
-  user-select: none;
-  font-weight: 500;
-
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  margin-left: 0.8rem;
-  padding: 0 0.4rem;
-
-  background: #fff;
-
-  transition: top 0.2s, font-size 0.2s, color 0.2s;
-} */
 
 .login-input:focus + .label-content,
 .login-input:not(:placeholder-shown) + .label-content {
@@ -94,15 +77,5 @@
 }
 
 @media (min-width: 800px)  {
-  /* .login-page-box {
-    padding-left: 20px;
-    padding-right: 20px;
-  } */
-  /* .ogin-input-label {
-    width: 300px;
-  }
-  .login-submit-btn {
-    width: 280px;
-  } */
   
 }

@@ -19,8 +19,7 @@ module.exports = (connection, DataTypes) => {
 );
 
 Category.associate = (models) => {
-  
-    
+ 
     Category.hasMany(models.ProductHasCategory, {
         foreignKey: "category_id",
         as: "category"
