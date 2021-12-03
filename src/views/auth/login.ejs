@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <%- include("../partials/head")%>
-<link rel="stylesheet" href="/css/global.css" />
+<%- include("../partials/head")%>
 <link rel="stylesheet" href="/css/login.css" />
 
 
@@ -9,30 +8,33 @@
   <!--header-->
   <%- include('../partials/header')%>
   <!--header-end-->
- 
-    
-  <main class="ctn-login-page-box">
-     <span><%= typeof error !== "undefined" ? error:'' %> </span>
-        <form class="row gy-4 gx-6 align-items-center" action="/auth/login" method="POST"  id="form_login">
-        <label class="login-input-label">
-          <input class="form-control" type="email" name="email" placeholder="Digite seu email"  />
-        </label>
 
-        <label class="login-input-label">
-          <input class="form-control" type="password" name="password" placeholder="Senha"/>
-        </label>
-        <label>
-          <button class="login-submit-btn" type="submit">Entrar</button>
-        </label>
-        <div class="forget-password">
-          <p class= "login-info">
-            Esqueceu a senha? <a><strong>Clique aqui</strong></a>
-          </p>
-          <p class= "login-info">
-            Não tem uma conta? <a href="/auth/cadastro"><strong>Cadastre-se</strong></a>
-          </p>
-        </div>
-      </form>
+
+  <main class="ctn-login-page-box">
+
+    <span><%= typeof error !== "undefined" ? error:'' %></span>
+
+    <form class="row gy-4 gx-6 align-items-center" action="/auth/login" method="POST" id="form_login">
+      <label class="login-input-label">
+        <input class="form-control" type="email" name="email" placeholder="Digite seu email" />
+      </label>
+
+      <label class="login-input-label">
+        <input class="form-control" type="password" name="password" placeholder="Senha" />
+      </label>
+      <label>
+        <button class="login-submit-btn" type="submit">Entrar</button>
+      </label>
+      <div class="forget-password">
+        <p class="login-info">
+          Esqueceu a senha? <a><strong>Clique aqui</strong></a>
+        </p>
+        <p class="login-info">
+          Não tem uma conta? <a href="/auth/cadastro"><strong>Cadastre-se</strong></a>
+        </p>
+      </div>
+    </form>
+
   </main>
 
   <div class="footerBox">

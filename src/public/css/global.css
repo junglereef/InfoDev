@@ -18,6 +18,10 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
   }
+
+  .btn-primary {
+  background-color: #ff4500;
+  }
   
   html {
     font-size: 62.5%;
