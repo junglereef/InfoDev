@@ -6,10 +6,10 @@
     
     <!-- Left contact page --> 
       
-      <form id="contact-form" class="form-horizontal" role="form">
+      <form action="/sendForm" method="POST" id="contact-form" class="form-horizontal" role="form"  >
          
         <div class="form-group">
-          <div class="col-sm-12">
+          <div class="col-sm-12 fs-3">
             <input type="text" class="form-control" id="name" placeholder="Nome" name="name" value="" required>
           </div>
         </div>
@@ -22,12 +22,11 @@
   
         <textarea class="form-control" rows="10" placeholder="Mensagem" name="message" required></textarea>
         
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <button class="btn btn-primary send-button" type="submit" >
           <div class="alt-send-button">
             <i class="fa fa-paper-plane"></i>
              <span class="send-text">Enviar</span>
           </div>
-        
         </button>
         
       </form>

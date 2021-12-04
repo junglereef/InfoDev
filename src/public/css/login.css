@@ -68,6 +68,25 @@ body {
     font-size: 14px
 }
 
+.text-center a {
+  color: var(--bs-white)
+}
+
+#login-button {
+  margin-left: 16.5vw;
+
+}
+
+#signup-button{
+  margin-left: 14vw;
+
+}
+
+#login-social-icons{
+  margin-bottom: 2vh;
+}
+
+
 .signup {
     height: 50px;
     font-size: 14px

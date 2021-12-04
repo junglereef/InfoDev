@@ -1,3 +1,4 @@
+const {Form} = require('../models');
 const MainController = {
   indexPage: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
@@ -23,6 +24,21 @@ const MainController = {
   registerRedirect(req, res) {
     res.redirect("/auth/cadastro"); // redirecionara para a pagina de cadastro através da rota auth
   },
-};
+
+  async sendForm(req,res){  
+        const{ name,email,message } = req.body;
+
+        const resultado = await Form.create(
+          {
+            name,
+            email,
+            message
+          }
+        );
+        
+        console.log(resultado)
+        return res.redirect('/')
+  }
+}
 
 module.exports = MainController;

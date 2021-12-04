@@ -12,6 +12,7 @@ router.get("/pedido-finalizado", MainController.orderConfirmation);
 // DEFINDO ROTAS DE REDIRECIONAMENTO
 router.get("/login", MainController.loginRedirect);
 router.get("/cadastre-se", MainController.registerRedirect);
+router.post("/sendForm", MainController.sendForm );
 
 module.exports = router;
 
