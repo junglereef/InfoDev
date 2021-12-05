@@ -1,3 +1,9 @@
+const Product = require('../models/Product');
+const { Category } = require("../models/Category");
+// const Cart = require('../models/Cart');
+const Order = require('../models/Order');
+
+
 const ProdutosController = {
   async productPage(req, res) {
     try {
@@ -50,6 +56,23 @@ const ProdutosController = {
       console.log(error);
     }
   },
+  async saveProduct(req, res) {
+    try {
+        const {name, preco, description} = req.body
+        const { filename } = req.file
+        await Product.create({
+            name,
+            preco,
+            description,
+            image: filename
+        })
+
+        return res.redirect("admin/produtosAdmin");
+    } catch (error) {
+        console.log("aqui")
+        return res.render("admin/cadastroProduto", {error: "Erro ao cadastrar produto."})
+    }
+},
   async categoriesProductPage(req, res) {
     try {
       // inserir o método aqui
@@ -82,6 +105,28 @@ const ProdutosController = {
       console.log(error);
     }
   },
+  async category(req,res){
+    try{
+        const {name} = req.body;
+
+        const category = await Category.create({
+            name
+        })
+        
+        res.redirect("/cadastroCategoria")
+        
+    }catch(err){
+        console.log(err)
+        return res.redirect
+    }
+},
+
+async delete(req,res) {
+  const {name} = req.body;
+  Category.destroy({ where: { name }});
+ },
+
 };
+
 
 module.exports = ProdutosController;
