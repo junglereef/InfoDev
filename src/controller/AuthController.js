@@ -31,7 +31,7 @@ const AuthController = {
   },
   async login(req, res) {
     try {
-      const { email, password } = req.body;
+      const { email, password, } = req.body;
       const user = await User.findOne({
         where: {
           email,
@@ -51,9 +51,11 @@ const AuthController = {
 
       if (user.user_type) {
         req.session.user.admin = true;
-      }
+      }   else {
+        return res.redirect("/admin/cliente")
+    }
 
-      return res.redirect("/admin");
+      return res.redirect("/admin/painel");
     } catch (error) {
       console.log(error);
       return res.render("auth/login", {
@@ -61,6 +63,11 @@ const AuthController = {
       });
     }
   },
+
+  showLogout(req,res) {
+    req.session.destroy();
+    return res.redirect("/");
+  }
 };
 
 module.exports = AuthController;

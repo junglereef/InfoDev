@@ -1,36 +1,5 @@
 /* PAINEL-USUARIO */
 
-/* .painel-usuario{
-    display: flex;
-  }
-  
-.corpo {
-display: flex;
-justify-content: left;
-margin: 10px;
-margin-bottom: 20px;
-}
-.corpo-painel-usuario {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.compras {
-  margin-top: 2rem;
-  color: #ff4500;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.compras-meio,
-.compras-meio h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-} */
-
 .orders {
     margin: 10rem;
   }
@@ -41,7 +10,7 @@ margin-bottom: 20px;
   .user-panel {
     margin: 10rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .user-menu-box {
@@ -49,8 +18,8 @@ margin-bottom: 20px;
 }
   .avatar {
     vertical-align: middle;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
   }
   .user-info {
@@ -93,12 +62,8 @@ margin-bottom: 20px;
   
   .titulo-pedidos-favoritos{
     text-align: center;
-    padding: 30px;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-variant: small-caps;
-    font-weight: bold;
+    padding: 3rem;
+    font-size: 3rem;
   }
   
   .quadro-pedidos {
@@ -106,16 +71,16 @@ margin-bottom: 20px;
     flex-wrap: wrap;
     flex-direction: column;
     background: rgb(255, 255, 255);
-    margin-top: 16px;
-    padding: 20px;
+    margin-top: 1.6rem;
+    padding: 2rem;
     border-radius: 20px;
-    margin-left: 50px;
-    width: 300px;
+    margin-left: 5rem;
+    width: 30rem;
   }
   .todos-quadro-pedidos{
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 0.5rem;
   }
   .seta-pedidos{
     display: flex;
@@ -123,15 +88,15 @@ margin-bottom: 20px;
     cursor: pointer;
   }
   .seta-pedidos img{
-    margin-top: 10px;
-    width: 40px;
+    margin-top: 1rem;
+    width: 4rem;
   }
   .detalhes-pedido-titulo{
-    font-size: 13px;
+    font-size: 1.2rem;
     font-weight: bold;
   }
   .detalhes-pedido{
-    font-size: 11px;
+    font-size: 1rem;
     font-weight: bold;
     color: #363636;
   }
@@ -140,15 +105,15 @@ margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     background: rgb(255, 255, 255);
-    margin-top: 10px;
-    padding: 32px;
-    border-radius: 12px;
+    margin-top: 1rem;
+    padding: 30rem;
+    border-radius: 1.1rem;
     margin-left: 45px;  
   }
   .section-favoritos{
     display: flex;
     justify-content: left;
-    padding: 5px;
+    padding: .5rem;
     flex-wrap: wrap;
   }
   
@@ -156,7 +121,7 @@ margin-bottom: 20px;
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    padding: 10px;
+    padding: 1rem;
     flex-direction: column;
   }
   
@@ -166,7 +131,7 @@ margin-bottom: 20px;
     -webkit-box-align: center;
     justify-content: flex-start;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: rgb(66, 70, 77);
   }
     
@@ -174,7 +139,7 @@ margin-bottom: 20px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: normal;
     color: rgb(66, 70, 77);
     
@@ -207,8 +172,8 @@ margin-bottom: 20px;
   .resumo{
       /* margin-right: 30px;
       margin-top: 40px; */
-      font-size: 15px;
-      padding: 10px;
+      font-size: 1.4rem;
+      padding: 1rem;
       border: 1px solid #ff4500;
       margin-bottom: 20px;
       /* width: 250px; */
@@ -221,14 +186,14 @@ margin-bottom: 20px;
       margin-bottom: 2em;
   }
   .resumo h3{
-      font-size: 20px;
+      font-size: 2rem;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
   }
   .resumo-pedido{
       display: flex;
       justify-content: space-between;
-      padding: 10px;
+      padding: 1rem;
       border-bottom: 1px solid #ff4500;
   }
   .e-resumo{
@@ -241,41 +206,15 @@ margin-bottom: 20px;
       text-align: center;
   }
   .d-entrega p{
-      font-size: 13px;
+      font-size: 1.1rem;
       text-align: left;
       font-weight: bold;
   }
   .d-entrega input{
-      margin-top: 20px;
-      padding: 15px 20px;
+      margin-top: 2rem;
+      padding: 1.4rem 2rem;
       border-radius: 10px;
       background-color: #ff4500;
       color: white;
       font-weight: bold;
   }
-  /* 
-  @media(min-width: 320px) and (max-width: 568px){
-      main{
-          display: flex;
-          flex-direction: column;
-      }
-      .panel-user{
-          margin-left: 50px;
-      }
-      .pfinalizado{
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 20px;
-          align-items: center;
-      }
-      .pfinalizado h2{
-          font-size: 20px;
-          text-align: center;
-          margin-left: 100px;
-       
-      }
-      .r-resumo{
-          align-items: center;
-          margin-left: 100px;
-      }
-  } */

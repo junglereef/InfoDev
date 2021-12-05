@@ -7,7 +7,9 @@ module.exports = (req, res, next) => {
     res.locals.user = user;
     //libera o acesso
     return next();
-  }
+  }  else {
+    res.redirect('/panel')
+}
   //caso não tenha prevlégio de adm redireciona para a home
-  return res.redirect("/");
+  return res.redirect("/customer");
 };

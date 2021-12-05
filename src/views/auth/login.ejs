@@ -9,11 +9,12 @@
   <%- include('../partials/header')%>
   <!--header-end-->
 
-  <span><%= typeof error !== "undefined" ? error:'' %></span>
+  
   <main class="ctn-login-page-box">
     <div class="container mt-5 mb-5">
       <div class="row d-flex align-items-center justify-content-center">
           <div class="col-md-6">
+            
               <div class="card px-5 py-5 "> 
                   <h5 class="fs-3">Entre no mundo dos Devs <br> As melhores marcas com os melhores preços</h5> 
                   <!-- <small class="mt-2 text-muted">Aproveito o melhor da web: HTML, CSS and javascript. Todos os nossos produtos contem com garantia de qualidade e satisfação</small> -->
@@ -22,9 +23,11 @@
                     
                     <div class="form-input"> <i class="fa fa-envelope"></i> <input type="text" name="email" class="form-control" placeholder="Informo o seu E-mail" required>
                     </div>
-                    <div class="form-input"> <i class="fa fa-lock"></i> <input type="text" name="password" class="form-control" placeholder="Crie uma Senha" required> </div>
+                    <div class="form-input"> <i class="fa fa-lock"></i> <input type="password" name="password" class="form-control" placeholder="Crie uma Senha" required> </div>
+                    <span id="login-error fs-3"><%= typeof error !== "undefined" ? error:'' %></span>
+                    <div> <button id="login-button" class="btn btn-primary mt-4 signup">Entrar</button></div>
                     
-                    <button id="login-button" class="btn btn-primary mt-4 signup">Entrar</button>
+                    
                   </form>
                   
 

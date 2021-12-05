@@ -5,6 +5,7 @@ const AuthController = require("../controller/AuthController");
 // ROTAS [VIEWS]
 router.get("/login", AuthController.showLogin); // exibe a página de login
 router.get("/cadastro", AuthController.showRegister); // exibe a página de cadastro
+router.get("/logout", AuthController.showLogout);
 
 //ROTAS [AÇÕES]
 router.post("/login", AuthController.login); // Executa a ação de login do usuário
