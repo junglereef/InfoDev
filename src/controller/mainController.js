@@ -1,7 +1,12 @@
-const {Form, Product} = require('../models');
+const { Form, Product } = require("../models");
 const MainController = {
-  indexPage: (req, res) => {
-    res.render("home", { page: "Infodev - Loja de Eletrônicos" });
+  async indexPage(req, res) {
+    try {
+      const products = await Product.findAll()
+      res.render("home", { page: "Infodev - Loja de Eletrônicos", products });
+    } catch (error) {
+      console.log(error);
+    }
   },
   cartPage: (req, res) => {
     res.render("cart", { page: "Carrinho" });
@@ -24,21 +29,18 @@ const MainController = {
   registerRedirect(req, res) {
     res.redirect("/auth/cadastro"); // redirecionara para a pagina de cadastro através da rota auth
   },
+  async sendForm(req, res) {
+    const { name, email, message } = req.body;
 
-  async sendForm(req,res){  
-        const{ name,email,message } = req.body;
+    const resultado = await Form.create({
+      name,
+      email,
+      message,
+    });
 
-        const resultado = await Form.create(
-          {
-            name,
-            email,
-            message
-          }
-        );
-        
-        console.log(resultado)
-        return res.redirect('/')
-  }
-}
+    console.log(resultado);
+    return res.redirect("/");
+  },
+};
 
 module.exports = MainController;

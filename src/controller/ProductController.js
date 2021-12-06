@@ -1,6 +1,4 @@
-const {Product, Category, Cart, Order}  = require("../models")
-// const Cart = require('../models/Cart');
-// const Order = require('../models/Order');
+const {Product, Category}  = require("../models")
 
 
 const ProductsController = {
