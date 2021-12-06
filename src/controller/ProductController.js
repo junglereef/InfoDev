@@ -1,10 +1,10 @@
-const Product = require('../models/Product');
+const { Product } = require("../models/Product")
 const { Category } = require("../models/Category");
 // const Cart = require('../models/Cart');
-const Order = require('../models/Order');
+// const Order = require('../models/Order');
 
 
-const ProdutosController = {
+const ProductsController = {
   async productPage(req, res) {
     try {
       const { id } = req.params;
@@ -42,7 +42,7 @@ const ProdutosController = {
   async createProductPage(req, res) {
     try {
       // inserir o método aqui
-      res.send("Criar produtos (página)"); // Rota administrativa 'admin/produtos/adicionar'
+      res.render("admin/createProduct"); // Rota administrativa 'admin/produtos/adicionar'
     } catch (error) {
       console.log(error);
     }
@@ -58,19 +58,19 @@ const ProdutosController = {
   },
   async saveProduct(req, res) {
     try {
-        const {name, preco, description} = req.body
+        const {name, unit_price, description} = req.body
         const { filename } = req.file
         await Product.create({
             name,
-            preco,
+            unit_price,
             description,
             image: filename
         })
 
-        return res.redirect("admin/produtosAdmin");
+        return res.redirect("admin/criar-produto");
     } catch (error) {
         console.log("aqui")
-        return res.render("admin/cadastroProduto", {error: "Erro ao cadastrar produto."})
+        return res.send("hello")
     }
 },
   async categoriesProductPage(req, res) {
@@ -98,9 +98,15 @@ const ProdutosController = {
     }
   },
   async deleteProduct(req, res) {
-    try {
-      const { id } = req.params;
-      res.send("Apagar produtos  (ação)"); // usado pela rota DELETE [ sem renderização direta ]
+    try { const productDeleted = await Product.destroy({
+      where: {
+          id: req.params.id
+      }
+  })
+
+  if(!productDeleted)
+      return res.render("/produtos", {error: "Produto não deletado.Tente Novamente", produtos: await Product.findAll()})
+  return res.redirect("/produtos") // usado pela rota DELETE [ sem renderização direta ]
     } catch (error) {
       console.log(error);
     }
@@ -129,4 +135,4 @@ async delete(req,res) {
 };
 
 
-module.exports = ProdutosController;
+module.exports = ProductsController;
