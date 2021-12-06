@@ -1,0 +1,13 @@
+<div class="conteiner-cards">
+    <% product.forEach(product => {%> 
+        <div class="cards">
+            <img src="/uploads/<%=product.image%>" class="product-image" alt="<%= products.name %>">
+            <div class="card-details">
+                <h2 class="cardName"><%= products.name%></h2>
+                <h5 class="cardDiscount"><%= products.offer_price %></h5>
+                <h3 class="cardPrice">R$ <%= products.unit_price %></h3>
+                <button class="cardBuy">Comprar</button>
+            </div>
+        </div>
+    <% }) %>
+</div>

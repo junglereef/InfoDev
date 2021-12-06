@@ -1,5 +1,4 @@
-const { Product } = require("../models/Product")
-const { Category } = require("../models/Category");
+const {Product, Category, Cart, Order}  = require("../models")
 // const Cart = require('../models/Cart');
 // const Order = require('../models/Order');
 
@@ -67,7 +66,7 @@ const ProductsController = {
             image: filename
         })
 
-        return res.redirect("admin/criar-produto");
+        return res.redirect("/admin/painel");
     } catch (error) {
         console.log("aqui")
         return res.send("hello")

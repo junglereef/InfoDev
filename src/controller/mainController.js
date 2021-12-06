@@ -1,4 +1,4 @@
-const {Form} = require('../models');
+const {Form, Product} = require('../models');
 const MainController = {
   indexPage: (req, res) => {
     res.render("home", { page: "Infodev - Loja de Eletrônicos" });
