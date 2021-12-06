@@ -2,10 +2,11 @@ const { Form, Product } = require("../models");
 const MainController = {
   async indexPage(req, res) {
     try {
-      const products = await Product.findAll()
-      res.render("home", { page: "Infodev - Loja de Eletrônicos", products });
+      const productCard = await Product.findAll();
+      res.render("home", { page: "Infodev - Loja de Eletrônicos", product:productCard });
     } catch (error) {
       console.log(error);
+      return res.render("home", {error: "Erro ao carregar produtos"})
     }
   },
   cartPage: (req, res) => {
