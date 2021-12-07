@@ -1,4 +1,15 @@
+const { User } = require("../models");
+
 const UserController = {
+
+  async customerPage (req, res) {
+    try {
+    res.render("clients/painel-cliente", { page: "Painel do usuário" });
+  } catch (error) {
+    console.log(error);
+  }
+  },
+
   async viewAllPage(req, res) {
     try {
     } catch (error) {

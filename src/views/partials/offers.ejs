@@ -1,7 +1,7 @@
-    <h2>Ofertas</h2>
-    <div class="prodcuts-grid">
+<h2>Ofertas</h2>
+<div class="prodcuts-grid">
+<% product.forEach(products => {%> 
     <div class="product-item">
-
         <div class="product-card">
             <span class="iconify" data-inline="false" data-icon="akar-icons:arrow-down"
                 style="color: #E17055; font-size: 16px;" data-flip="horizontal"></span>
@@ -10,11 +10,11 @@
 
         <div class="image">
             <a href="/produtos/produto">
-                <img src="/images/processador-amd.jpg" class="" alt="" title="AMD Ryzen 5 5600X"></a>
+                <img src="/uploads/<%=products.image%>" class="product-image" alt="<%= products.name %>"></a>
         </div>
         <div class="ctn-product">
             </a>
-            <div class="pname"><a href="/produtos/produto">Processador AMD Ryzen 5 5600X, Cache 35MB, 3.7GHz (4.6GHz Max Turbo)
+            <div class="pname"><a href="/produtos/produto"><%= products.name%>
                 </a></div>
         </div>
     </div>
@@ -107,4 +107,5 @@
                 </a></div>
         </div>
     </div>
+<% }) %>
 </div>

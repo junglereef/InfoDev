@@ -10,7 +10,7 @@ const mainRoutes = require("./routes");
 const productsRoutes = require("./routes/products");
 const adminRoutes = require("./routes/admin");
 const authRoutes = require("./routes/auth");
-
+const clientRoutes = require("./routes/client");
 //estabelecendo uma porta para inicialização do servidor
 const port = 3000;
 
@@ -48,7 +48,7 @@ app.use(mainRoutes);
 app.use("/produtos", productsRoutes);
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
-
+app.use("/cliente", clientRoutes);
 /*Import Bootstrap*/
 
 

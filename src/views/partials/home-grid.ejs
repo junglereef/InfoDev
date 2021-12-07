@@ -1,0 +1,25 @@
+<div class="grid">
+
+    <div class="content">
+        
+        <ul class="rig columns-4">
+            <% product.forEach(products => {%> 
+            <li>
+                <a href="/produtos/<%= products.name%>"> <img src="/uploads/<%=products.image%>" class="product-image" alt="<%= products.name %>">
+                <h4><%= products.name%></h4>
+                <i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star-half-o fa-2x"></i><i class="active fa fa-star-o fa-2x"></i>
+                <p><%= products.description %></p>
+                <div class="price">R$ <%= products.offer_price %></div>
+                <span style="text-decoration: line-through; color:red;">R$<%= products.unit_price %> </span>
+                <hr>
+                <button class="btn btn-default btn-xs pull-right" type="button">
+                    <i class="fa fa-cart-arrow-down"></i> Comprar
+                </button>
+                <button class="btn btn-default btn-xs pull-left" type="button">
+                    <i class="fa fa-eye"></i> Detalhes
+                </button>
+            </li>
+            <% }) %>
+        </ul>
+        
+    </div>
