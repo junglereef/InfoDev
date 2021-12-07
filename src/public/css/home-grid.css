@@ -1,7 +1,11 @@
 
+.home-grid{
+  margin-top: 2rem;
+}
 
 .grid > * {
     grid-template-columns: repeat(4, 1fr);
+    
   }
   
 .image{

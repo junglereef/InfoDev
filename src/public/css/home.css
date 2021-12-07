@@ -8,6 +8,7 @@
 /* OFERTA */
 .ctn-offer {
   font-size: clamp(2rem, 2.5vw, 2.8rem);
+  
 
 }
 
@@ -56,7 +57,7 @@
   .ctn-offer{
     position: relative; 
     background-color: #fff;
-    
+    padding-top: 0.5rem;
   }
 
   .ctn-product .pname>a {

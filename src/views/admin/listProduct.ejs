@@ -10,7 +10,43 @@
   <%- include("../partials/header") %>
   <!--header-fim-->
 <main>
+  <div>
+    <a href="/" class="btn btn-primary ml-3">Lista Produtos</a>  
+    <a href="/produtos/criar" class="btn btn-secondary ml-3">Novo Produto</a> 
+</div>    
 
+<br>
+  <table class="table">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col"><%= products.name%></th>
+    <th width="200px">Action</th>
+ 
+  </tr>
+</thead>
+<tbody>
+  <% if(data.length){
+ 
+  for(var i = 0; i< data.length; i++) {%>  
+  <tr>
+    <th scope="row"><%= (i+1) %></th>
+    <td><%= data[i].name%></td>
+    <td>
+    <a class="btn btn-success edit" href="../produtos/atualizar/<%=data[i].id%>">Edit</a>                       
+    <a class="btn btn-danger delete" onclick="return alert('tem certeza?')" href="../produtos/apagar/<%=data[i].id%>">Apagar</a>                       
+   </td>
+  </tr>
+  <% }
+           
+   }else{ %>
+       <tr>
+          <td colspan="3">Nenhum Produto</td>
+       </tr>
+    <% } %>    
+  
+</tbody>
+</table>
 </main>
   
 
