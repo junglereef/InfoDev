@@ -72,10 +72,6 @@ body {
   color: var(--bs-white)
 }
 
-#login-button {
-  margin-left: 16.5vw;
-
-}
 
 #login-error {
   color: white;

@@ -1,7 +1,12 @@
 const { User } = require("../models");
 const AdminController = {
-  dashboardPage: (req, res) => {
+  async dashboardPage (req, res)  {
+    try {
     res.render("admin/painel", { page: "Painel do Administrador" });
+  } catch (error) {
+    return res.redirect("/")
+    console.log(error);
+  }
   },
 
 };

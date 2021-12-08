@@ -3,7 +3,7 @@
     --primary-color: #ff4500;
     --acent-color: #864636;
     --white-color: #f1f1f1;
-    --blue-color:#365dae;
+    --blue-color:#0d6efd ;
     --gray-color: #939597;
     --secondary-color: #ff8c00;
     --primary-light: #ea834b;
@@ -164,6 +164,7 @@
     align-items: center;
     justify-content: center;
     color: var(--gray-color);
+    z-index: 5;
   }
   
   #navbar-list li {
@@ -327,6 +328,7 @@ form.example::after {
     margin:0;
     padding:0;
     text-align: center;
+    z-index: 5;
    
   }
 

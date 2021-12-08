@@ -11,7 +11,7 @@ router.get('/', ProductController.productsListPage);
 
 // BACKEND PRODUCTS 
 // router.get("/editar-produto/:id ", /*isLogin, acessLevel,*/ProductController.editProductPage);
-router.get("/editar-produto ", isLogin, acessLevel,ProductController.editProductPage);
+router.get("/editar-produtos/:id ", isLogin, acessLevel,ProductController.editProductPage);
 router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
 router.get('/criar-produto', isLogin, acessLevel, ProductController.createProductPage);
 

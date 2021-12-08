@@ -44,7 +44,7 @@ const ProductsController = {
   async createProductPage(req, res) {
     try {
       // inserir o método aqui
-      res.render("admin/createProduct"); // Rota administrativa 'admin/produtos/adicionar'
+      res.render("admin/createProduct",  { page: "Criar Produtos"}); // Rota administrativa 'admin/produtos/adicionar'
     } catch (error) {
       console.log(error);
     }
@@ -53,7 +53,7 @@ const ProductsController = {
     try {
       const { id } = req.params;
       // inserir o método aqui
-      res.send("Editar produtos (página)"); // Rota administrativa 'admin/produtos/editar/id'
+      res.render("admin/updateProduct",  { page: "Atualização Produtos"});// Rota administrativa 'admin/produtos/editar/id'
     } catch (error) {
       console.log(error);
     }
