@@ -7,16 +7,6 @@
     grid-template-columns: repeat(4, 1fr);
     
   }
-  
-.image{
-width: 300px;
-height: 280px;
-}
-.product-image {
-    max-height: 100%;
-    max-width: 100%;
-}
-
   ul.rig {
     list-style: none;
     font-size: 0px;
@@ -40,7 +30,7 @@ height: 280px;
   }
   
   ul.rig li img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     margin: 0 0 10px;
   }
@@ -76,9 +66,25 @@ height: 280px;
   
   ul.rig.columns-4 li {
     width: 22.5%;
+    text-align: center;
     /* this value + 2.5 should = 25% */
   }
   
+
+
+
+.home-product-price,
+.home-product-offer-price,
+.home-product-desctiption {
+  font-size: 2rem !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+
   @media (max-width: 680px) {
     ul.grid-nav li {
       display: inline-block;
