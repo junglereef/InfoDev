@@ -21,8 +21,13 @@ const ProductsController = {
   },
   async productsListAdminPage(req, res) {
     try {
-      // inserir o método aqui
-      res.send("Lista de produtos (página)"); //  Rota administrativa 'admin/produtos'
+      const products = await Product.findAll({
+        
+          order: [["createdAt", "DESC"]],
+      });
+      // console.log(products);
+     
+      res.render("admin/listProduct", { page: "Lista de Produtos",  product:products }); //  Rota administrativa 'admin/produtos'
     } catch (error) {
       console.log(error);
     }
@@ -55,11 +60,12 @@ const ProductsController = {
   },
   async saveProduct(req, res) {
     try {
-        const {name, unit_price, description} = req.body
+      const {name, unit_price,  offer_price, description} = req.body
         const { filename } = req.file
         await Product.create({
             name,
             unit_price,
+            offer_price,
             description,
             image: filename
         })
@@ -67,7 +73,7 @@ const ProductsController = {
         return res.redirect("/admin/painel");
     } catch (error) {
         console.log("aqui")
-        return res.send("hello")
+        return res.send("error")
     }
 },
   async categoriesProductPage(req, res) {

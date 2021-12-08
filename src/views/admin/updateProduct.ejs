@@ -10,7 +10,42 @@
   <%- include("../partials/header") %>
   <!--header-fim-->
 <main>
+  <div class="container mt-5 mb-5">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-6">
+            <div class="card px-5 py-5"> 
+              <% if(typeof error != 'undefined'){%>
+                <h4><%= error %></h4>
+                <% } %>
 
+                <form action="salvar-produto" method="POST" enctype="multipart/form-data">
+                  <label>Nome do produto:</label><br>
+                  <input class="mb-3 fs-2" type="text" name="name" placeholder="Ex:.Telefone" />
+                  <br>
+                          
+                  <label>Preço:</label><br>
+                  <input class="mb-3 fs-2" type="text" name="unit_price" placeholder="Ex:.20" />
+                  <br>
+                  <label>Preço em offerta:</label><br>
+                  <input class="mb-3 fs-2" type="text" name="offer_price" placeholder="Ex:.20" />
+                  <br>
+          
+                  <label>Descrição</label><br>
+                  <input class="mb-3 fs-2" type="text" name="description" placeholder="EX:. Motorolla e23"/>
+                  <br>
+          
+                  <label for="formFile" class="form-label">Imagem do produto:</label><br>
+                  <input class="form-control" id="formFile" type="file" name="image" />
+                  <br>
+          
+                  <button class="btn btn-primary fs-2" type="submit">Enviar</button>
+              </form>
+                
+               
+            </div>
+        </div>
+    </div>
+ </div>
 </main>
   
 

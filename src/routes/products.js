@@ -3,16 +3,22 @@ const router = express.Router();
 const ProductController = require("../controller/ProductController");
 const upload = require('../middlewares/upload');
 const isLogin = require('../middlewares/isLogin');
+const acessLevel = require("../middlewares/acessLevel");
 
 // MAIN PRODUCT ROUTES [VIEWS]
 // router.get("/:id", ProductController.productPage);
 router.get('/', ProductController.productsListPage);
-router.get("/editar-produto/:id ", isLogin,ProductController.editProductPage);
-router.get('/lista', isLogin, ProductController.productsListAdminPage);
-router.get('/criar-produto', isLogin, ProductController.createProductPage);
+
+// BACKEND PRODUCTS 
+// router.get("/editar-produto/:id ", /*isLogin, acessLevel,*/ProductController.editProductPage);
+router.get("/editar-produto ", isLogin, acessLevel,ProductController.editProductPage);
+router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
+router.get('/criar-produto', isLogin, acessLevel, ProductController.createProductPage);
 
 //CATEGORY ROUTES
 router.get("/categorias", ProductController.categoriesProductPage);
+// router.get("/criar", isLogin,ProdutosController.createProductPage);
+// router.get("/categorias", isLogin,ProdutosController.categoriesProductPage);
 
 //POST ROUTES
 // router.post('/criar-produto', isLogin, upload.single("image"), ProductController.createProduct);

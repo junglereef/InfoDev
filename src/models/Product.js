@@ -21,6 +21,8 @@ module.exports = (connection, DataTypes) => {
         length: DataTypes.INTEGER,
         weight: DataTypes.INTEGER,
         createdAt: DataTypes.DATE,
+        
+            
 
     },
     {
