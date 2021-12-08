@@ -45,8 +45,8 @@ const UserController = {
     }
   },
   async delete(req, res) {
-    const { id } = req.params;
     try {
+      const { id } = req.params;
     } catch (error) {
       console.log(error);
     }

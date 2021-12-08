@@ -52,10 +52,10 @@ const AuthController = {
       if (user.user_type) {
         req.session.user.admin = true;
       }   else {
-        return res.redirect("/cliente/painel")
+        return res.redirect("/cliente")
     }
 
-      return res.redirect("/admin/painel");
+      return res.redirect("/admin");
     } catch (error) {
       console.log(error);
       return res.render("auth/login", {

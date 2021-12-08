@@ -9,12 +9,6 @@ const acessLevel = require("../middlewares/acessLevel");
 // router.get("/:id", ProductController.productPage);
 router.get('/', ProductController.productsListPage);
 
-// BACKEND PRODUCTS 
-// router.get("/editar-produto/:id ", /*isLogin, acessLevel,*/ProductController.editProductPage);
-router.get("/editar-produtos/:id ", isLogin, acessLevel,ProductController.editProductPage);
-router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
-router.get('/criar-produto', isLogin, acessLevel, ProductController.createProductPage);
-
 //CATEGORY ROUTES
 router.get("/categorias", ProductController.categoriesProductPage);
 // router.get("/criar", isLogin,ProdutosController.createProductPage);
@@ -25,6 +19,7 @@ router.get("/categorias", ProductController.categoriesProductPage);
 router.post("/cadastarCategoria", isLogin,ProductController.category)
 router.post("/deletarCategoria", isLogin, ProductController.delete)
 router.post('/salvar-produto', isLogin, upload.single("image"), ProductController.saveProduct);
+
 
 //DELETE ROUTES
 router.delete('/deletar-produto/:id', isLogin, ProductController.deleteProduct);

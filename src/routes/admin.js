@@ -1,17 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const AdminController = require("../controller/AdminController");
-const isLogin = require("../middlewares/isLogin");
+const ProductController = require("../controller/ProductController");
 const acessLevel = require("../middlewares/acessLevel");
+const isLogin = require("../middlewares/isLogin");
 
 // router.use(isLogin); // Habilita verificação de login
 router.use(acessLevel);
 
 // ROTAS PAINEL [PRINCIPAL]
-router.get("/painel", isLogin, acessLevel, AdminController.dashboardPage);
+router.get("/", isLogin, acessLevel, AdminController.dashboardPage);
 
 
-//// DEFININDO ROTAS [VIEWS] PRODUTOS
+
+// BACKEND PRODUCTS 
+// router.get("/editar-produto/:id ", /*isLogin, acessLevel,*/ProductController.editProductPage);
+router.get("/editar-produto/:id ", isLogin, acessLevel,ProductController.editProductPage);
+router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
+router.get('/criar-produtos', isLogin, acessLevel, ProductController.createProductPage);
+
 
 
 module.exports = router;

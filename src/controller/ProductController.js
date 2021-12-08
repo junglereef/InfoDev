@@ -51,10 +51,16 @@ const ProductsController = {
   },
   async editProductPage(req, res) {
     try {
-      const { id } = req.params;
-      // inserir o método aqui
-      res.render("admin/updateProduct",  { page: "Atualização Produtos"});// Rota administrativa 'admin/produtos/editar/id'
+      const {id} = req.params;
+      // // inserir o método aqui
+      // const products = await Product.findById(id, (err, product))
+  
+      return res.render("/updateProductPage" + id,  { 
+        page: "Atualização Produtos",
+             
+      });// Rota administrativa 'admin/produtos/editar/id'
     } catch (error) {
+      res.redirect("/")
       console.log(error);
     }
   },

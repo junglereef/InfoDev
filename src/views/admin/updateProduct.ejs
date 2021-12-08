@@ -13,10 +13,14 @@
   <div class="container mt-5 mb-5">
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-6">
+            <div class="card-header bg-success">
+              <h3 class="text-light">Atualizar Produtos (<%= product.name %>)</h3>
+            </div>
             <div class="card px-5 py-5"> 
               <% if(typeof error != 'undefined'){%>
                 <h4><%= error %></h4>
                 <% } %>
+
 
                 <form action="/salvar-edicao-produto/<% product._id %> " method="post" enctype="multipart/form-data">
                   
@@ -33,16 +37,18 @@
                   <br>
           
                   <label>Descrição</label><br>
-                  <input class="mb-3 fs-2" type="text" name="description" placeholder="EX:. Motorolla e23"/>
+                  <input class="mb-3 fs-2" type="text" name="description" placeholder="EX:. Motorolla e23" required/>
                   <br>
           
                   <label for="formFile" class="form-label">Imagem do produto:</label><br>
-                  <input class="form-control" id="formFile" type="file" name="image" />
-                  <img src="/<%= product. image %> " width="100%" class ="img-thumbnail">
+                  <input class="form-control" id="formFile" type="file" name="image" required/>
+                  <img src="/<%= product. image %> " width="100%" class ="img-thumbnail mt-1">
                   <input type="hidden" name="old_image" value="<%= user.image %> " class="type">
                   <br>
-          
-                  <button class="btn btn-primary fs-2" type="submit">Atualizar</button>
+                  
+                  <div class="mb-3 d-grid" >
+                  <input type="submit" class="btn btn-success fs-2" value="Add Product">Atualizar</button>
+                </div>
               </form>
                 
                
