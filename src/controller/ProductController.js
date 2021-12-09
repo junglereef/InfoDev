@@ -84,7 +84,7 @@ const ProductsController = {
   async productPage(req, res) {
       try {
       const {id} = req.params
-      const product = await Product.findByPk({id})
+      const product = await Product.findByPk(id)
       return res.render("item", {product})
     } catch (error) {
       return res.send("Erro ao acessar este produto.")
@@ -93,6 +93,5 @@ const ProductsController = {
   
 
 };
-
 
 module.exports = ProductsController;
