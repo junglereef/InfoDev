@@ -87,7 +87,7 @@ const ProductsController = {
       const product = await Product.findByPk({id})
       return res.render("item", {product})
     } catch (error) {
-      return res.send("/", {error: "Erro ao acessar este produto.", product: req.body})
+      return res.send("Erro ao acessar este produto.")
     }
   },
   
