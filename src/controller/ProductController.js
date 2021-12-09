@@ -1,5 +1,6 @@
 
 const {Product}  = require("../models")
+const Sequelize = require('sequelize');
 const { render } = require("ejs");
 
 
@@ -29,7 +30,7 @@ const ProductsController = {
             image: filename
         })
 
-        return res.redirect("/admin/painel");
+        return res.redirect("/admin/lista-produtos");
     } catch (error) {
         console.log("aqui")
         return res.render("admin/criar-produtos", {error: "Erro ao cadastrar produto."})
@@ -50,57 +51,43 @@ const ProductsController = {
     }
   },
   async editProductPage(req, res) {
-    try {
-      const productEdit = await Product.findOne({
-        where: {id: req.params.id}
-    })
-      // const {id} = req.params;
-      if(productEdit != null)
-      return res.render('admin/editar-produto', {products: productEdit})    
-  return res.render('admin/lista-produtos', {error: "Não há produtos cadastrado.", product: null})// Rota administrativa 'admin/produtos/editar/id'
-    } catch (error) {
-      res.render('admin/lista-produtos', {error: "Erro ao tentar editar produto.", produtos: null})
-      console.log(error);
-    }
+    const {id} = req.params
+        const products = await Product.findByPk(id);
+        return res.render('admin/updateProduct',{products})  
   },
   async editProduct(req, res) {
     try {
-      const { name, price,offer_price, description } = req.body
+      let image = undefined
+      const {id} = req.params 
+      const { name, unit_price, offer_price, description } = req.body
+      if (req.file && req.files != "undefined") {
+        const { filename } = req.file;
+        image = filename;
+      }
       await Product.update({
           name,
-          price,
+          unit_price,
           offer_price,
           description,
-          image: req.file.filename,
-          updatedAt: new Date().toISOString()
+          image,
       },
           {
-              where: {id: req.params.id},
+              where: {id},
           }
       );
       return res.redirect("/admin/lista-produtos")// usado pela rota PUT [ sem renderização direta ]
     } catch (error) {
-      return res.render("admin/editar-produto", {error: "Erro ao tentar editar produto.", produto: req.body})
+      return res.render("admin/updateProduct", {error: "Erro ao tentar editar produto.", products: req.body})
     }
   },
 
   async productPage(req, res) {
+    const {id} = req.params
     try {
-      // const { name, price,offer_price, description } = req.body
-      // await Product({
-      //     name,
-      //     price,
-      //     offer_price,
-      //     description,
-      //     image: req.file.filename,
-      // },
-      //     {
-      //         where: {id: req.params.id},
-      //     }
-      // );
+    
       return res.render("item")
     } catch (error) {
-      return res.send("/", {error: "Erro ao tentar editar produto.", produto: req.body})
+      return res.send("/", {error: "Erro ao acessar este produto.", product: req.body})
     }
   },
   

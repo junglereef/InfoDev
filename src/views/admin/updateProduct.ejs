@@ -14,7 +14,7 @@
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-6">
             <div class="card-header bg-success">
-              <h3 class="text-light">Atualizar Produtos (<%= product.name %>)</h3>
+              <h3 class="text-light">Atualizar: (<%= products.name %>)</h3>
             </div>
             <div class="card px-5 py-5"> 
               <% if(typeof error != 'undefined'){%>
@@ -22,32 +22,32 @@
                 <% } %>
 
 
-                <form action="/salvar-edicao-produto/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/admin/editar-produto/<%=products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                   
                   <label>Nome do produto:</label><br>
-                  <input class="mb-3 fs-2" type="text" name="name" placeholder="Ex:.Telefone" value="<%= product.name %> " required />
+                  <input class="mb-3 fs-2" type="text" name="name" placeholder="Ex:.Telefone" value="<%= products.name %> " required />
                   <br>
                           
                   <label>Preço:</label><br>
-                  <input class="mb-3 fs-2" type="text" name="unit_price" placeholder="Ex:.20" value="<%= product.unit_price %> " required/>
+                  <input class="mb-3 fs-2" type="text" name="unit_price" placeholder="Ex:.20" value="<%= products.unit_price %> " required/>
                   <br>
                   <label>Preço em offerta:</label><br>
                   <input class="mb-3 fs-2" type="text" name="offer_price" placeholder="Ex:.20"
-                  value=" <%= product.offer_price %> " required/>
+                  value=" <%= products.offer_price %> " required/>
                   <br>
           
                   <label>Descrição</label><br>
-                  <input class="mb-3 fs-2" type="text" name="description" placeholder="EX:. Motorolla e23" required/>
+                  <input class="mb-3 fs-2" type="text" name="description" placeholder="EX:. Motorolla e23"  value=" <%= products.description %>" required/>
                   <br>
           
                   <label for="formFile" class="form-label">Imagem do produto:</label><br>
-                  <input class="form-control" id="formFile" type="file" name="image" required/>
-                  <img src="/<%= product. image %> " width="100%" class ="img-thumbnail mt-1">
-                  <input type="hidden" name="old_image" value="<%= user.image %> " class="type">
+                  <input class="form-control" id="formFile" type="file" name="image" />
+                  <img src="/uploads/<%= products. image %> " width="100%" class ="img-thumbnail mt-1">
+                  <input type="hidden" name="old_image" value="<%= products.image %> " class="type">
                   <br>
                   
                   <div class="mb-3 d-grid" >
-                  <input type="submit" class="btn btn-success fs-2" value="Add Product">Atualizar</button>
+                  <input type="submit" class="btn btn-success fs-2" value="Atualizar"></button>
                 </div>
               </form>
                 

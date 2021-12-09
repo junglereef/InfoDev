@@ -4,6 +4,8 @@ const path = require("path");
 const logger = require("morgan");
 const app = express();
 const methodOverride = require("method-override");
+const bodyParser = require('body-parser');
+
 
 //Definindo utilização de rotas
 const mainRoutes = require("./routes");
