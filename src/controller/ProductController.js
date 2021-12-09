@@ -82,12 +82,10 @@ const ProductsController = {
   },
 
   async productPage(req, res) {
-    const {id} = req.params
-    try {
-      const product = await Product.findAll({
-        
-      });
-      return res.render("item")
+      try {
+      const {id} = req.params
+      const product = await Product.findByPk({id})
+      return res.render("item", {product})
     } catch (error) {
       return res.send("/", {error: "Erro ao acessar este produto.", product: req.body})
     }
