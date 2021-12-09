@@ -1,6 +1,5 @@
 
 const {Product}  = require("../models")
-const Sequelize = require("sequelize");
 const { render } = require("ejs");
 
 
@@ -82,6 +81,26 @@ const ProductsController = {
       return res.redirect("/admin/lista-produtos")// usado pela rota PUT [ sem renderização direta ]
     } catch (error) {
       return res.render("admin/editar-produto", {error: "Erro ao tentar editar produto.", produto: req.body})
+    }
+  },
+
+  async productPage(req, res) {
+    try {
+      // const { name, price,offer_price, description } = req.body
+      // await Product({
+      //     name,
+      //     price,
+      //     offer_price,
+      //     description,
+      //     image: req.file.filename,
+      // },
+      //     {
+      //         where: {id: req.params.id},
+      //     }
+      // );
+      return res.render("item")
+    } catch (error) {
+      return res.send("/", {error: "Erro ao tentar editar produto.", produto: req.body})
     }
   },
   

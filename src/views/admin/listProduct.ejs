@@ -10,146 +10,159 @@
   <!--header-->
   <%- include("../partials/header") %>
   <!--header-fim-->
-<main>
- 
-  <div class="container">
-  <div class="row flex-lg-nowrap">
-    
-  
-      <div class="row flex-lg-nowrap">
-        <div class="col mb-3">
-          <div class="e-panel card">
-            <div class="card-body">
-              <div class="card-title">
-                <h5 class="ml-2 "><span class="text-primary text-center">Produtos Cadastrados</span></h6>
-              </div>
-              <div class="e-table">
-                <div class="table-responsive table-lg ml-3">
-                  <table class="table table-bordered text-center">
-                   
-                    <thead>
-                      
-                      <tr>
-                       
-                        <th class="align-top">
-                          <div class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0">
-                            <input type="checkbox" class="custom-control-input" id="all-items">
-                            <label class="custom-control-label" for="all-items"></label>
-                          </div>
-                        </th>
-                        <th>Imagem</th>
-                        <th class="max-width">Nome</th>
-                        <th class="sortable">Data</th>
-                        <th> </th>
-                        <th>Opções</th>
-                        
-                      </tr>
-                    </thead>
-                    
-                    <tbody>
-                      <% product.forEach(products => {%> 
-                      <tr>
-                        <td class="align-middle">
-                          <div class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0 align-top">
-                            <input type="checkbox" class="custom-control-input" id="item-1">
-                            <label class="custom-control-label" for="item-1"></label>
-                          </div>
-                        </td>
-                        <td class="align-middle text-center">
-                          <div class="bg-light d-inline-flex justify-content-center align-items-center align-top" style="width: 10rem; height: auto; "><img src="/uploads/<%=products.image%>" class="img-fluid mx-auto d-block" alt="<%= products.name %>"></div>
-                        </td>
-                        <td class="text-nowrap align-middle"><%= products.name %></td>
-                        <td class="text-nowrap align-middle"><span><%= products.createdAt %></span></td>
-                        <td class="text-center align-middle"><i class="fa fa-fw text-secondary cursor-pointer fa-toggle-on"></i></td>
-                        <td class="text-center align-middle">
-                          <div class="btn-group align-top">
- 
-                            <form action="/editar-produto/<%=products.id%>" method="GET" enctype="multipart/form-data">
-                                <button type="submit" class="btn btn-secondary btn-outline-light badge fs-6" id="button-edit">Editar</button>
-                            </form>
-                            
-                          <form method="POST" action="/deletar-produto/<%= products.id %>?_method=DELETE">
-                                <button id="button-delete" type="submit" class="btn btn-secondary btn-outline-light badge fs-6"><i class="fa fa-trash"></i></button>
-                            </form>
-                                                     
-                         </div>
-                           
-                        </td>
-                       
-                      </tr>
-                      <% }) %>
-                    </tbody>
-                    
-                  </table>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <ul class="pagination mt-3 mb-0">
-                    <li class="disabled page-item"><a href="#" class="page-link">‹</a></li>
-                    <li class="active page-item"><a href="#" class="page-link">1</a></li>
-                    <!-- <li class="page-item"><a href="#" class="page-link">2</a></li> -->
-                    <li class="page-item"><a href="#" class="page-link">›</a></li>
-                    <li class="page-item"><a href="#" class="page-link">»</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-3 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <div class="text-center px-xl-3">
-                <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#user-form-modal" onclick="location.href='/admin/criar-produtos';">Cadastrar Produto</button>
-                
-              </div>
-              
-              <hr class="my-3">
-              <div>
-                <div class="form-group">
-                  <label>Periodo desde-até:</label>
-                  <div>
-                    <input id="dates-range" class="form-control flatpickr-input" placeholder="01 Dec 17 - 27 Jan 18" type="text" readonly="readonly">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Procurar por Nome:</label>
-                  <div><input class="form-control w-100" type="text" placeholder="Name" value=""></div>
-                </div>
-              </div>
-              <hr class="my-3">
-              <div class="">
-                <label>Status:</label>
-                <div class="px-2">
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" name="user-status" id="users-status-disabled">
-                    <label class="custom-control-label" for="users-status-disabled">Desabilitado</label>
-                  </div>
-                </div>
-                <div class="px-2">
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" name="user-status" id="users-status-active">
-                    <label class="custom-control-label" for="users-status-active">Ativo</label>
-                  </div>
-                </div>
-                <div class="px-2">
-                  <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" name="user-status" id="users-status-any" checked="">
-                    <label class="custom-control-label" for="users-status-any">Qualquer</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</main>
-  
+  <main>
 
-<div class="footerBox"></div>
-<!--footer-->
-<%- include("../partials/footer") %>
-<!--footer-fim-->
-</div>
+    <div class="container">
+      <div class="row flex-lg-nowrap">
+
+
+        <div class="row flex-lg-nowrap">
+          <div class="col mb-3">
+            <div class="e-panel card">
+              <div class="card-body">
+                <div class="card-title">
+                  <h5 class="ml-2 "><span class="text-primary text-center">Produtos Cadastrados</span></h6>
+                </div>
+                <div class="e-table">
+                  <div class="table-responsive table-lg ml-3">
+                    <table class="table table-bordered text-center">
+
+                      <thead>
+
+                        <tr>
+
+                          <th class="align-top">
+                            <div
+                              class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0">
+                              <input type="checkbox" class="custom-control-input" id="all-items">
+                              <label class="custom-control-label" for="all-items"></label>
+                            </div>
+                          </th>
+                          <th>Imagem</th>
+                          <th class="max-width">Nome</th>
+                          <th class="sortable">Data</th>
+                          <th> </th>
+                          <th>Opções</th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <% product.forEach(products => {%>
+                        <tr>
+                          <td class="align-middle">
+                            <div
+                              class="custom-control custom-control-inline custom-checkbox custom-control-nameless m-0 align-top">
+                              <input type="checkbox" class="custom-control-input" id="item-1">
+                              <label class="custom-control-label" for="item-1"></label>
+                            </div>
+                          </td>
+                          <td class="align-middle text-center">
+                            <div class="bg-light d-inline-flex justify-content-center align-items-center align-top"
+                              style="width: 10rem; height: auto; "><img src="/uploads/<%=products.image%>"
+                                class="img-fluid mx-auto d-block" alt="<%= products.name %>"></div>
+                          </td>
+                          <td class="text-nowrap align-middle"><%= products.name %></td>
+                          <td class="text-nowrap align-middle"><span><%= products.createdAt %></span></td>
+                          <td class="text-center align-middle"><i
+                              class="fa fa-fw text-secondary cursor-pointer fa-toggle-on"></i></td>
+                          <td class="text-center align-middle">
+                            <div class="btn-group align-top">
+
+                              <form action="/admin/editar-produto/<%=products.id%>" method="GET"
+                                enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-secondary btn-outline-light badge fs-6"
+                                  id="button-edit">Editar</button>
+                              </form>
+
+                              <form method="POST" action="/admin/deletar-produto/<%= products.id %>?_method=DELETE">
+                                <button id="button-delete" type="submit"
+                                  class="btn btn-secondary btn-outline-light badge fs-6"><i
+                                    class="fa fa-trash"></i></button>
+                              </form>
+
+                            </div>
+
+                          </td>
+
+                        </tr>
+                        <% }) %>
+                      </tbody>
+
+                    </table>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <ul class="pagination mt-3 mb-0">
+                      <li class="disabled page-item"><a href="#" class="page-link">‹</a></li>
+                      <li class="active page-item"><a href="#" class="page-link">1</a></li>
+                      <!-- <li class="page-item"><a href="#" class="page-link">2</a></li> -->
+                      <li class="page-item"><a href="#" class="page-link">›</a></li>
+                      <li class="page-item"><a href="#" class="page-link">»</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-center px-xl-3">
+                  <button class="btn btn-primary btn-block" type="button" data-toggle="modal"
+                    data-target="#user-form-modal" onclick="location.href='/admin/criar-produtos';">Cadastrar
+                    Produto</button>
+
+                </div>
+
+                <hr class="my-3">
+                <div>
+                  <div class="form-group">
+                    <label>Periodo desde-até:</label>
+                    <div>
+                      <input id="dates-range" class="form-control flatpickr-input" placeholder="01 Dec 17 - 27 Jan 18"
+                        type="text" readonly="readonly">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Procurar por Nome:</label>
+                    <div><input class="form-control w-100" type="text" placeholder="Name" value=""></div>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <div class="">
+                  <label>Status:</label>
+                  <div class="px-2">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" name="user-status" id="users-status-disabled">
+                      <label class="custom-control-label" for="users-status-disabled">Desabilitado</label>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" name="user-status" id="users-status-active">
+                      <label class="custom-control-label" for="users-status-active">Ativo</label>
+                    </div>
+                  </div>
+                  <div class="px-2">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" name="user-status" id="users-status-any"
+                        checked="">
+                      <label class="custom-control-label" for="users-status-any">Qualquer</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+
+
+  <div class="footerBox"></div>
+  <!--footer-->
+  <%- include("../partials/footer") %>
+  <!--footer-fim-->
+  </div>
 
 </body>
 

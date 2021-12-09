@@ -8,13 +8,7 @@ const isLogin = require('../middlewares/isLogin');
 const acessLevel = require("../middlewares/acessLevel");
 
 // MAIN PRODUCT ROUTES [VIEWS]
-router.get('/item/:id', (req, res) =>{
-    if(typeof Number(req.params.id) != "number") {
-        return res.send('Deve digitar um numero');
-    }
-
-    res.render('item');
-});
+router.get('/item/:id', ProductController.productPage);
 
 //CATEGORY ROUTES
 router.get("/categorias", CategoryController.listAll);
