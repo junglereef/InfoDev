@@ -1,68 +1,22 @@
-const {Product, Category}  = require("../models")
+
+const {Product}  = require("../models")
+const Sequelize = require("sequelize");
+const { render } = require("ejs");
 
 
 const ProductsController = {
-  async productPage(req, res) {
-    try {
-      const { id } = req.params;
-      // inserir o método aqui
-      res.render("Produto", { page: "Página Produto" }); // Rota de usuario
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async productsListPage(req, res) {
-    try {
-      // inserir o método aqui
-      res.send("Lista de produtos (página)"); // Rota de usuario
-    } catch (error) {
-      console.log(error);
-    }
-  },
+  
   async productsListAdminPage(req, res) {
     try {
-      const products = await Product.findAll({
-        
-          order: [["createdAt", "DESC"]],
-      });
-      // console.log(products);
+      const products = await Product.findAll();
      
-      res.render("admin/listProduct", { page: "Lista de Produtos",  product:products }); //  Rota administrativa 'admin/produtos'
+      return res.render("admin/listProduct", { page: "Lista de Produtos",  product:products }); //  Rota administrativa 'admin/produtos'
     } catch (error) {
-      console.log(error);
+      return res.render("admin", {error: "Erro ao carregar produtos"})
     }
   },
-  async productAdminPage(req, res) {
-    try {
-      const { id } = req.params;
-      // inserir o método aqui
-      res.render("Produto", { page: "Página Produto" }); // Rota administrativa 'admin/produtos/id'
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async createProductPage(req, res) {
-    try {
-      // inserir o método aqui
-      res.render("admin/createProduct",  { page: "Criar Produtos"}); // Rota administrativa 'admin/produtos/adicionar'
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async editProductPage(req, res) {
-    try {
-      const {id} = req.params;
-      // // inserir o método aqui
-      // const products = await Product.findById(id, (err, product))
-  
-      return res.render("/updateProductPage" + id,  { 
-        page: "Atualização Produtos",
-             
-      });// Rota administrativa 'admin/produtos/editar/id'
-    } catch (error) {
-      res.redirect("/")
-      console.log(error);
-    }
+  createProductPage(req, res) {
+      res.render("admin/createProduct", { page: "Criar Produtos"}); // Rota administrativa 
   },
   async saveProduct(req, res) {
     try {
@@ -79,31 +33,7 @@ const ProductsController = {
         return res.redirect("/admin/painel");
     } catch (error) {
         console.log("aqui")
-        return res.send("error")
-    }
-},
-  async categoriesProductPage(req, res) {
-    try {
-      // inserir o método aqui
-      res.render("categorias", { page: "Categorias" }); // Rota administrativa 'admin/produtos/categorias'
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async editProduct(req, res) {
-    try {
-      const { id } = req.params;
-      // inserir o método aqui
-      res.send("Editar produtos  (ação)"); // usado pela rota PUT [ sem renderização direta ]
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async createProduct(req, res) {
-    try {
-      res.send("Criar produtos (ação)"); // usado pela rota POST [ sem renderização direta ]
-    } catch (error) {
-      console.log(error);
+        return res.render("admin/criar-produtos", {error: "Erro ao cadastrar produto."})
     }
   },
   async deleteProduct(req, res) {
@@ -114,32 +44,47 @@ const ProductsController = {
   })
 
   if(!productDeleted)
-      return res.render("/produtos", {error: "Produto não deletado.Tente Novamente", produtos: await Product.findAll()})
-  return res.redirect("/produtos") // usado pela rota DELETE [ sem renderização direta ]
+      return res.render("/admin/lista-produtos", {error: "Produto não deletado.Tente Novamente", produtos: await Product.findAll()})
+  return res.redirect("/admin/lista-produtos") // usado pela rota DELETE [ sem renderização direta ]
     } catch (error) {
+      return res.render("/admin/lista-produtos", {error: "Produto não deletado.Tente Novamente", produtos: await Product.findAll()})
+    }
+  },
+  async editProductPage(req, res) {
+    try {
+      const productEdit = await Product.findOne({
+        where: {id: req.params.id}
+    })
+      // const {id} = req.params;
+      if(productEdit != null)
+      return res.render('admin/editar-produto', {products: productEdit})    
+  return res.render('admin/lista-produtos', {error: "Não há produtos cadastrado.", product: null})// Rota administrativa 'admin/produtos/editar/id'
+    } catch (error) {
+      res.render('admin/lista-produtos', {error: "Erro ao tentar editar produto.", produtos: null})
       console.log(error);
     }
   },
-  async category(req,res){
-    try{
-        const {name} = req.body;
-
-        const category = await Category.create({
-            name
-        })
-        
-        res.redirect("/cadastroCategoria")
-        
-    }catch(err){
-        console.log(err)
-        return res.redirect
+  async editProduct(req, res) {
+    try {
+      const { name, price,offer_price, description } = req.body
+      await Product.update({
+          name,
+          price,
+          offer_price,
+          description,
+          image: req.file.filename,
+          updatedAt: new Date().toISOString()
+      },
+          {
+              where: {id: req.params.id},
+          }
+      );
+      return res.redirect("/admin/lista-produtos")// usado pela rota PUT [ sem renderização direta ]
+    } catch (error) {
+      return res.render("admin/editar-produto", {error: "Erro ao tentar editar produto.", produto: req.body})
     }
-},
-
-async delete(req,res) {
-  const {name} = req.body;
-  Category.destroy({ where: { name }});
- },
+  },
+  
 
 };
 

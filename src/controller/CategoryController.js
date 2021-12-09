@@ -10,8 +10,11 @@ const CategoryController = {
   createPage(req, res) {
     // Página criara apenas categoria não tendo consulta ao DB diretamente
   },
+
+  
   async listAll(req, res) {
     try {
+      res.render("categorias", { page: "Categorias" });
     } catch (error) {
       console.log(error);
     }

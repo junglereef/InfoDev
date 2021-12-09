@@ -4,6 +4,7 @@ const AdminController = require("../controller/AdminController");
 const ProductController = require("../controller/ProductController");
 const acessLevel = require("../middlewares/acessLevel");
 const isLogin = require("../middlewares/isLogin");
+const upload = require('../middlewares/upload');
 
 // router.use(isLogin); // Habilita verificação de login
 router.use(acessLevel);
@@ -15,10 +16,16 @@ router.get("/", isLogin, acessLevel, AdminController.dashboardPage);
 
 // BACKEND PRODUCTS 
 // router.get("/editar-produto/:id ", /*isLogin, acessLevel,*/ProductController.editProductPage);
-router.get("/editar-produto/:id ", isLogin, acessLevel,ProductController.editProductPage);
-router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
 router.get('/criar-produtos', isLogin, acessLevel, ProductController.createProductPage);
+router.get("/lista-produtos", isLogin, acessLevel, ProductController.productsListAdminPage);
+router.post('/salvar-produto', isLogin, acessLevel, upload.single("image"), ProductController.saveProduct);
+router.get("/editar-produto/:id ", isLogin, acessLevel,ProductController.editProductPage);
 
+//PUT ROUTES
+router.put('/salvar-editar-produto/:id', isLogin, acessLevel,upload.single("image"), ProductController.editProduct);
+
+//DELETE ROUTES
+router.delete('/deletar-produto/:id', isLogin, acessLevel, ProductController.deleteProduct);
 
 
 module.exports = router;

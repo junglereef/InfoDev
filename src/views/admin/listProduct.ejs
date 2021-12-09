@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <%- include("../partials/head")%>
+
 <link rel="stylesheet" href="/css/global.css" />
 <link rel="stylesheet" href="/css/panel.css" />
 
@@ -62,9 +63,16 @@
                         <td class="text-center align-middle"><i class="fa fa-fw text-secondary cursor-pointer fa-toggle-on"></i></td>
                         <td class="text-center align-middle">
                           <div class="btn-group align-top">
-                              <button class="btn btn-secondary btn-outline-light badge fs-6" type="button" onclick="window.location.href='editar-produto/<%= products.id %>'">Atualizar</button>
-                              <button class="btn btn-secondary btn-outline-light badge fs-6" type="button"><i class="fa fa-trash"></i></button>
-                          </div>
+ 
+                            <form action="/editar-produto/<%=products.id%>" method="GET" enctype="multipart/form-data">
+                                <button type="submit" class="btn btn-secondary btn-outline-light badge fs-6" id="button-edit">Editar</button>
+                            </form>
+                            
+                          <form method="POST" action="/deletar-produto/<%= products.id %>?_method=DELETE">
+                                <button id="button-delete" type="submit" class="btn btn-secondary btn-outline-light badge fs-6"><i class="fa fa-trash"></i></button>
+                            </form>
+                                                     
+                         </div>
                            
                         </td>
                        

@@ -4,7 +4,7 @@
         <ul class="rig columns-4">
             <% product.forEach(products => {%> 
             <li>
-                <a href="/produtos/<%= products.name%>"> <img src="/uploads/<%=products.image%>" class="image" alt="<%= products.name %>">
+                <a href="produtos/item/<%= products.id%>"> <img src="/uploads/<%=products.image%>" class="image" alt="<%= products.name %>">
                 <h4 class="home-product-name"><%= products.name%></h4>
                 <i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star-half-o fa-2x"></i><i class="active fa fa-star-o fa-2x"></i>
                 <p class="home-product-desctiption"><%= products.description %></p>
