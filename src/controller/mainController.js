@@ -10,17 +10,24 @@ const MainController = {
     }
   },
   cartPage: (req, res) => {
-    res.render("cart", { page: "Carrinho" });
+    res.render("cart/carrinho", { page: "Carrinho" });
   },
   checkoutPage: (req, res) => {
-    res.render("checkout", { page: "Finalizar Compra" });
+    res.render("cart/checkout", { page: "Finalizar Compra" });
   },
   orderConfirmation: (req, res) => {
-    res.render("pedido-finalizado", { page: "Pedido finalizado" });
+    res.render("cart/pedido-finalizado", { page: "Pedido finalizado" });
   },
   accountPage: (req, res) => {
     res.render("user", { page: "Minha Conta" });
   },
+  sobrePage: (req, res) => {
+    res.render("sobre", { page: "Sobre Nós" });
+  },
+  newsPage: (req, res) => {
+    res.render("news", { page: "Noticias" });
+  },
+  
   contactPage: (req, res) => {
     res.render("contato", { page: "Contato" });
   },
